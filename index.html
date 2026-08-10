@@ -125,15 +125,23 @@
   .problema-destaque { font-size: clamp(22px, 3vw, 30px); line-height: 1.45; color: #F5F2EB; font-weight: 600; margin-bottom: 28px; }
   .problema-destaque strong { color: #D1D5DB; }
 
-  /* METODO 3P */
-  .metodo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-  .metodo-card { padding: 34px 28px; text-align: left; }
-  .metodo-card .mp-tag { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 18px; }
-  .metodo-card .mp-ic { width: 52px; height: 52px; border-radius: 16px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
-  .metodo-card .mp-ic svg { width: 26px; height: 26px; color: #9CA3AF; }
-  .metodo-card h3 { font-size: 22px; margin-bottom: 12px; }
-  .metodo-card p { font-size: 14px; line-height: 1.7; }
-  .metodo-card .mp-result { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(107,114,128,.15); font-size: 13px; color: #D1D5DB; font-weight: 600; }
+  /* METODO 3P — COM FRAMEWORK CONSULTORIA */
+  .metodo-intro { margin-bottom: 48px; }
+  .metodo-intro .framework-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px; background: rgba(107,114,128,.08); border: 1px solid rgba(107,114,128,.18); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 16px; }
+  .metodo-fases { display: flex; flex-direction: column; gap: 32px; }
+  .metodo-fase { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start; padding: 36px 32px; border-radius: 22px; background: rgba(255,255,255,.015); border: 1px solid rgba(107,114,128,.06); transition: border-color .4s ease, background .3s ease; }
+  .metodo-fase:hover { border-color: rgba(107,114,128,.18); background: rgba(255,255,255,.025); }
+  .metodo-fase-num { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #6B7280; margin-bottom: 10px; }
+  .metodo-fase h3 { font-size: 26px; font-weight: 800; margin-bottom: 8px; line-height: 1.2; }
+  .metodo-fase .fase-tag { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 14px; }
+  .fase-tag.diagnostico { background: rgba(107,114,128,.12); color: #9CA3AF; border: 1px solid rgba(107,114,128,.2); }
+  .fase-tag.estruturacao { background: rgba(107,114,128,.14); color: #B0B5BD; border: 1px solid rgba(107,114,128,.25); }
+  .fase-tag.execucao { background: rgba(107,114,128,.16); color: #D1D5DB; border: 1px solid rgba(107,114,128,.3); }
+  .metodo-fase-texto { padding-top: 4px; }
+  .metodo-fase-texto p { font-size: 15px; line-height: 1.75; margin-bottom: 14px; }
+  .metodo-fase-texto .fase-entregaveis { display: flex; flex-wrap: wrap; gap: 8px; }
+  .entregavel-tag { padding: 6px 14px; border-radius: 999px; background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.12); font-size: 12px; font-weight: 600; color: #9CA3AF; }
+  .metodo-fase .fase-3p { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(107,114,128,.5); margin-top: 12px; }
 
   /* DIFERENCIAIS */
   .dif-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
@@ -252,7 +260,8 @@
     .section-lead { font-size: 16px; line-height: 1.75; max-width: 100%; }
     .section-lead.sm { max-width: 100%; }
     .problema-destaque { font-size: 20px; }
-    .metodo-grid { grid-template-columns: 1fr; }
+    .metodo-fase { grid-template-columns: 1fr; gap: 16px; padding: 28px 22px; }
+    .metodo-fase h3 { font-size: 22px; }
     .para-grid { grid-template-columns: 1fr; }
   }
 
@@ -295,15 +304,15 @@
           <input type="text" id="inputEmpresa" placeholder="Nome da sua software house" required>
         </div>
         <div class="form-group">
-  <label for="inputPorte">Tamanho da empresa</label>
-  <select id="inputPorte" required>
-    <option value="" disabled selected>Selecione</option>
-    <option value="ate-20">Até 20 funcionários</option>
-    <option value="21-50">21 a 50 funcionários</option>
-    <option value="51-100">51 a 100 funcionários</option>
-    <option value="100+">Mais de 100 funcionários</option>
-  </select>
-</div>
+          <label for="inputPorte">Tamanho da empresa</label>
+          <select id="inputPorte" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="ate-20">Até 20 funcionários</option>
+            <option value="21-50">21 a 50 funcionários</option>
+            <option value="51-100">51 a 100 funcionários</option>
+            <option value="100+">Mais de 100 funcionários</option>
+          </select>
+        </div>
         <div class="form-group">
           <label for="inputPreocupacao">Principal desafio</label>
           <select id="inputPreocupacao" required>
@@ -344,7 +353,7 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#problema">O Problema</a></li>
-    <li><a href="#metodo">Método 3P</a></li>
+    <li><a href="#metodo">Método</a></li>
     <li><a href="#diferenciais">Diferenciais</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#contato">Contato</a></li>
@@ -366,7 +375,7 @@
       Blindagem para Software Houses
     </div>
     <h1 class="au d2" style="margin-top:24px;">Blindar para <span class="gt">Crescer</span></h1>
-    <p class="hero-subtitle au d3">Sua software house pronta para grandes players em 6 meses. Método 3P: Padronização, Proteção, Prevenção.</p>
+    <p class="hero-subtitle au d3">Sua software house pronta para grandes players em 9 meses. Diagnóstico, Estruturação, Execução. Método 3P: Padronização, Proteção, Prevenção.</p>
     <p class="hero-tagline au d4">Consultoria · SGSI · ISO 27001 · ISO 27701</p>
     <div class="hero-buttons au d5">
       <button class="btn-primary" onclick="openModal()">
@@ -375,17 +384,17 @@
       </button>
       <a href="#metodo" class="btn-outline">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Ver o Método 3P
+        Ver o Método
       </a>
     </div>
     <div class="stats-grid au d6">
       <div>
-        <div class="stat-big gray">6 meses</div>
-        <div class="stat-label">Para blindar sua software house</div>
+        <div class="stat-big gray">9 meses</div>
+        <div class="stat-label">Diagnóstico à certificação</div>
       </div>
       <div>
-        <div class="stat-big light">Método 3P</div>
-        <div class="stat-label">Padronização, Proteção, Prevenção</div>
+        <div class="stat-big light">3 fases</div>
+        <div class="stat-label">Diagnóstico, Estruturação, Execução</div>
       </div>
       <div>
         <div class="stat-big pale">Software<br>Houses</div>
@@ -422,40 +431,74 @@
     </div>
   </section>
 
+  <!-- MÉTODO — FRAMEWORK CONSULTORIA DE ALTO VALOR -->
   <section id="metodo">
     <div class="gl au"></div>
-    <h2 class="au d1">Método <span class="gt">3P</span></h2>
-    <p class="au d2 section-lead sm">
-      Não é consultoria genérica. É método específico para software houses. Em 6 meses, sua empresa sai de vulnerável para pronta para grandes players.
-    </p>
-    <div class="metodo-grid">
-      <div class="card metodo-card au d2">
-        <span class="mp-tag">Mês 1 e 2</span>
-        <div class="mp-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+    <h2 class="au d1">Como <span class="gt">funciona</span></h2>
+
+    <div class="metodo-intro au d2">
+      <span class="framework-badge">Framework de Consultoria</span>
+      <p class="section-lead sm">
+        Nossa atuação segue o modelo de consultoria de alto valor: <strong style="color:#F5F2EB;">Diagnóstico, Estruturação e Execução</strong>. Cada fase é construída sobre um pilar do Método 3P, com etapas claras, medição de resultados e entregáveis concretos. Em 9 meses, sua software house está pronta para conquistar grandes players.
+      </p>
+    </div>
+
+    <div class="metodo-fases">
+
+      <!-- FASE 1: DIAGNÓSTICO -->
+      <div class="metodo-fase au d2">
+        <div>
+          <div class="metodo-fase-num">Fase 1 · Mês 1 a 2</div>
+          <h3>Diagnóstico</h3>
+          <span class="fase-tag diagnostico">Pilar 3P · Padronização</span>
         </div>
-        <h3>01. Padronização</h3>
-        <p>Estruturamos processos, políticas e documentação. Sua software house fala a língua que grandes players entendem e exigem.</p>
-        <div class="mp-result">Resultado: base documental alinhada à ISO 27001</div>
-      </div>
-      <div class="card metodo-card au d3">
-        <span class="mp-tag">Mês 3 e 4</span>
-        <div class="mp-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="metodo-fase-texto">
+          <p>Toda intervenção começa pela <strong>compreensão profunda da realidade da sua software house</strong>. Mapeamos o nível atual de maturidade em segurança, identificamos vulnerabilidades, lacunas em relação à ISO 27001 e estruturamos a base documental e de políticas. Nada de template. O diagnóstico é específico para o seu negócio.</p>
+          <div class="fase-entregaveis">
+            <span class="entregavel-tag">Análise de maturidade</span>
+            <span class="entregavel-tag">Mapa de riscos e GAP analysis</span>
+            <span class="entregavel-tag">Políticas estruturadas</span>
+            <span class="entregavel-tag">Roadmap de adequação</span>
+          </div>
         </div>
-        <h3>02. Proteção</h3>
-        <p>Implementamos controles, mapeamos riscos e blindamos vulnerabilidades. Seus dados e os dos seus clientes ficam protegidos.</p>
-        <div class="mp-result">Resultado: SGSI implementado e controles ativos</div>
       </div>
-      <div class="card metodo-card au d4">
-        <span class="mp-tag">Mês 5 e 6</span>
-        <div class="mp-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+
+      <!-- FASE 2: ESTRUTURAÇÃO -->
+      <div class="metodo-fase au d3">
+        <div>
+          <div class="metodo-fase-num">Fase 2 · Mês 3 a 5</div>
+          <h3>Estruturação</h3>
+          <span class="fase-tag estruturacao">Pilar 3P · Proteção</span>
         </div>
-        <h3>03. Prevenção</h3>
-        <p>Treinamos seu time e criamos cultura de segurança. Você não depende de sorte. Depende de método.</p>
-        <div class="mp-result">Resultado: time preparado e pronto para auditoria</div>
+        <div class="metodo-fase-texto">
+          <p>Com o diagnóstico em mãos, partimos para a <strong>implementação do SGSI e dos controles de segurança</strong>. Estruturamos processos, implantamos rotinas de gestão, blindamos vulnerabilidades e adequamos sua software house aos requisitos da ISO 27001 e 27701. Cada controle é implementado com método, não com improviso.</p>
+          <div class="fase-entregaveis">
+            <span class="entregavel-tag">SGSI implementado</span>
+            <span class="entregavel-tag">Controles de segurança ativos</span>
+            <span class="entregavel-tag">Adequação ISO 27001</span>
+            <span class="entregavel-tag">Gestão de riscos operacional</span>
+          </div>
+        </div>
       </div>
+
+      <!-- FASE 3: EXECUÇÃO -->
+      <div class="metodo-fase au d4">
+        <div>
+          <div class="metodo-fase-num">Fase 3 · Mês 6 a 9</div>
+          <h3>Execução</h3>
+          <span class="fase-tag execucao">Pilar 3P · Prevenção</span>
+        </div>
+        <div class="metodo-fase-texto">
+          <p>A fase final transforma segurança em <strong>cultura e resultado mensurável</strong>. Treinamos seu time, realizamos auditoria interna pré-certificação, consolidamos a cultura de segurança e preparamos sua software house para a auditoria externa. Você não depende de sorte. Depende de método.</p>
+          <div class="fase-entregaveis">
+            <span class="entregavel-tag">Time treinado</span>
+            <span class="entregavel-tag">Auditoria interna</span>
+            <span class="entregavel-tag">Preparação para certificação</span>
+            <span class="entregavel-tag">Cultura de segurança consolidada</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -525,7 +568,6 @@
     </div>
   </section>
 
-  <!-- SOBRE / BRAND STORY -->
   <section id="sobre">
     <div class="gl au"></div>
     <h2 class="au d1">De onde a <span class="gt">Blind Corp</span> vem</h2>
@@ -542,7 +584,7 @@
 
         <p>A decisão foi clara: transformar capacidade individual em <strong>negócio escalável</strong>. Atender várias software houses ao mesmo tempo. Levar para cada cliente o método que já tinha sido testado, validado e aprovado em implementações reais.</p>
 
-        <p>Nasceu a <strong>Blind Corp</strong>. Nasceu o <strong>Método 3P</strong>. Nasceu a promessa de 6 meses para preparar sua software house para conquistar grandes players.</p>
+        <p>Nasceu a <strong>Blind Corp</strong>. Nasceu o <strong>Método 3P</strong>. Nasceu a promessa de 9 meses para preparar sua software house para conquistar grandes players.</p>
 
         <p><strong>Blindar para crescer.</strong></p>
       </div>
@@ -647,10 +689,10 @@
     const email = document.getElementById('inputEmail').value.trim();
     const whatsapp = document.getElementById('inputWhatsapp').value.trim();
     const empresa = document.getElementById('inputEmpresa').value.trim();
-    const funcionarios = document.getElementById('inputFuncionarios').value;
+    const porte = document.getElementById('inputPorte').value;
     const preocupacao = document.getElementById('inputPreocupacao').value;
 
-    if (!nome || !email || !whatsapp || !empresa || !funcionarios || !preocupacao) {
+    if (!nome || !email || !whatsapp || !empresa || !porte || !preocupacao) {
       alert('Por favor, preencha todos os campos.');
       return;
     }
@@ -663,7 +705,7 @@
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, email, whatsapp, empresa, funcionarios, preocupacao })
+        body: JSON.stringify({ nome, email, whatsapp, empresa, porte, preocupacao })
       });
     } catch (err) {}
 
