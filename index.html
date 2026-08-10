@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blind Corp | Consultoria e Cibersegurança</title>
+<title>Blind Corp | Blindar para Crescer</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -68,7 +68,7 @@
 
   .content { padding: 100px 64px 120px; max-width: 1100px; margin: 0 auto; }
 
-  section { margin-bottom: 100px; scroll-margin-top: 100px; }
+  section { margin-bottom: 120px; scroll-margin-top: 100px; }
   section h2 { font-size: clamp(34px, 5vw, 48px); margin-bottom: 32px; font-weight: 800; letter-spacing: -.025em; }
 
   h1 { font-weight: 900; letter-spacing: -.03em; line-height: 1.08; color: #F5F2EB; }
@@ -102,9 +102,9 @@
   #hero { min-height: 85vh; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 60px 0 40px; }
   #hero .hero-logo { width: 100px; height: 100px; border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; overflow: hidden; background: none; }
   #hero .hero-logo img { width: 100px; height: 100px; border-radius: 24px; object-fit: contain; }
-  #hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(56px, 10vw, 100px); margin-bottom: 12px; letter-spacing: .05em; }
-  #hero .hero-subtitle { font-family: 'Montserrat', sans-serif; font-size: clamp(16px, 2vw, 22px); color: #9CA3AF; margin-bottom: 12px; font-weight: 400; }
-  #hero .hero-tagline { font-size: 14px; color: rgba(156,163,175,.6); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; margin-bottom: 40px; }
+  #hero h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(48px, 9vw, 90px); margin-bottom: 20px; letter-spacing: .03em; }
+  #hero .hero-subtitle { font-family: 'Montserrat', sans-serif; font-size: clamp(18px, 2.5vw, 26px); color: #D1D5DB; margin-bottom: 16px; font-weight: 500; max-width: 780px; margin-left: auto; margin-right: auto; }
+  #hero .hero-tagline { font-size: 15px; color: rgba(156,163,175,.7); letter-spacing: .08em; text-transform: uppercase; font-weight: 700; margin-bottom: 40px; }
   .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 
   .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 15px; text-decoration: none; transition: all .3s ease; box-shadow: 0 8px 30px rgba(107,114,128,.25); letter-spacing: .02em; cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
@@ -114,47 +114,59 @@
   .btn-outline:hover { background: rgba(107,114,128,.08); border-color: #9CA3AF; transform: translateY(-3px); }
 
   /* STATS */
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; max-width: 750px; margin: 48px auto 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; max-width: 900px; margin: 48px auto 0; }
   .stats-grid > div { transition: transform .4s ease; cursor: default; }
   .stats-grid > div:hover .stat-big { transform: scale(1.1) translateY(-4px); }
   .stats-grid > div:hover .stat-label { color: #F5F2EB; }
-  .stat-big { font-size: 52px; font-weight: 900; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 8px; display: inline-block; transition: transform .4s cubic-bezier(.22,1,.36,1); }
+  .stat-big { font-size: 48px; font-weight: 900; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 8px; display: inline-block; transition: transform .4s cubic-bezier(.22,1,.36,1); }
   .stat-big.gray { color: #6B7280; } .stat-big.light { color: #9CA3AF; } .stat-big.pale { color: #D1D5DB; }
   .stat-label { font-size: 12px; color: rgba(156,163,175,.6); letter-spacing: .05em; text-transform: uppercase; font-weight: 600; transition: color .3s ease; }
 
-  /* SERVIÇOS */
-  .servicos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-  .servico-card { padding: 32px 26px; }
-  .servico-card .sv-ic { width: 48px; height: 48px; border-radius: 14px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; transition: transform .4s ease, background .3s ease; }
-  .servico-card:hover .sv-ic { transform: rotate(-4deg) scale(1.08); background: rgba(107,114,128,.18); }
-  .servico-card .sv-ic svg { width: 24px; height: 24px; color: #9CA3AF; }
-  .servico-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; line-height: 1.35; }
-  .servico-card p { font-size: 14px; color: #9CA3AF; line-height: 1.65; }
+  /* PROBLEMA */
+  .problema-destaque { font-size: clamp(22px, 3vw, 30px); line-height: 1.45; color: #F5F2EB; font-weight: 600; margin-bottom: 28px; }
+  .problema-destaque strong { color: #D1D5DB; }
+
+  /* METODO 3P */
+  .metodo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .metodo-card { padding: 34px 28px; text-align: left; }
+  .metodo-card .mp-tag { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 18px; }
+  .metodo-card .mp-ic { width: 52px; height: 52px; border-radius: 16px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+  .metodo-card .mp-ic svg { width: 26px; height: 26px; color: #9CA3AF; }
+  .metodo-card h3 { font-size: 22px; margin-bottom: 12px; }
+  .metodo-card p { font-size: 14px; line-height: 1.7; }
+  .metodo-card .mp-result { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(107,114,128,.15); font-size: 13px; color: #D1D5DB; font-weight: 600; }
 
   /* DIFERENCIAIS */
   .dif-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
   .dif-card { padding: 28px 24px; }
   .dif-card .df-num { font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 900; line-height: 1; background: linear-gradient(135deg, #6B7280, #9CA3AF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; opacity: .7; transition: opacity .3s ease, transform .4s cubic-bezier(.22,1,.36,1); }
   .dif-card:hover .df-num { opacity: 1; transform: scale(1.08); }
-  .dif-card h3 { font-size: 15px; font-weight: 700; color: #F5F2EB; margin-bottom: 8px; line-height: 1.35; }
+  .dif-card h3 { font-size: 16px; font-weight: 700; color: #F5F2EB; margin-bottom: 10px; line-height: 1.35; }
   .dif-card p { font-size: 13px; color: #9CA3AF; line-height: 1.6; }
 
-  /* PROCESSO — TIMELINE */
-  .processo-steps { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 44px; }
-  .processo-steps::before { content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #6B7280, #9CA3AF, rgba(107,114,128,.15)); }
-  .step { position: relative; padding: 20px 0 32px; }
-  .step:last-child { padding-bottom: 0; }
-  .step::before { content: ''; position: absolute; left: -37px; top: 28px; width: 14px; height: 14px; border-radius: 50%; background: #6B7280; border: 3px solid #0A1F3D; box-shadow: 0 0 0 4px rgba(107,114,128,.2); z-index: 2; }
-  .step-num { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #6B7280; margin-bottom: 6px; }
-  .step h3 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
-  .step p { font-size: 15px; color: #9CA3AF; line-height: 1.7; }
+  /* PARA QUEM */
+  .para-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+  .para-card { padding: 32px 28px; }
+  .para-card h3 { font-size: 18px; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .para-card ul { list-style: none; }
+  .para-card li { font-size: 14px; line-height: 1.8; padding-left: 22px; position: relative; margin-bottom: 8px; }
+  .para-card li::before { content: ''; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: #6B7280; }
+  .para-card.sim li::before { background: #6B7280; }
+  .para-card.nao li::before { background: #9CA3AF; opacity: .5; }
+
+  /* SOBRE / BRAND STORY */
+  .sobre-grid { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
+  .sobre-foto { width: 100%; aspect-ratio: 1; border-radius: 24px; object-fit: cover; border: 1px solid rgba(107,114,128,.2); box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+  .sobre-texto p { font-size: 16px; line-height: 1.85; margin-bottom: 18px; }
+  .sobre-texto p strong { color: #F5F2EB; font-weight: 600; }
+  .sobre-quote { border-left: 3px solid #6B7280; padding-left: 24px; margin: 28px 0; font-size: 20px; line-height: 1.6; color: #D1D5DB; font-weight: 600; font-style: italic; }
 
   /* CTA */
   .cta-inner { text-align: center; padding: 64px 48px; background: linear-gradient(145deg, rgba(10,20,35,.95), rgba(13,21,37,.98)); border: 1px solid rgba(107,114,128,.15); border-radius: 28px; position: relative; overflow: hidden; }
   .cta-inner::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(107,114,128,.08) 0%, transparent 70%); pointer-events: none; }
   .cta-inner::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 250px; height: 250px; border-radius: 50%; background: radial-gradient(circle, rgba(107,114,128,.05) 0%, transparent 70%); pointer-events: none; }
   .cta-inner h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; position: relative; z-index: 1; }
-  .cta-inner p { font-size: 16px; color: #9CA3AF; max-width: 580px; margin: 0 auto 40px; line-height: 1.8; position: relative; z-index: 1; }
+  .cta-inner p { font-size: 16px; color: #9CA3AF; max-width: 620px; margin: 0 auto 40px; line-height: 1.8; position: relative; z-index: 1; }
   .cta-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; }
 
   /* CONTATO */
@@ -344,12 +356,13 @@
     .content { padding: 80px 20px 80px; max-width: 100%; }
     .cta-inner { padding: 40px 24px; }
     .modal-box { padding: 40px 28px; max-height: 85vh; }
-    .processo-steps { padding-left: 32px; }
-    .processo-steps::before { left: 15px; }
-    .step::before { left: -29px; top: 24px; width: 12px; height: 12px; }
-    .servicos-grid { grid-template-columns: 1fr; }
+    .sobre-grid { grid-template-columns: 1fr; }
+    .sobre-foto { max-width: 240px; margin: 0 auto; }
     .section-lead { font-size: 16px; line-height: 1.75; max-width: 100%; }
     .section-lead.sm { max-width: 100%; }
+    .problema-destaque { font-size: 20px; }
+    .metodo-grid { grid-template-columns: 1fr; }
+    .para-grid { grid-template-columns: 1fr; }
   }
 
   @media print {
@@ -373,8 +386,8 @@
       <div class="modal-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
-      <h3>Solicite um <span class="gt">diagnóstico gratuito</span></h3>
-      <p class="modal-sub">Preencha os dados abaixo e um especialista da <strong>Blind Corp</strong> entrará em contato para entender suas necessidades de segurança.</p>
+      <h3>Quanto você perdeu em <span class="gt">contrato</span>?</h3>
+      <p class="modal-sub">Solicite um diagnóstico gratuito. Em até 24 horas, um especialista da <strong>Blind Corp</strong> vai entender quanto sua software house está deixando de ganhar por falta de blindagem.</p>
 
       <form id="captureForm" novalidate>
         <div class="form-group">
@@ -391,28 +404,27 @@
         </div>
         <div class="form-group">
           <label for="inputEmpresa">Empresa</label>
-          <input type="text" id="inputEmpresa" placeholder="Nome da sua empresa" required>
+          <input type="text" id="inputEmpresa" placeholder="Nome da sua software house" required>
         </div>
         <div class="form-group">
-          <label for="inputPorte">Porte da empresa</label>
-          <select id="inputPorte" required>
-            <option value="" disabled selected>Selecione o porte</option>
-            <option value="micro">Micro (até 19 funcionários)</option>
-            <option value="pequena">Pequena (20 a 99)</option>
-            <option value="media">Média (100 a 499)</option>
-            <option value="grande">Grande (500+)</option>
+          <label for="inputFuncionarios">Tamanho da empresa</label>
+          <select id="inputFuncionarios" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="ate-20">Até 20 funcionários</option>
+            <option value="21-50">21 a 50 funcionários</option>
+            <option value="51-100">51 a 100 funcionários</option>
+            <option value="100+">Mais de 100 funcionários</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="inputPreocupacao">Principal preocupação</label>
+          <label for="inputPreocupacao">Principal desafio</label>
           <select id="inputPreocupacao" required>
             <option value="" disabled selected>Selecione</option>
-            <option value="lgpd">Adequação à LGPD</option>
-            <option value="iso27001">Certificação ISO 27001</option>
-            <option value="iso27701">Certificação ISO 27701</option>
-            <option value="ataques">Proteção contra ataques/ransomware</option>
-            <option value="sgsi">Implementação de SGSI</option>
-            <option value="outro">Outro / Não sei ao certo</option>
+            <option value="perdendo-contratos">Estamos perdendo contratos por falta de ISO 27001</option>
+            <option value="nao-sabe-por-onde-comecar">Não sabemos por onde começar</option>
+            <option value="projeto-parado">Temos um projeto parado ou travado</option>
+            <option value="grande-player">Precisamos atender um grande player</option>
+            <option value="outro">Outro</option>
           </select>
         </div>
 
@@ -448,10 +460,9 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#problema">O Problema</a></li>
-    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#metodo">Método 3P</a></li>
     <li><a href="#diferenciais">Diferenciais</a></li>
-    <li><a href="#normas">Normas ISO</a></li>
-    <li><a href="#processo">Processo</a></li>
+    <li><a href="#sobre">Sobre</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <button class="nav-cta desktop-only" onclick="openModal()">Diagnóstico Grátis</button>
@@ -470,36 +481,36 @@
 
     <div class="badge au d1">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Consultoria em Cibersegurança
+      Blindagem para Software Houses
     </div>
 
-    <h1 class="au d2" style="margin-top:24px;">Blind <span class="gt">Corp</span></h1>
-    <p class="hero-subtitle au d3">Segurança da informação para empresas que não podem falhar</p>
+    <h1 class="au d2" style="margin-top:24px;">Blindar para <span class="gt">Crescer</span></h1>
+    <p class="hero-subtitle au d3">Sua software house pronta para grandes players em 6 meses. Método 3P: Padronização, Proteção, Prevenção.</p>
     <p class="hero-tagline au d4">Consultoria · SGSI · ISO 27001 · ISO 27701</p>
 
     <div class="hero-buttons au d5">
       <button class="btn-primary" onclick="openModal()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Quero Blindar Minha Operação
+        Quero Blindar Minha Software House
       </button>
-      <a href="#servicos" class="btn-outline">
+      <a href="#metodo" class="btn-outline">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Conhecer Serviços
+        Ver o Método 3P
       </a>
     </div>
 
     <div class="stats-grid au d6">
       <div>
-        <div class="stat-big gray">78%</div>
-        <div class="stat-label">Das empresas sofreram ataques cibernéticos em 2024</div>
+        <div class="stat-big gray">6 meses</div>
+        <div class="stat-label">Para blindar sua software house</div>
       </div>
       <div>
-        <div class="stat-big light">R$ 5,5 mi</div>
-        <div class="stat-label">Custo médio de um vazamento de dados no Brasil</div>
+        <div class="stat-big light">Método 3P</div>
+        <div class="stat-label">Padronização, Proteção, Prevenção</div>
       </div>
       <div>
-        <div class="stat-big pale">85%</div>
-        <div class="stat-label">Dos incidentes ocorrem por falhas básicas de gestão</div>
+        <div class="stat-big pale">Software<br>Houses</div>
+        <div class="stat-label">Foco exclusivo. Nada além disso.</div>
       </div>
     </div>
   </section>
@@ -507,63 +518,71 @@
   <!-- O PROBLEMA -->
   <section id="problema">
     <div class="gl au"></div>
-    <h2 class="au d1">Sua empresa está <span class="gt">protegida?</span></h2>
+    <h2 class="au d1">Sua software house está <span class="gt">perdendo contratos?</span></h2>
     <p class="au d2 section-lead">
-      Ataques de ransomware, vazamentos de dados e violações da LGPD não são mais exceção — são rotina. 
-      <strong style="color:#F5F2EB;">A maioria das empresas só descobre a vulnerabilidade quando já é tarde.</strong>
+      Grandes players exigem ISO 27001. Bancos, seguradoras, indústrias. Se sua software house não tem, você não entra. Não é questão de segurança. É questão de <strong style="color:#F5F2EB;">receita bloqueada</strong>.
     </p>
-    <div class="stats-grid au d3" style="margin:0; max-width:100%; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-      <div class="card" style="text-align:center; padding:28px 20px;">
-        <div style="font-size:40px; margin-bottom:10px;">🔓</div>
-        <div class="stat-label" style="margin-bottom:6px;">Ransomware no Brasil</div>
-        <p style="font-size:13px; color:#9CA3AF;">O Brasil é o 2º país com mais ataques de ransomware na América Latina</p>
-      </div>
-      <div class="card" style="text-align:center; padding:28px 20px;">
-        <div style="font-size:40px; margin-bottom:10px;">⚖️</div>
-        <div class="stat-label" style="margin-bottom:6px;">Multas da LGPD</div>
-        <p style="font-size:13px; color:#9CA3AF;">Multas podem chegar a R$ 50 milhões por violação de dados pessoais</p>
-      </div>
+
+    <div class="problema-destaque au d3">
+      "A gente era a melhor opção tecnicamente. Mas o cliente exigiu segurança. E a gente não tinha." — <strong>CEO de software house</strong>, contrato perdido de <strong>R$ 2 milhões</strong>.
+    </div>
+
+    <div class="stats-grid au d4" style="margin:0; max-width:100%; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
       <div class="card" style="text-align:center; padding:28px 20px;">
         <div style="font-size:40px; margin-bottom:10px;">📉</div>
-        <div class="stat-label" style="margin-bottom:6px;">Impacto na Reputação</div>
-        <p style="font-size:13px; color:#9CA3AF;">60% das PMEs fecham em até 6 meses após um ataque grave</p>
+        <div class="stat-label" style="margin-bottom:6px;">Contratos perdidos</div>
+        <p style="font-size:13px; color:#9CA3AF;">Software houses perdem contratos de R$ 200 mil a R$ 2 milhões por falta de ISO 27001.</p>
+      </div>
+      <div class="card" style="text-align:center; padding:28px 20px;">
+        <div style="font-size:40px; margin-bottom:10px;">🏦</div>
+        <div class="stat-label" style="margin-bottom:6px;">Exigência dos grandes players</div>
+        <p style="font-size:13px; color:#9CA3AF;">Bancos, seguradoras e indústrias não negociam sem comprovação de segurança.</p>
+      </div>
+      <div class="card" style="text-align:center; padding:28px 20px;">
+        <div style="font-size:40px; margin-bottom:10px;">⏱️</div>
+        <div class="stat-label" style="margin-bottom:6px;">Consultorias lentas</div>
+        <p style="font-size:13px; color:#9CA3AF;">Projetos de 12 a 18 meses que não entregam resultado concreto.</p>
       </div>
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos">
+  <!-- MÉTODO 3P -->
+  <section id="metodo">
     <div class="gl au"></div>
-    <h2 class="au d1">O que <span class="gt">entregamos</span></h2>
-    <p class="au d2 section-lead sm">Soluções completas de segurança da informação — da estratégia à implementação.</p>
-    <div class="servicos-grid">
-      <div class="card servico-card au d2">
-        <div class="sv-ic">
+    <h2 class="au d1">Método <span class="gt">3P</span></h2>
+    <p class="au d2 section-lead sm">
+      Não é consultoria genérica. É método específico para software houses. Em 6 meses, sua empresa sai de vulnerável para pronta para grandes players.
+    </p>
+
+    <div class="metodo-grid">
+      <div class="card metodo-card au d2">
+        <span class="mp-tag">Mês 1 e 2</span>
+        <div class="mp-ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3>01. Padronização</h3>
+        <p>Estruturamos processos, políticas e documentação. Sua software house fala a língua que grandes players entendem e exigem.</p>
+        <div class="mp-result">Resultado: base documental alinhada à ISO 27001</div>
+      </div>
+
+      <div class="card metodo-card au d3">
+        <span class="mp-tag">Mês 3 e 4</span>
+        <div class="mp-ic">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>Consultoria em Cibersegurança</h3>
-        <p>Avaliamos a maturidade de segurança da sua empresa, identificamos vulnerabilidades e desenhamos o roadmap de proteção ideal para seu negócio.</p>
+        <h3>02. Proteção</h3>
+        <p>Implementamos controles, mapeamos riscos e blindamos vulnerabilidades. Seus dados e os dos seus clientes ficam protegidos.</p>
+        <div class="mp-result">Resultado: SGSI implementado e controles ativos</div>
       </div>
-      <div class="card servico-card au d3">
-        <div class="sv-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Implementação de SGSI</h3>
-        <p>Estruturamos seu Sistema de Gestão de Segurança da Informação do zero, com políticas, controles e processos alinhados às melhores práticas do mercado.</p>
-      </div>
-      <div class="card servico-card au d4">
-        <div class="sv-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <h3>Preparação para ISO 27001 e 27701</h3>
-        <p>Conduzimos sua empresa em todo o processo de adequação às normas ISO de segurança e privacidade da informação.</p>
-      </div>
-      <div class="card servico-card au d5">
-        <div class="sv-ic">
+
+      <div class="card metodo-card au d4">
+        <span class="mp-tag">Mês 5 e 6</span>
+        <div class="mp-ic">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Gestão de Riscos e Compliance</h3>
-        <p>Identificamos, classificamos e mitigamos riscos de segurança da informação, garantindo conformidade com LGPD e regulamentações do setor.</p>
+        <h3>03. Prevenção</h3>
+        <p>Treinamos seu time e criamos cultura de segurança. Você não depende de sorte. Depende de método.</p>
+        <div class="mp-result">Resultado: time preparado e pronto para auditoria</div>
       </div>
     </div>
   </section>
@@ -572,97 +591,91 @@
   <section id="diferenciais">
     <div class="gl au"></div>
     <h2 class="au d1">Por que a <span class="gt">Blind Corp</span></h2>
-    <p class="au d2 section-lead sm">Não somos apenas consultores. Somos parceiros na proteção do seu negócio.</p>
+    <p class="au d2 section-lead sm">Não somos mais uma consultoria de segurança. Somos parceiros de crescimento para software houses.</p>
     <div class="dif-grid">
       <div class="card dif-card au d2">
         <div class="df-num">01</div>
-        <h3>Abordagem personalizada</h3>
-        <p>Cada empresa tem riscos únicos. Desenhamos soluções sob medida, não templates prontos.</p>
+        <h3>Foco exclusivo em software houses</h3>
+        <p>A gente não atende qualquer empresa. Só software houses. Por isso entende sua operação, seus clientes e seus desafios.</p>
       </div>
       <div class="card dif-card au d3">
         <div class="df-num">02</div>
-        <h3>Visão de negócio</h3>
-        <p>Falamos a linguagem do seu board. Conectamos segurança da informação a resultados de negócio.</p>
+        <h3>Método 3P proprietário</h3>
+        <p>Padronização, Proteção, Prevenção. Não é improviso. É sistema. Testado em implementações reais.</p>
       </div>
       <div class="card dif-card au d4">
         <div class="df-num">03</div>
-        <h3>Especialistas certificados</h3>
-        <p>Profissionais com certificações internacionais e experiência prática em implementação de SGSI.</p>
+        <h3>Foco em ROI, não em conformidade</h3>
+        <p>A gente não vende ISO 27001. A gente desbloqueia contratos. Segurança é investimento que se paga.</p>
       </div>
       <div class="card dif-card au d5">
         <div class="df-num">04</div>
-        <h3>Do diagnóstico à certificação</h3>
-        <p>Acompanhamos todo o ciclo: avaliação inicial, implementação, auditoria interna e preparação para certificação.</p>
+        <h3>Transparência radical</h3>
+        <p>Se tem 47 vulnerabilidades, o relatório diz 47. Sem maquiagem. Sem surpresa. Sem consultoria que some.</p>
       </div>
       <div class="card dif-card au d1">
         <div class="df-num">05</div>
-        <h3>Confidencialidade absoluta</h3>
-        <p>Somos blindados por princípio. Suas vulnerabilidades e dados estratégicos permanecem sob sigilo total.</p>
-      </div>
-      <div class="card dif-card au d2">
-        <div class="df-num">06</div>
-        <h3>LGPD e ISO na prática</h3>
-        <p>Não entregamos teoria. Entregamos políticas, procedimentos e controles que funcionam no dia a dia.</p>
+        <h3>Conexão com grandes players</h3>
+        <p>A gente sabe o que eles exigem. Porque já trabalhou com eles. E conduz sua software house até lá.</p>
       </div>
     </div>
   </section>
 
-  <!-- NORMAS ISO -->
-  <section id="normas">
+  <!-- PARA QUEM É -->
+  <section id="paraquem">
     <div class="gl au"></div>
-    <h2 class="au d1">ISO 27001 e <span class="gt">ISO 27701</span></h2>
-    <p class="au d2 section-lead">
-      As normas internacionais que atestam que sua empresa leva segurança da informação a sério — e que abrem portas para negócios com grandes corporações.
-    </p>
-    <div class="servicos-grid">
-      <div class="card servico-card au d3">
-        <div class="sv-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
-        <h3>ISO 27001</h3>
-        <p>Padrão internacional para Sistemas de Gestão de Segurança da Informação (SGSI). Define requisitos para proteger confidencialidade, integridade e disponibilidade dos dados.</p>
+    <h2 class="au d1">A Blind Corp é <span class="gt">para você?</span></h2>
+    <p class="au d2 section-lead sm">A gente não atende todo mundo. E isso é proposital.</p>
+    <div class="para-grid">
+      <div class="card para-card sim au d2">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          É para você se
+        </h3>
+        <ul>
+          <li>Sua empresa é uma software house</li>
+          <li>Você quer conquistar grandes players</li>
+          <li>Está perdendo contratos por falta de ISO 27001</li>
+          <li>Tem de 20 a 100 funcionários</li>
+          <li>Valoriza método, transparência e resultado</li>
+        </ul>
       </div>
-      <div class="card servico-card au d4">
-        <div class="sv-ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <h3>ISO 27701</h3>
-        <p>Extensão da ISO 27001 focada em privacidade da informação. Essencial para empresas que tratam dados pessoais e precisam demonstrar conformidade com a LGPD.</p>
+      <div class="card para-card nao au d3">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Não é para você se
+        </h3>
+        <ul>
+          <li>Você não é uma software house</li>
+          <li>Quer apenas "um selo" para pendurar na parede</li>
+          <li>Está buscando a consultoria mais barata</li>
+          <li>Não está disposto a investir em segurança como diferencial</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- PROCESSO -->
-  <section id="processo">
+  <!-- SOBRE / BRAND STORY -->
+  <section id="sobre">
     <div class="gl au"></div>
-    <h2 class="au d1">Como <span class="gt">funciona</span></h2>
-    <p class="au d2 section-lead sm">Da primeira conversa à certificação, um processo transparente e colaborativo.</p>
+    <h2 class="au d1">De onde a <span class="gt">Blind Corp</span> vem</h2>
 
-    <div class="processo-steps">
-      <div class="step au d2">
-        <div class="step-num">Etapa 1</div>
-        <h3>Diagnóstico inicial</h3>
-        <p>Entendemos sua operação, seus ativos de informação e o nível atual de maturidade em segurança. Essa avaliação é gratuita e sem compromisso.</p>
-      </div>
-      <div class="step au d3">
-        <div class="step-num">Etapa 2</div>
-        <h3>Análise de riscos e GAP</h3>
-        <p>Identificamos as vulnerabilidades e medimos a distância entre sua situação atual e os requisitos das normas ISO 27001 e 27701.</p>
-      </div>
-      <div class="step au d4">
-        <div class="step-num">Etapa 3</div>
-        <h3>Plano de implementação</h3>
-        <p>Desenhamos o roadmap completo: políticas, controles, procedimentos e cronograma de implantação do SGSI.</p>
-      </div>
-      <div class="step au d5">
-        <div class="step-num">Etapa 4</div>
-        <h3>Execução e treinamento</h3>
-        <p>Implementamos as soluções lado a lado com sua equipe, garantindo que todos entendam e adotem as novas práticas de segurança.</p>
-      </div>
-      <div class="step au d6">
-        <div class="step-num">Etapa 5</div>
-        <h3>Auditoria e certificação</h3>
-        <p>Realizamos auditoria interna pré-certificação e acompanhamos sua empresa até a conquista do selo ISO.</p>
+    <div class="sobre-grid au d2">
+      <img src="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png" alt="Fernando - Blind Corp" class="sobre-foto">
+      <div class="sobre-texto">
+        <p>Eu não vim da TI. Vim da <strong>indústria</strong>. Em 2021, entrei numa fábrica de equipamentos para locomotivas. Era hardware e software. Foi meu primeiro contato com tecnologia. E foi ali que descobri minha vocação: <strong>estrutura, processo, auditoria</strong>.</p>
+
+        <p>No final de 2022, recebi um convite para trabalhar numa <strong>software house</strong>. Minha missão: implementar um SGPI do zero. Havia uma consultoria apoiando. Foi meu primeiro contato direto com consultoria. E foi ali que eu percebi: <strong>consultoria genérica não entende software house</strong>.</p>
+
+        <p>Implementei o SGPI do zero. Depois evoluí para SGI. Depois implementei ISO 20000 do zero também. Conduzi as implementações. Falei com diretores. Treinei times. Passei por auditorias. E deu certo.</p>
+
+        <div class="sobre-quote">"Quando pedi uma posição de liderança, a empresa disse não. Foi o melhor 'não' da minha vida."</div>
+
+        <p>Percebi que podia <strong>multiplicar minha contribuição</strong>. Atender várias software houses. Transformar minha capacidade em negócio. Sempre fui didático. Sempre falei com C-level de igual para igual. Sempre conduzi auditoria como parceiro, não como fiscal.</p>
+
+        <p>Criei a <strong>Blind Corp</strong> e o <strong>Método 3P</strong>. Em 6 meses, sua software house está pronta para conquistar grandes players.</p>
+
+        <p><strong>Blindar para crescer.</strong></p>
       </div>
     </div>
   </section>
@@ -671,8 +684,8 @@
   <section id="diagnostico">
     <div class="cta-inner as">
       <div class="gl ce"></div>
-      <h2><span class="gt">Pronto para blindar</span> sua operação?</h2>
-      <p>Solicite um <strong style="color:#F5F2EB;">diagnóstico gratuito de segurança da informação</strong>. Em até 24 horas úteis, um especialista da Blind Corp entrará em contato para entender seus desafios e desenhar os primeiros passos.</p>
+      <h2><span class="gt">Pronto</span> para conquistar grandes players?</h2>
+      <p>Solicite um <strong style="color:#F5F2EB;">diagnóstico gratuito</strong>. Em até 24 horas úteis, um especialista da Blind Corp vai entender quanto sua software house está deixando de ganhar por falta de blindagem.</p>
       <div class="cta-buttons">
         <button class="btn-primary" onclick="openModal()">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
@@ -771,10 +784,10 @@
     const email = document.getElementById('inputEmail').value.trim();
     const whatsapp = document.getElementById('inputWhatsapp').value.trim();
     const empresa = document.getElementById('inputEmpresa').value.trim();
-    const porte = document.getElementById('inputPorte').value;
+    const funcionarios = document.getElementById('inputFuncionarios').value;
     const preocupacao = document.getElementById('inputPreocupacao').value;
 
-    if (!nome || !email || !whatsapp || !empresa || !porte || !preocupacao) {
+    if (!nome || !email || !whatsapp || !empresa || !funcionarios || !preocupacao) {
       alert('Por favor, preencha todos os campos.');
       return;
     }
@@ -787,7 +800,7 @@
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, email, whatsapp, empresa, porte, preocupacao })
+        body: JSON.stringify({ nome, email, whatsapp, empresa, funcionarios, preocupacao })
       });
     } catch (err) {
       // no-cors não retorna erro real
