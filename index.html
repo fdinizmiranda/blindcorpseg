@@ -125,23 +125,22 @@
   .problema-destaque { font-size: clamp(22px, 3vw, 30px); line-height: 1.45; color: #F5F2EB; font-weight: 600; margin-bottom: 28px; }
   .problema-destaque strong { color: #D1D5DB; }
 
-  /* METODO 3P — COM FRAMEWORK CONSULTORIA */
+  /* METODO 3P */
   .metodo-intro { margin-bottom: 48px; }
-  .metodo-intro .framework-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px; background: rgba(107,114,128,.08); border: 1px solid rgba(107,114,128,.18); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 16px; }
-  .metodo-fases { display: flex; flex-direction: column; gap: 32px; }
+  .metodo-intro .metodo-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px; background: rgba(107,114,128,.08); border: 1px solid rgba(107,114,128,.18); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 16px; }
+  .metodo-fases { display: flex; flex-direction: column; gap: 28px; }
   .metodo-fase { display: grid; grid-template-columns: 200px 1fr; gap: 32px; align-items: start; padding: 36px 32px; border-radius: 22px; background: rgba(255,255,255,.015); border: 1px solid rgba(107,114,128,.06); transition: border-color .4s ease, background .3s ease; }
   .metodo-fase:hover { border-color: rgba(107,114,128,.18); background: rgba(255,255,255,.025); }
   .metodo-fase-num { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #6B7280; margin-bottom: 10px; }
   .metodo-fase h3 { font-size: 26px; font-weight: 800; margin-bottom: 8px; line-height: 1.2; }
   .metodo-fase .fase-tag { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 14px; }
-  .fase-tag.diagnostico { background: rgba(107,114,128,.12); color: #9CA3AF; border: 1px solid rgba(107,114,128,.2); }
-  .fase-tag.estruturacao { background: rgba(107,114,128,.14); color: #B0B5BD; border: 1px solid rgba(107,114,128,.25); }
-  .fase-tag.execucao { background: rgba(107,114,128,.16); color: #D1D5DB; border: 1px solid rgba(107,114,128,.3); }
+  .fase-tag.padronizacao { background: rgba(107,114,128,.12); color: #9CA3AF; border: 1px solid rgba(107,114,128,.2); }
+  .fase-tag.protecao { background: rgba(107,114,128,.14); color: #B0B5BD; border: 1px solid rgba(107,114,128,.25); }
+  .fase-tag.prevencao { background: rgba(107,114,128,.16); color: #D1D5DB; border: 1px solid rgba(107,114,128,.3); }
   .metodo-fase-texto { padding-top: 4px; }
   .metodo-fase-texto p { font-size: 15px; line-height: 1.75; margin-bottom: 14px; }
   .metodo-fase-texto .fase-entregaveis { display: flex; flex-wrap: wrap; gap: 8px; }
   .entregavel-tag { padding: 6px 14px; border-radius: 999px; background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.12); font-size: 12px; font-weight: 600; color: #9CA3AF; }
-  .metodo-fase .fase-3p { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(107,114,128,.5); margin-top: 12px; }
 
   /* DIFERENCIAIS */
   .dif-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
@@ -375,7 +374,7 @@
       Blindagem para Software Houses
     </div>
     <h1 class="au d2" style="margin-top:24px;">Blindar para <span class="gt">Crescer</span></h1>
-    <p class="hero-subtitle au d3">Sua software house pronta para grandes players em 9 meses. Diagnóstico, Estruturação, Execução. Método 3P: Padronização, Proteção, Prevenção.</p>
+    <p class="hero-subtitle au d3">Sua software house pronta para grandes players em 9 meses. Método 3P: Padronização, Proteção, Prevenção.</p>
     <p class="hero-tagline au d4">Consultoria · SGSI · ISO 27001 · ISO 27701</p>
     <div class="hero-buttons au d5">
       <button class="btn-primary" onclick="openModal()">
@@ -390,11 +389,11 @@
     <div class="stats-grid au d6">
       <div>
         <div class="stat-big gray">9 meses</div>
-        <div class="stat-label">Diagnóstico à certificação</div>
+        <div class="stat-label">Da base à certificação</div>
       </div>
       <div>
-        <div class="stat-big light">3 fases</div>
-        <div class="stat-label">Diagnóstico, Estruturação, Execução</div>
+        <div class="stat-big light">3 pilares</div>
+        <div class="stat-label">Padronização, Proteção, Prevenção</div>
       </div>
       <div>
         <div class="stat-big pale">Software<br>Houses</div>
@@ -431,70 +430,75 @@
     </div>
   </section>
 
-  <!-- MÉTODO — FRAMEWORK CONSULTORIA DE ALTO VALOR -->
+  <!-- MÉTODO 3P -->
   <section id="metodo">
     <div class="gl au"></div>
-    <h2 class="au d1">Como <span class="gt">funciona</span></h2>
+    <h2 class="au d1">Método <span class="gt">3P</span></h2>
 
     <div class="metodo-intro au d2">
-      <span class="framework-badge">Framework de Consultoria</span>
+      <span class="metodo-badge">Padronização · Proteção · Prevenção</span>
       <p class="section-lead sm">
-        Nossa atuação segue o modelo de consultoria de alto valor: <strong style="color:#F5F2EB;">Diagnóstico, Estruturação e Execução</strong>. Cada fase é construída sobre um pilar do Método 3P, com etapas claras, medição de resultados e entregáveis concretos. Em 9 meses, sua software house está pronta para conquistar grandes players.
+        Três pilares. Nove meses. Nossa atuação segue um método proprietário testado em implementações reais. Cada pilar constrói a base para o próximo. Nada de template. Nada de improviso. Sua software house pronta para conquistar grandes players.
       </p>
     </div>
 
     <div class="metodo-fases">
 
-      <!-- FASE 1: DIAGNÓSTICO -->
+      <!-- PILAR 1: PADRONIZAÇÃO -->
       <div class="metodo-fase au d2">
         <div>
-          <div class="metodo-fase-num">Fase 1 · Mês 1 a 2</div>
-          <h3>Diagnóstico</h3>
-          <span class="fase-tag diagnostico">Pilar 3P · Padronização</span>
+          <div class="metodo-fase-num">Pilar 1 · Mês 1 a 3</div>
+          <h3>Padronização</h3>
+          <span class="fase-tag padronizacao">Estruturar a base</span>
         </div>
         <div class="metodo-fase-texto">
-          <p>Toda intervenção começa pela <strong>compreensão profunda da realidade da sua software house</strong>. Mapeamos o nível atual de maturidade em segurança, identificamos vulnerabilidades, lacunas em relação à ISO 27001 e estruturamos a base documental e de políticas. Nada de template. O diagnóstico é específico para o seu negócio.</p>
+          <p>Toda blindagem começa pela <strong>compreensão profunda da realidade da sua software house</strong>. Mapeamos o nível atual de maturidade, identificamos vulnerabilidades, lacunas em relação à ISO 27001 e estruturamos a base documental e de políticas. Sem chão, não há prédio.</p>
           <div class="fase-entregaveis">
             <span class="entregavel-tag">Análise de maturidade</span>
-            <span class="entregavel-tag">Mapa de riscos e GAP analysis</span>
+            <span class="entregavel-tag">GAP analysis ISO 27001</span>
+            <span class="entregavel-tag">Mapa de riscos</span>
             <span class="entregavel-tag">Políticas estruturadas</span>
+            <span class="entregavel-tag">Escopo do SGSI</span>
+            <span class="entregavel-tag">SoA</span>
             <span class="entregavel-tag">Roadmap de adequação</span>
           </div>
         </div>
       </div>
 
-      <!-- FASE 2: ESTRUTURAÇÃO -->
+      <!-- PILAR 2: PROTEÇÃO -->
       <div class="metodo-fase au d3">
         <div>
-          <div class="metodo-fase-num">Fase 2 · Mês 3 a 5</div>
-          <h3>Estruturação</h3>
-          <span class="fase-tag estruturacao">Pilar 3P · Proteção</span>
+          <div class="metodo-fase-num">Pilar 2 · Mês 4 a 6</div>
+          <h3>Proteção</h3>
+          <span class="fase-tag protecao">Blindar a operação</span>
         </div>
         <div class="metodo-fase-texto">
-          <p>Com o diagnóstico em mãos, partimos para a <strong>implementação do SGSI e dos controles de segurança</strong>. Estruturamos processos, implantamos rotinas de gestão, blindamos vulnerabilidades e adequamos sua software house aos requisitos da ISO 27001 e 27701. Cada controle é implementado com método, não com improviso.</p>
+          <p>Com a base estruturada, partimos para a <strong>implementação</strong>. Papel vira prática. Implantamos o SGSI, ativamos controles de segurança, estruturamos a gestão de riscos e adequamos sua software house aos requisitos da ISO 27001 e 27701. Cada controle é implementado com método, não com improviso.</p>
           <div class="fase-entregaveis">
             <span class="entregavel-tag">SGSI implementado</span>
             <span class="entregavel-tag">Controles de segurança ativos</span>
-            <span class="entregavel-tag">Adequação ISO 27001</span>
+            <span class="entregavel-tag">Adequação ISO 27001/27701</span>
             <span class="entregavel-tag">Gestão de riscos operacional</span>
+            <span class="entregavel-tag">Monitoramento contínuo</span>
           </div>
         </div>
       </div>
 
-      <!-- FASE 3: EXECUÇÃO -->
+      <!-- PILAR 3: PREVENÇÃO -->
       <div class="metodo-fase au d4">
         <div>
-          <div class="metodo-fase-num">Fase 3 · Mês 6 a 9</div>
-          <h3>Execução</h3>
-          <span class="fase-tag execucao">Pilar 3P · Prevenção</span>
+          <div class="metodo-fase-num">Pilar 3 · Mês 7 a 9</div>
+          <h3>Prevenção</h3>
+          <span class="fase-tag prevencao">Cultura que se sustenta</span>
         </div>
         <div class="metodo-fase-texto">
-          <p>A fase final transforma segurança em <strong>cultura e resultado mensurável</strong>. Treinamos seu time, realizamos auditoria interna pré-certificação, consolidamos a cultura de segurança e preparamos sua software house para a auditoria externa. Você não depende de sorte. Depende de método.</p>
+          <p>A fase final transforma segurança em <strong>cultura</strong>. Treinamos seu time, realizamos auditoria interna pré-certificação, consolidamos a cultura de segurança e preparamos sua software house para a auditoria externa. Você não depende de sorte. Depende de método. A blindagem se sustenta de dentro para fora.</p>
           <div class="fase-entregaveis">
             <span class="entregavel-tag">Time treinado</span>
             <span class="entregavel-tag">Auditoria interna</span>
             <span class="entregavel-tag">Preparação para certificação</span>
             <span class="entregavel-tag">Cultura de segurança consolidada</span>
+            <span class="entregavel-tag">Pronto para grandes players</span>
           </div>
         </div>
       </div>
@@ -584,7 +588,7 @@
 
         <p>A decisão foi clara: transformar capacidade individual em <strong>negócio escalável</strong>. Atender várias software houses ao mesmo tempo. Levar para cada cliente o método que já tinha sido testado, validado e aprovado em implementações reais.</p>
 
-        <p>Nasceu a <strong>Blind Corp</strong>. Nasceu o <strong>Método 3P</strong>. Nasceu a promessa de 9 meses para preparar sua software house para conquistar grandes players.</p>
+        <p>Nasceu a <strong>Blind Corp</strong>. Nasceu o <strong>Método 3P: Padronização, Proteção, Prevenção</strong>. Nasceu a promessa de 9 meses para preparar sua software house para conquistar grandes players.</p>
 
         <p><strong>Blindar para crescer.</strong></p>
       </div>
