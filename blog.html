@@ -17,12 +17,12 @@
     .hero h2 { font-size: 2.2rem; margin-bottom: 10px; }
     .hero p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
     .blog-grid { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+    .card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
     .card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-    .card-body { padding: 25px; }
-    .card-tag { display: inline-block; background: #e0f0ff; color: #0d1b2a; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; text-transform: uppercase; }
+    .card-body { padding: 25px; flex: 1; display: flex; flex-direction: column; }
+    .card-tag { display: inline-block; background: #e0f0ff; color: #0d1b2a; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; text-transform: uppercase; width: fit-content; }
     .card-body h3 { font-size: 1.3rem; margin-bottom: 10px; color: #0d1b2a; }
-    .card-body p { font-size: 0.95rem; color: #555; margin-bottom: 15px; }
+    .card-body p { font-size: 0.95rem; color: #555; margin-bottom: 15px; flex: 1; }
     .card-body a { color: #0d6efd; text-decoration: none; font-weight: 600; }
     .card-body a:hover { text-decoration: underline; }
     footer { background: #0d1b2a; color: #aaa; text-align: center; padding: 25px 20px; font-size: 0.85rem; }
@@ -50,4 +50,26 @@
     <article class="card">
       <div class="card-body">
         <span class="card-tag">ISO 27001</span>
-        <h3>ISO 27001 para
+        <h3>ISO 27001 para Software Houses: o guia essencial</h3>
+        <p>Entenda por que a certificação ISO 27001 é estratégica para empresas de desenvolvimento de software e como ela abre portas para contratos maiores.</p>
+        <a href="artigo-iso-27001-software-house.html">Ler artigo</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-body">
+        <span class="card-tag">Custos</span>
+        <h3>Quanto custa a certificação ISO 27001 em 2026?</h3>
+        <p>Um panorama realista dos investimentos necessários para conquistar a certificação, incluindo consultoria, auditoria e manutenção.</p>
+        <a href="artigo-quanto-custa-iso-27001.html">Ler artigo</a>
+      </div>
+    </article>
+
+  </section>
+
+  <footer>
+    <p>2026 Consultoria ISO 27001. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
