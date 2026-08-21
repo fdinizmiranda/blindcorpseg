@@ -1,0 +1,13 @@
+# robots.txt - Blind Corp
+# Permite rastreamento total do site
+
+User-agent: *
+Allow: /
+
+# Bloqueia arquivos internos desnecessários
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://blindcorpseg.com.br/sitemap.xml
