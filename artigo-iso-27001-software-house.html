@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISO 27001 para Software Houses: Guia Completo 2026 | Blind Corp</title>
+<meta name="description" content="Guia completo sobre ISO 27001 para software houses. Entenda a certificação, requisitos, etapas e como se preparar em 9 meses sem retrabalho.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://blindcorpseg.com.br/artigo-iso-27001-software-house.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050D1A;
+    color: #F5F2EB;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.8;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(900px 420px at 72% 18%, rgba(107,114,128,.10) 0%, transparent 42%),
+      radial-gradient(800px 380px at 30% 25%, rgba(10,31,61,.9) 0%, transparent 52%),
+      linear-gradient(180deg, #0A1F3D 0%, #0D1525 45%, #050D1A 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .18;
+    background-image: radial-gradient(rgba(107,114,128,.06) .8px, transparent .8px);
+    background-size: 24px 24px;
+  }
+
+  .gt {
+    background: linear-gradient(135deg, #6B7280 0%, #D1D5DB 50%, #6B7280 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .nav-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(5,13,26,.78); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(107,114,128,.08);
+  }
+  .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: .05em; color: #F5F2EB; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { color: #9CA3AF; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; transition: color .3s ease; }
+  .nav-links a:hover, .nav-links a.active { color: #D1D5DB; }
+  .nav-cta { padding: 10px 22px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 13px; text-decoration: none; transition: all .3s ease; border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(107,114,128,.35); }
+
+  .article-wrap { padding: 120px 20px 80px; max-width: 760px; margin: 0 auto; }
+
+  .breadcrumb { font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 28px; letter-spacing: .03em; }
+  .breadcrumb a { color: #9CA3AF; text-decoration: none; }
+  .breadcrumb a:hover { color: #D1D5DB; }
+
+  .article-tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 18px; }
+
+  .article-title { font-size: clamp(30px, 5vw, 44px); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 20px; }
+
+  .article-meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(107,114,128,.1); }
+
+  .article-body h2 { font-size: 26px; font-weight: 800; margin: 44px 0 18px; letter-spacing: -.02em; }
+  .article-body h3 { font-size: 20px; font-weight: 700; margin: 32px 0 14px; }
+  .article-body p { font-size: 17px; color: #B0B5BD; margin-bottom: 22px; }
+  .article-body ul, .article-body ol { margin: 0 0 24px 24px; }
+  .article-body li { font-size: 16px; color: #B0B5BD; margin-bottom: 10px; }
+  .article-body strong { color: #F5F2EB; }
+  .article-body a { color: #D1D5DB; text-decoration: underline; text-underline-offset: 3px; }
+
+  .callout { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-left: 3px solid #6B7280; border-radius: 14px; padding: 24px 26px; margin: 32px 0; }
+  .callout p { margin: 0; font-size: 16px; }
+
+  .cta-box { margin: 56px 0; text-align: center; padding: 48px 40px; background: linear-gradient(145deg, rgba(10,20,35,.95), rgba(13,21,37,.98)); border: 1px solid rgba(107,114,128,.15); border-radius: 24px; }
+  .cta-box h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+  .cta-box p { font-size: 15px; color: #9CA3AF; margin-bottom: 28px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 15px; text-decoration: none; transition: all .3s ease; box-shadow: 0 8px 30px rgba(107,114,128,.25); border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+
+  .related { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(107,114,128,.1); }
+  .related h3 { font-size: 18px; margin-bottom: 20px; }
+  .related a { display: block; color: #9CA3AF; text-decoration: none; font-size: 15px; margin-bottom: 12px; transition: color .3s ease; }
+  .related a:hover { color: #D1D5DB; }
+
+  .footer-bar { text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(107,114,128,.08); }
+  .footer-bar p { font-size: 13px; color: rgba(156,163,175,.35); letter-spacing: .05em; }
+
+  .mobile-menu-toggle { display: none; background: none; border: none; color: #D1D5DB; cursor: pointer; padding: 6px; }
+
+  @keyframes shimmer { 0% { background-position: -200% center } 100% { background-position: 200% center } }
+
+  @media (max-width: 900px) {
+    .nav-bar { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(5,13,26,.96); padding: 20px; gap: 16px; align-items: flex-start; }
+    .mobile-menu-toggle { display: block; }
+    .nav-cta.desktop-only { display: none; }
+    .article-wrap { padding: 100px 20px 60px; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ISO 27001 para Software Houses: Guia Completo 2026",
+  "description": "Guia completo sobre ISO 27001 para software houses. Entenda a certificação, requisitos, etapas e como se preparar em 9 meses sem retrabalho.",
+  "image": "https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png",
+  "datePublished": "2026-08-21",
+  "dateModified": "2026-08-21",
+  "author": {
+    "@type": "Organization",
+    "name": "Blind Corp"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blind Corp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png"
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<nav class="nav-bar">
+  <a href="index.html" class="nav-logo">
+    <img src="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses">
+    Blind Corp
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="index.html#servicos">Serviços</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+  </ul>
+  <a href="index.html#diagnostico" class="nav-cta desktop-only">Solicitar Diagnóstico</a>
+  <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="index.html">Início</a> &gt; <a href="blog.html">Blog</a> &gt; <span>ISO 27001 para Software Houses</span>
+  </nav>
+
+  <span class="article-tag">ISO 27001</span>
+  <h1 class="article-title">ISO 27001 para software houses: o guia <span class="gt">completo</span></h1>
+
+  <div class="article-meta">
+    <span>Por Blind Corp</span>
+    <span>21 de agosto de 2026</span>
+    <span>Leitura: 12 min</span>
+  </div>
+
+  <div class="article-body">
+
+    <p>Se sua software house quer atender bancos, seguradoras, fintechs ou grandes indústrias, existe um filtro que decide se você entra na concorrência ou fica de fora: a <strong>ISO 27001</strong>. Este guia explica, sem enrolação, o que é a norma, o que ela exige da sua operação e como se preparar em nove meses sem retrabalho.</p>
+
+    <p>Não é sobre segurança pela segurança. É sobre <strong>destravar receita</strong>. Cada contrato bloqueado por falta de certificação é receita que vai para o concorrente.</p>
+
+    <h2>O que é a ISO 27001 e por que ela trava contratos</h2>
+
+    <p>A ISO 27001 é a norma internacional que define como uma empresa deve estruturar a <strong>gestão da segurança da informação</strong>. Na prática, ela comprova para o mercado que sua empresa protege dados com controles reconhecidos, auditados e sustentáveis.</p>
+
+    <p>Para uma software house, isso não é um selo decorativo. É <strong>pré-requisito comercial</strong>. Grandes players não abrem mais negociação com fornecedores que não comprovem segurança. Sem certificação, você pode ser a melhor opção técnica e ainda assim perder o contrato.</p>
+
+    <div class="callout">
+      <p><strong>O ponto central:</strong> ISO 27001 não é sobre segurança pela segurança. É sobre <strong>destravar receita</strong>. Cada contrato bloqueado por falta de certificação é receita que vai para o concorrente.</p>
+    </div>
+
+    <h2>Por que software houses precisam agora</h2>
+
+    <p>O mercado mudou. Até 2020, segurança da informação era um diferencial competitivo. Em 2026, é <strong>barreira de entrada</strong>. Se sua software house atende ou quer atender:</p>
+
+    <ul>
+      <li>Bancos e fintechs</li>
+      <li>Seguradoras e corretoras</li>
+      <li>Empresas de saúde e farmácias</li>
+      <li>Indústrias com dados sensíveis</li>
+      <li>Órgãos públicos e empresas estatais</li>
+    </ul>
+
+    <p>Você precisa da ISO 27001. Não é questão de "se" vai precisar. É questão de "quando" vai perder o próximo contrato por não ter.</p>
+
+    <h3>O custo invisível de não certificar</h3>
+
+    <p>Muitos donos de software house calculam o custo da certificação e param por aí. O erro é não calcular o <strong>custo de oportunidade</strong>:</p>
+
+    <ul>
+      <li>Quantos contratos você perdeu nos últimos 12 meses porque o cliente exigia certificação?</li>
+      <li>Quantas RFPs (Request for Proposal) você nem recebeu porque não estava na lista de fornecedores aprovados?</li>
+      <li>Quanto tempo seu time comercial gasta explicando que "tem segurança" sem ter um selo que prove?</li>
+    </ul>
+
+    <p>A resposta costuma ser assustadora. E é exatamente por isso que a certificação se paga em meses, não em anos.</p>
+
+    <h2>O que a norma exige da sua operação</h2>
+
+    <p>A ISO 27001 se baseia em três pilares que sustentam todo o Sistema de Gestão de Segurança da Informação (SGSI):</p>
+
+    <ul>
+      <li><strong>Confidencialidade:</strong> a informação só chega a quem tem autorização.</li>
+      <li><strong>Integridade:</strong> a informação não é alterada indevidamente.</li>
+      <li><strong>Disponibilidade:</strong> a informação está acessível quando o negócio precisa.</li>
+    </ul>
+
+    <p>Para atingir esses pilares, a norma define <strong>93 controles de segurança</strong> organizados em quatro categorias:</p>
+
+    <ol>
+      <li><strong>Controles organizacionais:</strong> políticas, papéis, responsabilidades, gestão de fornecedores.</li>
+      <li><strong>Controles de pessoas:</strong> treinamento, conscientização, processo disciplinar.</li>
+      <li><strong>Controles físicos:</strong> controle de acesso a instalações, proteção contra ameaças ambientais.</li>
+      <li><strong>Controles tecnológicos:</strong> criptografia, controle de acesso lógico, backup, gestão de vulnerabilidades.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>Importante:</strong> Você não precisa implementar todos os 93 controles. A norma exige que você <strong>analise cada um</strong> e aplique os que fazem sentido para o seu contexto de negócio e riscos. O que não pode é ignorar a análise.</p>
+    </div>
+
+    <h3>Documentação obrigatória</h3>
+
+    <p>A ISO 27001 exige documentação específica. Os principais documentos que você vai precisar:</p>
+
+    <ul>
+      <li><strong>Escopo do SGSI:</strong> o que está dentro e fora do sistema de gestão.</li>
+      <li><strong>Política de Segurança da Informação:</strong> diretrizes gerais aprovadas pela direção.</li>
+      <li><strong>Análise de Riscos:</strong> metodologia, critérios de aceitação e resultados.</li>
+      <li><strong>Plano de Tratamento de Riscos:</strong> como cada risco será mitigado.</li>
+      <li><strong>Declaração de Aplicabilidade (SoA):</strong> quais controles você aplica e por quê.</li>
+      <li><strong>Procedimentos operacionais:</strong> controle de acesso, backup, gestão de incidentes, etc.</li>
+      <li><strong>Registros de evidência:</strong> treinamentos, auditorias, revisões, incidentes.</li>
+    </ul>
+
+    <p>Aqui está o erro mais comum: tratar a ISO 27001 como projeto de documentação. Aí o processo vira papel empilhado, o time não adota, e a auditoria reprova.</p>
+
+    <h2>As etapas até a certificação</h2>
+
+    <p>O caminho não é um formulário que se preenche. É um processo estruturado, que no <strong>Método 3P da Blind Corp</strong> se divide assim:</p>
+
+    <h3>Fase 1: Padronização (meses 1 a 3)</h3>
+
+    <p>O objetivo aqui é entender onde você está e onde precisa chegar. As atividades principais:</p>
+
+    <ul>
+      <li><strong>Mapeamento de maturidade:</strong> avaliar o estado atual da segurança na empresa.</li>
+      <li><strong>GAP analysis:</strong> comparar o que você tem com o que a norma exige.</li>
+      <li><strong>Definição de escopo:</strong> delimitar o que entra no SGSI (toda a empresa ou áreas específicas).</li>
+      <li><strong>Estruturação da base documental:</strong> criar políticas, procedimentos e formulários.</li>
+    </ul>
+
+    <p>Nessa fase, você também define o <strong>comitê de segurança</strong> e os <strong>donos de processo</strong>. Sem governança clara, o projeto não anda.</p>
+
+    <h3>Fase 2: Proteção (meses 4 a 7)</h3>
+
+    <p>Agora é hora de implementar o SGSI na prática. As atividades principais:</p>
+
+    <ul>
+      <li><strong>Análise de riscos:</strong> identificar ativos, ameaças, vulnerabilidades e impactos.</li>
+      <li><strong>Plano de tratamento de riscos:</strong> definir como cada risco será mitigado, transferido, aceito ou evitado.</li>
+      <li><strong>Implementação de controles:</strong> ativar os controles tecnológicos, físicos e organizacionais.</li>
+      <li><strong>Treinamento do time:</strong> conscientizar todos os colaboradores sobre suas responsabilidades.</li>
+      <li><strong>Gestão de fornecedores:</strong> avaliar e contratar fornecedores com critérios de segurança.</li>
+    </ul>
+
+    <p>Essa fase é a mais trabalhosa. É onde a teoria encontra a realidade da operação. E é onde a maioria das empresas trava, porque subestima o esforço de mudança cultural.</p>
+
+    <h3>Fase 3: Prevenção (meses 8 a 9)</h3>
+
+    <p>Agora você se prepara para a auditoria externa. As atividades principais:</p>
+
+    <ul>
+      <li><strong>Auditoria interna:</strong> verificar se o SGSI está conforme a norma e identificar não conformidades.</li>
+      <li><strong>Revisão pela direção:</strong> a alta gestão analisa o desempenho do SGSI e decide sobre melhorias.</li>
+      <li><strong>Correção de não conformidades:</strong> ajustar o que foi identificado na auditoria interna.</li>
+      <li><strong>Auditoria externa:</strong> a certificadora independente avalia o SGSI e emite o certificado.</li>
+    </ul>
+
+    <p>Se você chegou até aqui com disciplina, a auditoria externa é tranquila. Se chegou no improviso, é onde tudo desmorona.</p>
+
+    <h2>Quanto tempo leva de verdade</h2>
+
+    <p>A resposta honesta: <strong>de 6 a 12 meses</strong>, dependendo do tamanho da empresa, da maturidade atual e do esforço dedicado.</p>
+
+    <p>Software houses menores (até 30 pessoas) costumam fechar em 6 a 8 meses. Empresas maiores (50+ pessoas) levam 9 a 12 meses. O fator crítico não é o tamanho, é o <strong>comprometimento da direção</strong>.</p>
+
+    <p>Se o dono ou CEO não priorizar, o projeto vira mais uma tarefa na pilha. E tarefa que não é prioridade não anda.</p>
+
+    <h3>O que acelera o processo</h3>
+
+    <ul>
+      <li><strong>Consultoria especializada:</strong> quem já fez 50 certificações não vai cometer os erros de quem está fazendo a primeira.</li>
+      <li><strong>Metodologia estruturada:</strong> um método claro evita retrabalho e decisões erradas.</li>
+      <li><strong>Ferramentas de gestão:</strong> planilhas funcionam, mas sistemas dedicados agilizam o controle de evidências.</li>
+      <li><strong>Time dedicado:</strong> ter alguém responsável pelo projeto (mesmo que parcial) faz toda a diferença.</li>
+    </ul>
+
+    <h2>Erros que travam o processo</h2>
+
+    <p>Depois de acompanhar dezenas de projetos de certificação, os erros mais comuns são:</p>
+
+    <h3>1. Tratar como projeto de TI</h3>
+
+    <p>A ISO 27001 não é um projeto de TI. É um projeto de <strong>negócio</strong>. Envolve pessoas, processos, fornecedores, direção. Se você delega só para o time técnico, vai falhar.</p>
+
+    <h3>2. Copiar documentação de outra empresa</h3>
+
+    <p>Cada empresa tem seu contexto, seus riscos, sua operação. Copiar política de segurança da internet ou de outra empresa é receita para reprovação na auditoria. A documentação precisa refletir <strong>sua realidade</strong>.</p>
+
+    <h3>3. Ignorar a gestão de fornecedores</h3>
+
+    <p>Muitas software houses focam nos controles internos e esquecem que a norma exige gestão de fornecedores. Se você usa cloud (AWS, Azure, GCP), se terceiriza desenvolvimento, se contrata freelancers, tudo isso entra no escopo.</p>
+
+    <h3>4. Deixar o treinamento para o final</h3>
+
+    <p>Conscientização de segurança não é um curso de 2 horas antes da auditoria. É um processo contínuo. Se o time não entende por que está fazendo, não faz direito. E o auditor percebe.</p>
+
+    <h3>5. Subestimar a auditoria interna</h3>
+
+    <p>A auditoria interna não é burocracia. É o último teste antes do auditor externo chegar. Se você pula essa etapa ou faz de qualquer jeito, vai descobrir os problemas na hora errada.</p>
+
+    <h2>Quanto custa a certificação</h2>
+
+    <p>Os custos se dividem em três categorias:</p>
+
+    <h3>1. Consultoria</h3>
+
+    <p>O valor varia conforme o tamanho da empresa e a complexidade da operação. Para software houses de até 30 pessoas, o investimento em consultoria fica entre <strong>R$ 40 mil e R$ 80 mil</strong>. Para empresas maiores, pode chegar a R$ 150 mil.</p>
+
+    <h3>2. Auditoria externa</h3>
+
+    <p>A certificadora independente cobra pela auditoria. O valor depende do tamanho da empresa e do número de dias de auditoria. Em média, entre <strong>R$ 20 mil e R$ 50 mil</strong> para a auditoria inicial (certificação).</p>
+
+    <h3>3. Custos internos</h3>
+
+    <p>Aqui entra o tempo do seu time dedicado ao projeto, possíveis investimentos em ferramentas de segurança, treinamento, etc. Esse custo varia muito, mas não subestime: costuma ser <strong>30% a 50% do custo total</strong>.</p>
+
+    <div class="callout">
+      <p><strong>Conta rápida:</strong> para uma software house de 20 pessoas, o investimento total fica entre <strong>R$ 80 mil e R$ 150 mil</strong>. Se você fecha um contrato de R$ 500 mil por ano porque tinha a certificação, o ROI é imediato.</p>
+    </div>
+
+    <h2>Como a Blind Corp acelera sua certificação</h2>
+
+    <p>O <strong>Método 3P</strong> da Blind Corp foi desenhado para software houses que querem certificar em 9 meses sem retrabalho. A diferença está em três pilares:</p>
+
+    <ul>
+      <li><strong>Padronização:</strong> mapeamos sua maturidade, fazemos o GAP analysis e estruturamos a base documental.</li>
+      <li><strong>Proteção:</strong> implementamos o SGSI e ativamos os controles de segurança.</li>
+      <li><strong>Prevenção:</strong> treinamos seu time, rodamos a auditoria interna e preparamos para a externa.</li>
+    </ul>
+
+    <p>Não é um projeto de TI. É um projeto de <strong>negócio</strong>. E o objetivo não é só certificar. É <strong>destravar receita</strong>.</p>
+
+    <h2>Próximos passos</h2>
+
+    <p>Se sua software house quer atender grandes players, a ISO 27001 não é opcional. É questão de tempo até você perder o próximo contrato por não ter.</p>
+
+    <p>O primeiro passo é um <strong>diagnóstico gratuito</strong>. Em 24 horas, você recebe um relatório com:</p>
+
+    <ul>
+      <li>O estado atual da sua segurança da informação</li>
+      <li>Os gaps críticos que precisam ser corrigidos</li>
+      <li>Uma estimativa de tempo e investimento para certificar</li>
+      <li>O ROI projetado com base nos contratos que você pode destravar</li>
+    </ul>
+
+    <p>Sem compromisso. Sem venda agressiva. Só clareza sobre onde você está e o que precisa fazer.</p>
+
+  </div>
+
+  <div class="cta-box">
+    <h3>Sua software house está pronta para os <span class="gt">grandes players</span>?</h3>
+    <p>Solicite um diagnóstico gratuito e descubra em 24 horas quanto você está deixando de ganhar.</p>
+    <a href="index.html#diagnostico" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+      Solicitar Diagnóstico
+    </a>
+  </div>
+
+  <div class="related">
+    <h3>Leia também</h3>
+    <a href="artigo-quanto-custa-iso-27001.html">Quanto custa a certificação ISO 27001?</a>
+    <a href="artigo-iso-27001-vs-27701.html">ISO 27001 vs ISO 27701: qual sua empresa precisa?</a>
+    <a href="blog.html">Ver todos os artigos →</a>
+  </div>
+
+</main>
+
+<div class="footer-bar">
+  <p>© 2026 Blind Corp — blindcorpseg.com.br. Todos os direitos reservados.</p>
+</div>
+
+<script>
+  document.getElementById('mobileToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
