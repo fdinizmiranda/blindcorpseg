@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página não encontrada | Blind Corp</title>
+<meta name="robots" content="noindex, follow">
+<meta name="description" content="Página não encontrada. Volte para o início da Blind Corp.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDQMP70Q9X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SDQMP70Q9X');
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050D1A;
+    color: #F5F2EB;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(900px 420px at 72% 18%, rgba(107,114,128,.10) 0%, transparent 42%),
+      radial-gradient(800px 380px at 30% 25%, rgba(10,31,61,.9) 0%, transparent 52%),
+      linear-gradient(180deg, #0A1F3D 0%, #0D1525 45%, #050D1A 100%);
+  }
+  .wrap { max-width: 520px; width: 100%; }
+  .logo { width: 80px; height: 80px; border-radius: 20px; margin: 0 auto 28px; display: block; }
+  .code {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(80px, 18vw, 140px);
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, #6B7280, #D1D5DB 50%, #6B7280);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: shimmer 4s linear infinite;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: clamp(24px, 4vw, 32px); font-weight: 800; margin-bottom: 12px; letter-spacing: -.02em; }
+  p { color: #9CA3AF; font-size: 15px; line-height: 1.7; margin-bottom: 32px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 32px; border-radius: 999px;
+    background: linear-gradient(135deg, #6B7280, #9CA3AF);
+    color: #050D1A; font-weight: 700; font-size: 14px; text-decoration: none;
+    transition: all .3s ease; font-family: 'Inter', sans-serif;
+  }
+  .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+  @keyframes shimmer { 0% { background-position: -200% center } 100% { background-position: 200% center } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img src="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png" alt="Blind Corp" class="logo">
+  <div class="code">404</div>
+  <h1>Página não encontrada</h1>
+  <p>A página que você procura pode ter sido movida ou não existe mais. Mas a blindagem da sua software house começa aqui.</p>
+  <a href="/" class="btn">Voltar ao início</a>
+</div>
+</body>
+</html>
