@@ -614,6 +614,11 @@
           </label>
           <div class="field-error" id="lgpdConsentError">Para continuar, marque esta opção confirmando que aceita a Política de Privacidade.</div>
         </div>
+        <!-- Campo invisível: humanos não veem, bots preenchem -->
+        <div style="position:absolute;left:-9999px;top:-9999px;height:1px;width:1px;overflow:hidden;" aria-hidden="true">
+          <label for="website">Não preencha este campo</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
         <button type="submit" class="form-submit" id="formSubmitBtn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
           Solicitar Diagnóstico
@@ -1087,6 +1092,16 @@
     }
   }
 
+  // Token do reCAPTCHA (retorna vazio se não configurado)
+  async function getRecaptchaToken() {
+    if (typeof grecaptcha === 'undefined') return '';
+    try {
+      return await grecaptcha.execute('SUA_CHAVE_SITE', { action: 'submit' });
+    } catch (e) {
+      return '';
+    }
+  }
+
   function openModal() {
     document.getElementById('modalOverlay').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -1192,21 +1207,36 @@
     // Captura o IP antes de enviar
     const ip = await getIP();
 
+    // Campo honeypot (deve vir vazio)
+    const honeypot = document.getElementById('website') ? document.getElementById('website').value : '';
+
+    // Token do reCAPTCHA (retorna vazio se ainda não configurado)
+    const recaptchaToken = await getRecaptchaToken();
+
     try {
-      await fetch(SCRIPT_URL, {
+      const response = await fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({
           nome, email, whatsapp, empresa, porte, preocupacao,
           consentimento: 'Aceito',
           consentimentoData: new Date().toISOString(),
-          ip: ip
+          ip: ip,
+          website: honeypot,
+          recaptchaToken: recaptchaToken
         })
       });
 
-      document.getElementById('modalFormContent').classList.add('hide');
-      document.getElementById('modalSuccess').classList.add('show');
+      const result = await response.json();
+
+      if (result && result.status === 'ok') {
+        document.getElementById('modalFormContent').classList.add('hide');
+        document.getElementById('modalSuccess').classList.add('show');
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Diagnóstico';
+        alert(result && result.mensagem ? result.mensagem : 'Não foi possível enviar. Tente novamente.');
+      }
     } catch (err) {
       btn.disabled = false;
       btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Diagnóstico';
