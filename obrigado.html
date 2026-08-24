@@ -9,15 +9,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDQMP70Q9X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-SDQMP70Q9X');
-</script>
-
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -63,9 +54,38 @@
   }
   .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
   @keyframes pop { from { opacity: 0; transform: scale(.6) } to { opacity: 1; transform: scale(1) } }
+
+  /* COOKIE BANNER */
+  .cookie-banner { position: fixed; bottom: 24px; left: 24px; right: 24px; max-width: 680px; margin: 0 auto; z-index: 3000; background: rgba(10,20,35,.97); border: 1px solid rgba(107,114,128,.25); border-radius: 16px; padding: 20px 24px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; box-shadow: 0 20px 60px rgba(0,0,0,.6); backdrop-filter: blur(16px); opacity: 0; transform: translateY(20px); pointer-events: none; transition: all .4s ease; }
+  .cookie-banner.show { opacity: 1; transform: translateY(0); pointer-events: all; }
+  .cookie-text { flex: 1; min-width: 220px; }
+  .cookie-text p { font-size: 13px; color: #9CA3AF; line-height: 1.6; margin: 0; }
+  .cookie-text a { color: #D1D5DB; text-decoration: underline; }
+  .cookie-actions { display: flex; gap: 10px; }
+  .cookie-btn { padding: 10px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; font-family: 'Inter', sans-serif; cursor: pointer; border: none; transition: all .3s ease; }
+  .cookie-btn.accept { background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; }
+  .cookie-btn.accept:hover { filter: brightness(1.1); transform: translateY(-2px); }
+  .cookie-btn.reject { background: transparent; border: 1px solid rgba(107,114,128,.4); color: #9CA3AF; }
+  .cookie-btn.reject:hover { border-color: #9CA3AF; color: #D1D5DB; }
+
+  @media (max-width: 600px) {
+    .cookie-banner { flex-direction: column; align-items: stretch; }
+    .cookie-actions { justify-content: flex-end; }
+  }
 </style>
 </head>
 <body>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentimento de cookies">
+  <div class="cookie-text">
+    <p>Este site usa cookies para melhorar sua experiência e analisar o tráfego, em conformidade com a LGPD. Consulte nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+  </div>
+  <div class="cookie-actions">
+    <button id="cookieAccept" class="cookie-btn accept">Aceitar</button>
+    <button id="cookieReject" class="cookie-btn reject">Recusar</button>
+  </div>
+</div>
+
 <div class="wrap">
   <img src="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png" alt="Blind Corp" class="logo">
   <div class="check">
@@ -75,5 +95,39 @@
   <p>Recebemos seus dados. Um especialista da <strong>Blind Corp</strong> entrará em contato em até <strong>24 horas úteis</strong> para agendar seu diagnóstico.</p>
   <a href="/" class="btn">Voltar ao início</a>
 </div>
+
+<script>
+  (function () {
+    const banner = document.getElementById('cookieBanner');
+    const stored = localStorage.getItem('bc_cookie_consent');
+    if (stored === 'accepted') { loadGA(); }
+    else if (stored === 'rejected') { /* GA não carrega */ }
+    else { banner.classList.add('show'); }
+
+    document.getElementById('cookieAccept').addEventListener('click', function () {
+      localStorage.setItem('bc_cookie_consent', 'accepted');
+      banner.classList.remove('show');
+      loadGA();
+    });
+    document.getElementById('cookieReject').addEventListener('click', function () {
+      localStorage.setItem('bc_cookie_consent', 'rejected');
+      banner.classList.remove('show');
+    });
+
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SDQMP70Q9X';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SDQMP70Q9X');
+    }
+  })();
+</script>
+
 </body>
 </html>
