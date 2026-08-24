@@ -296,6 +296,28 @@
   .cookie-btn.reject { background: transparent; border: 1px solid rgba(107,114,128,.4); color: #9CA3AF; }
   .cookie-btn.reject:hover { border-color: #9CA3AF; color: #D1D5DB; }
 
+  /* CTA FIXO MOBILE */
+  .mobile-cta-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 1200;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(5,13,26,.96); backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(107,114,128,.15);
+    box-shadow: 0 -8px 30px rgba(0,0,0,.35);
+    display: none;
+  }
+  .mobile-cta-bar .mc-btn {
+    width: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 20px; border-radius: 999px;
+    background: linear-gradient(135deg, #6B7280, #9CA3AF);
+    color: #050D1A; font-weight: 700; font-size: 15px;
+    font-family: 'Inter', sans-serif; letter-spacing: .02em;
+    border: none; cursor: pointer;
+    box-shadow: 0 8px 30px rgba(107,114,128,.25);
+    transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+  }
+  .mobile-cta-bar .mc-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(107,114,128,.4); filter: brightness(1.08); }
+
   /* FOOTER */
   .footer-bar { text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(107,114,128,.08); }
   .footer-bar p { font-size: 13px; color: rgba(156,163,175,.35); letter-spacing: .05em; }
@@ -325,7 +347,7 @@
     .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(5,13,26,.96); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(107,114,128,.1); padding: 20px; gap: 16px; }
     .mobile-menu-toggle { display: block; }
     .nav-cta.desktop-only { display: none; }
-    .content { padding: 80px 20px 80px; max-width: 100%; }
+    .content { padding: 80px 20px 120px; max-width: 100%; }
     .cta-inner { padding: 40px 24px; }
     .modal-box { padding: 40px 28px; max-height: 85vh; }
     .sobre-grid { grid-template-columns: 1fr; }
@@ -338,13 +360,14 @@
     .para-grid { grid-template-columns: 1fr; }
     .dif-grid, .stats-grid, .contact-grid { grid-template-columns: 1fr; }
     .dif-grid > *, .stats-grid > *, .para-grid > *, .contact-grid > * { min-width: 0; }
-    .cookie-banner { flex-direction: column; align-items: stretch; }
+    .cookie-banner { flex-direction: column; align-items: stretch; bottom: 88px; }
     .cookie-actions { justify-content: flex-end; }
+    .mobile-cta-bar { display: block; }
   }
 
   @media print {
     body::before, body::after { display: none; }
-    .nav-bar, .progress, .modal-overlay, .cookie-banner { display: none; }
+    .nav-bar, .progress, .modal-overlay, .cookie-banner, .mobile-cta-bar { display: none; }
     .content { padding: 24px; max-width: 100%; }
     section { margin-bottom: 40px; page-break-inside: avoid; }
     .au, .as { opacity: 1; animation: none; }
@@ -388,11 +411,27 @@
           "addressCountry": "BR"
         },
         {
+          "@type": "AdministrativeArea",
+          "name": "Região Metropolitana de Curitiba",
+          "addressCountry": "BR"
+        },
+        {
           "@type": "City",
           "name": "São Paulo",
           "addressCountry": "BR"
         }
       ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Curitiba",
+        "addressRegion": "PR",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.4284,
+        "longitude": -49.2733
+      },
       "founder": {
         "@type": "Person",
         "name": "Fernando",
@@ -1025,6 +1064,14 @@
   </div>
 
 </main>
+
+<!-- CTA fixo mobile -->
+<div class="mobile-cta-bar" id="mobileCtaBar">
+  <button class="mc-btn" onclick="openModal()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+    Solicitar Diagnóstico
+  </button>
+</div>
 
 <script>
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9E9aza5x-MwePyUSVE1LHN2V_hnEI-iz24C57PIqNfeuYxMfRGOlxnxrrS204sZi2/exec';
