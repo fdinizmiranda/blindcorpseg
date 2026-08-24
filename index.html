@@ -144,6 +144,7 @@
   /* PROBLEMA */
   .problema-destaque { font-size: clamp(22px, 3vw, 30px); line-height: 1.45; color: #F5F2EB; font-weight: 600; margin-bottom: 28px; }
   .problema-destaque strong { color: #D1D5DB; }
+  .stats-grid-problema { margin: 0; max-width: 100%; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 
   /* METODO 3P */
   .metodo-intro { margin-bottom: 48px; }
@@ -163,7 +164,7 @@
   .entregavel-tag { padding: 6px 14px; border-radius: 999px; background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.12); font-size: 12px; font-weight: 600; color: #9CA3AF; }
 
   /* DIFERENCIAIS */
-  .dif-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+  .dif-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
   .dif-card { padding: 28px 24px; }
   .dif-card .df-num { font-family: 'Montserrat', sans-serif; font-size: 38px; font-weight: 900; line-height: 1; background: linear-gradient(135deg, #6B7280, #9CA3AF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; opacity: .7; transition: opacity .3s ease, transform .4s cubic-bezier(.22,1,.36,1); }
   .dif-card:hover .df-num { opacity: 1; transform: scale(1.08); }
@@ -282,6 +283,17 @@
     .metodo-fase { grid-template-columns: 1fr; gap: 16px; padding: 28px 22px; }
     .metodo-fase h3 { font-size: 22px; }
     .para-grid { grid-template-columns: 1fr; }
+    .dif-grid,
+    .stats-grid,
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .dif-grid > *,
+    .stats-grid > *,
+    .para-grid > *,
+    .contact-grid > * {
+      min-width: 0;
+    }
   }
 
   @media print {
@@ -577,7 +589,7 @@
     <div class="problema-destaque au d3">
       "A gente era a melhor opção tecnicamente. Mas o cliente exigiu segurança. E a gente não tinha." — <strong>CEO de software house</strong>, contrato perdido de <strong>R$ 2 milhões</strong>.
     </div>
-    <div class="stats-grid au d4" style="margin:0; max-width:100%; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+    <div class="stats-grid stats-grid-problema au d4">
       <div class="card" style="text-align:center; padding:28px 20px;">
         <div style="font-size:40px; margin-bottom:10px;">📉</div>
         <div class="stat-label" style="margin-bottom:6px;">Contratos perdidos</div>
