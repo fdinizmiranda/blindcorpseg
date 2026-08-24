@@ -972,6 +972,17 @@
 <script>
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9E9aza5x-MwePyUSVE1LHN2V_hnEI-iz24C57PIqNfeuYxMfRGOlxnxrrS204sZi2/exec';
 
+  // Captura o IP do visitante (fallback silencioso)
+  async function getIP() {
+    try {
+      const resp = await fetch('https://api.ipify.org?format=json');
+      const data = await resp.json();
+      return data.ip || '';
+    } catch (e) {
+      return '';
+    }
+  }
+
   function openModal() {
     document.getElementById('modalOverlay').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -1064,18 +1075,32 @@
     btn.disabled = true;
     btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Enviando...';
 
+    // Captura o IP antes de enviar
+    const ip = await getIP();
+
     try {
-      await fetch(SCRIPT_URL, {
+      // ATENÇÃO: sem 'mode: no-cors' e sem o header Content-Type.
+      // Assim o navegador consegue LER a resposta do Apps Script.
+      const resp = await fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           nome, email, whatsapp, empresa, porte, preocupacao,
           consentimento: 'Aceito',
-          consentimentoData: new Date().toISOString()
+          consentimentoData: new Date().toISOString(),
+          ip: ip
         })
       });
-    } catch (err) {}
+
+      const resultado = await resp.json();
+      if (resultado.status !== 'ok') {
+        throw new Error(resultado.mensagem || 'Erro no envio');
+      }
+    } catch (err) {
+      btn.disabled = false;
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Diagnóstico';
+      alert('Não foi possível enviar agora. Tente novamente ou fale conosco no WhatsApp.');
+      return;
+    }
 
     document.getElementById('modalFormContent').classList.add('hide');
     document.getElementById('modalSuccess').classList.add('show');
