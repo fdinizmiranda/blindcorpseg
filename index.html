@@ -1314,9 +1314,13 @@
     // Token do reCAPTCHA (retorna vazio se ainda não configurado)
     const recaptchaToken = await getRecaptchaToken();
 
-    try {
-      const response = await fetch(SCRIPT_URL, {
+        try {
+      // O Google Apps Script responde POST com redirecionamento 302.
+      // O navegador não consegue ler a resposta, então usamos "no-cors"
+      // e tratamos o envio como concluído assim que a requisição é enviada.
+      await fetch(SCRIPT_URL, {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({
           nome, email, whatsapp, empresa, porte, preocupacao,
@@ -1328,21 +1332,16 @@
         })
       });
 
-      const result = await response.json();
-
-      if (result && result.status === 'ok') {
-        document.getElementById('modalFormContent').classList.add('hide');
-        document.getElementById('modalSuccess').classList.add('show');
-      } else {
-        btn.disabled = false;
-        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Diagnóstico';
-        alert(result && result.mensagem ? result.mensagem : 'Não foi possível enviar. Tente novamente.');
-      }
+      // Envio concluído: mostra o sucesso imediatamente.
+      document.getElementById('modalFormContent').classList.add('hide');
+      document.getElementById('modalSuccess').classList.add('show');
     } catch (err) {
+      // Só cai aqui em falha REAL de rede (offline, DNS, sem internet).
       btn.disabled = false;
       btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Diagnóstico';
-      alert('Não foi possível enviar agora. Tente novamente ou fale conosco no WhatsApp.');
+      alert('Não foi possível enviar agora. Verifique sua conexão ou fale conosco no WhatsApp.');
     }
+
   });
 
   // Cookie consent (LGPD)
