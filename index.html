@@ -14,6 +14,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 
+<!-- Performance: acelera a resolução das fontes do Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
@@ -21,13 +25,19 @@
 <meta property="og:title" content="Consultoria ISO 27001 para Software Houses | Blind Corp">
 <meta property="og:description" content="Certificação ISO 27001 em 9 meses com o Método 3P. Foco em ROI, não em burocracia. Diagnóstico gratuito em 24h.">
 <meta property="og:url" content="https://blindcorpseg.com.br/">
-<meta property="og:image" content="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png">
+<meta property="og:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta property="og:image:secure_url" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Blind Corp - Consultoria ISO 27001 para Software Houses">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Consultoria ISO 27001 para Software Houses | Blind Corp">
 <meta name="twitter:description" content="Certificação ISO 27001 em 9 meses com o Método 3P. Diagnóstico gratuito em 24h.">
-<meta name="twitter:image" content="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png">
+<meta name="twitter:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta name="twitter:image:alt" content="Blind Corp - Consultoria ISO 27001 para Software Houses">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -380,13 +390,24 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://blindcorpseg.com.br/#website",
+      "url": "https://blindcorpseg.com.br/",
+      "name": "Blind Corp",
+      "description": "Consultoria ISO 27001 e ISO 27701 para software houses.",
+      "publisher": {
+        "@id": "https://blindcorpseg.com.br/#empresa"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
       "@type": "ProfessionalService",
       "@id": "https://blindcorpseg.com.br/#empresa",
       "name": "Blind Corp",
       "description": "Consultoria em segurança da informação para software houses. Especializada em ISO 27001, ISO 27701 e LGPD.",
       "url": "https://blindcorpseg.com.br/",
-      "logo": "https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png",
-      "image": "https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png",
+      "logo": "https://blindcorpseg.com.br/assets/logo-blindcorp.png",
+      "image": "https://blindcorpseg.com.br/assets/logo-blindcorp.png",
       "email": "contato@blindcorpseg.com.br",
       "telephone": "+5541998089060",
       "priceRange": "$$",
@@ -436,7 +457,7 @@
         "@type": "Person",
         "name": "Fernando",
         "jobTitle": "Fundador & Consultor Líder",
-        "image": "https://i.ibb.co/x83PDB5P/Fer.jpg",
+        "image": "https://blindcorpseg.com.br/assets/fernando.jpg",
         "description": "Fundador da Blind Corp com 16 anos de experiência em processos, sistemas e auditoria, especialista em levar empresas às certificações.",
         "sameAs": [
           "https://www.linkedin.com/in/fdinizmiranda/",
@@ -653,7 +674,7 @@
 
 <nav class="nav-bar" id="navBar">
   <a href="#hero" class="nav-logo">
-    <img src="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses">
+    <img src="https://blindcorpseg.com.br/assets/logo-blindcorp.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses" width="36" height="36">
     Blind Corp
   </a>
   <ul class="nav-links" id="navLinks">
@@ -677,14 +698,14 @@
 
   <section id="hero">
     <div class="hero-logo as">
-      <img src="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses">
+      <img src="https://blindcorpseg.com.br/assets/logo-blindcorp.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses" width="100" height="100">
     </div>
     <div class="badge au d1">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       Blindagem para Software Houses
     </div>
-    <h1 class="au d2" style="margin-top:24px;">Blindar para <span class="gt">Crescer</span></h1>
-    <p class="hero-subtitle au d3">Sua software house pronta para grandes players em 9 meses. Método 3P: Padronização, Proteção, Prevenção.</p>
+    <h1 class="au d2" style="margin-top:24px;">Consultoria <span class="gt">ISO 27001</span> para Software Houses</h1>
+    <p class="hero-subtitle au d3">Blindar para crescer. Sua software house pronta para grandes players em 9 meses. Método 3P: Padronização, Proteção, Prevenção.</p>
     <p class="hero-tagline au d4">Consultoria · SGSI · ISO 27001 · ISO 27701</p>
     <div class="hero-buttons au d5">
       <button class="btn-primary" onclick="openModal()">
@@ -970,7 +991,7 @@
     <div class="gl au"></div>
     <h2 class="au d1">De onde a <span class="gt">Blind Corp</span> vem</h2>
     <div class="sobre-grid au d2">
-      <img src="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses" class="sobre-foto">
+      <img src="https://blindcorpseg.com.br/assets/logo-blindcorp.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses" class="sobre-foto" width="280" height="280">
       <div class="sobre-texto">
         <p>A Blind Corp nasceu da indústria, não da TI. Em 2021, o primeiro contato com tecnologia veio de dentro de uma <strong>fábrica de equipamentos para locomotivas</strong>. Hardware, software, processos críticos. Foi ali que a vocação se revelou: <strong>estrutura, método, auditoria</strong>.</p>
 
@@ -995,7 +1016,7 @@
     <p class="au d2 section-lead sm">Na Blind Corp, somos uma equipe de especialistas: consultores, auditores, gestores. Cada um com experiência real, dia a dia de software house. Nosso diferencial é entregar conhecimento e autoridade de quem vive o que fala.</p>
     <div class="time-grid">
       <div class="card time-card au d2">
-        <img src="https://i.ibb.co/x83PDB5P/Fer.jpg" alt="Fernando, fundador da Blind Corp" class="tm-avatar">
+        <img src="https://blindcorpseg.com.br/assets/fernando.jpg" alt="Fernando, fundador da Blind Corp" class="tm-avatar" width="120" height="120">
         <h3>Fernando</h3>
         <div class="tm-role">Fundador · Consultor Líder</div>
         <p>16 anos de experiência em processos, sistemas de gestão e auditoria. Liderou a implementação de SGPI e ISO 20000 do zero na prática, em software house.</p>
