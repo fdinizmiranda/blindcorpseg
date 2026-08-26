@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | Blind Corp - ISO 27001 e Segurança da Informação</title>
-<meta name="description" content="Conteúdo prático sobre ISO 27001, segurança da informação e certificação para empresas de tecnologia.">
+<meta name="description" content="Artigos sobre ISO 27001, segurança da informação e certificação para empresas de tecnologia.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/logo-blindcorp.png">
 
 <style>
@@ -95,7 +95,7 @@
   }
 
   .header-inner {
-    max-width: 1280px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 16px 24px;
     display: flex;
@@ -158,45 +158,31 @@
   /* ===== HERO ===== */
   .hero {
     position: relative;
-    padding: 120px 24px 100px;
+    padding: 100px 24px 80px;
     text-align: center;
     overflow: hidden;
     border-bottom: 1px solid var(--border);
   }
 
-  /* Imagem de fundo com overlay */
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('assets/images/blog-hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.25;
-    z-index: 0;
-  }
-
-  /* Grid pattern */
   .hero::after {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
       linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     z-index: 1;
   }
 
-  /* Gradiente radial de glow */
   .hero-glow {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
-    height: 500px;
-    background: radial-gradient(ellipse, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    width: 700px;
+    height: 420px;
+    background: radial-gradient(ellipse, rgba(59, 130, 246, 0.14) 0%, transparent 70%);
     z-index: 1;
     pointer-events: none;
   }
@@ -204,7 +190,7 @@
   .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto;
   }
 
@@ -240,7 +226,7 @@
 
   .hero h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(48px, 8vw, 80px);
+    font-size: clamp(42px, 7vw, 68px);
     font-weight: 900;
     letter-spacing: -0.03em;
     line-height: 1;
@@ -254,41 +240,14 @@
   .hero p {
     font-size: 18px;
     color: var(--text-secondary);
-    max-width: 600px;
-    margin: 0 auto 40px;
+    max-width: 560px;
+    margin: 0 auto;
     line-height: 1.7;
-  }
-
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 48px;
-    flex-wrap: wrap;
-  }
-
-  .stat {
-    text-align: center;
-  }
-
-  .stat-number {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--text-primary);
-    display: block;
-  }
-
-  .stat-label {
-    font-size: 12px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-top: 4px;
   }
 
   /* ===== FILTROS ===== */
   .filters-section {
-    max-width: 1280px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 40px 24px 20px;
   }
@@ -296,7 +255,7 @@
   .filters-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     padding-bottom: 24px;
@@ -307,6 +266,7 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .pill {
@@ -319,6 +279,7 @@
     color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.2s;
+    font-family: inherit;
   }
 
   .pill:hover {
@@ -333,54 +294,16 @@
     color: #FFFFFF;
   }
 
-  .search-box {
-    position: relative;
-    flex: 1;
-    max-width: 320px;
-  }
-
-  .search-box input {
-    width: 100%;
-    padding: 10px 16px 10px 42px;
-    background: rgba(107, 114, 128, 0.08);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text-primary);
-    font-size: 13px;
-    font-family: inherit;
-    transition: all 0.2s;
-  }
-
-  .search-box input::placeholder {
-    color: var(--text-muted);
-  }
-
-  .search-box input:focus {
-    outline: none;
-    border-color: var(--accent);
-    background: rgba(10, 31, 61, 0.6);
-  }
-
-  .search-box::before {
-    content: '🔍';
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    opacity: 0.5;
-  }
-
   /* ===== POSTS GRID ===== */
   .posts-section {
-    max-width: 1280px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 40px 24px 80px;
   }
 
   .posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 24px;
   }
 
@@ -390,7 +313,8 @@
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s ease;
-    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     display: flex;
     flex-direction: column;
   }
@@ -401,34 +325,42 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.1);
   }
 
+  /* Thumbnail sem imagem: gradiente + ícone */
   .post-thumbnail {
     position: relative;
-    height: 200px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-card) 100%);
   }
 
-  .post-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
-
-  .post-card:hover .post-thumbnail img {
-    transform: scale(1.05);
-  }
-
-  .post-thumbnail-overlay {
+  .post-thumbnail::before {
+    content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(5, 13, 26, 0.8) 100%);
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .thumb-1 { background: linear-gradient(135deg, #0A1F3D 0%, #12386e 100%); }
+  .thumb-2 { background: linear-gradient(135deg, #0A1F3D 0%, #0e3a5c 100%); }
+  .thumb-3 { background: linear-gradient(135deg, #0A1F3D 0%, #14355a 100%); }
+
+  .thumb-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 56px;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.5));
   }
 
   .post-category {
     position: absolute;
     top: 16px;
     left: 16px;
+    z-index: 2;
     padding: 6px 14px;
     background: rgba(59, 130, 246, 0.9);
     backdrop-filter: blur(8px);
@@ -461,37 +393,27 @@
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin-bottom: 20px;
     flex: 1;
+    margin-bottom: 20px;
   }
 
-  .post-meta {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-    font-size: 12px;
-    color: var(--text-muted);
-  }
-
-  .post-meta span {
+  .post-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    transition: gap 0.2s;
   }
 
-  .read-time::before {
-    content: '';
-  }
-
-  .post-date::before {
-    content: '📅';
+  .post-card:hover .post-link {
+    gap: 10px;
   }
 
   /* ===== NEWSLETTER ===== */
   .newsletter-section {
-    max-width: 1280px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px 80px;
   }
@@ -612,11 +534,8 @@
     nav { gap: 20px; }
     nav a { font-size: 11px; }
     .hero { padding: 80px 24px 60px; }
-    .hero-stats { gap: 32px; }
     .posts-grid { grid-template-columns: 1fr; }
     .newsletter-form { flex-direction: column; }
-    .filters-bar { flex-direction: column; align-items: stretch; }
-    .search-box { max-width: 100%; }
   }
 
   @media (max-width: 480px) {
@@ -646,36 +565,17 @@
   <div class="hero-content">
     <div class="hero-badge">Blog de Segurança</div>
     <h1>BLOG</h1>
-    <p>Conteúdo prático sobre ISO 27001, segurança da informação e certificação para empresas de tecnologia.</p>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-number">24</span>
-        <span class="stat-label">Artigos</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">12</span>
-        <span class="stat-label">Categorias</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number">5k+</span>
-        <span class="stat-label">Leitores</span>
-      </div>
-    </div>
+    <p>Conteúdo prático sobre ISO 27001 e segurança da informação para empresas de tecnologia.</p>
   </div>
 </section>
 
 <section class="filters-section">
   <div class="filters-bar">
     <div class="filter-pills">
-      <button class="pill active">Todos</button>
-      <button class="pill">ISO 27001</button>
-      <button class="pill">Custos</button>
-      <button class="pill">Implementação</button>
-      <button class="pill">LGPD</button>
-      <button class="pill">Cloud Security</button>
-    </div>
-    <div class="search-box">
-      <input type="text" placeholder="Buscar artigos...">
+      <button class="pill active" data-filter="all">Todos</button>
+      <button class="pill" data-filter="implementacao">Implementação</button>
+      <button class="pill" data-filter="software-house">Software House</button>
+      <button class="pill" data-filter="custos">Custos</button>
     </div>
   </div>
 </section>
@@ -683,101 +583,41 @@
 <section class="posts-section">
   <div class="posts-grid">
 
-    <article class="post-card">
-      <div class="post-thumbnail">
-        <img src="assets/images/blog-iso27001.jpg" alt="ISO 27001">
-        <div class="post-thumbnail-overlay"></div>
-        <span class="post-category">ISO 27001</span>
-      </div>
-      <div class="post-body">
-        <h3 class="post-title">ISO 27001 para empresas de tecnologia: guia completo 2026</h3>
-        <p class="post-excerpt">Tudo o que você precisa saber sobre a norma, desde os requisitos até o processo de certificação.</p>
-        <div class="post-meta">
-          <span class="post-date">20 Ago 2026</span>
-          <span class="read-time">12 min</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="post-card">
-      <div class="post-thumbnail">
-        <img src="assets/images/blog-custos.jpg" alt="Custos ISO 27001">
-        <div class="post-thumbnail-overlay"></div>
-        <span class="post-category">Custos</span>
-      </div>
-      <div class="post-body">
-        <h3 class="post-title">Quanto custa a certificação ISO 27001 em 2026?</h3>
-        <p class="post-excerpt">Análise detalhada dos investimentos necessários para obter e manter a certificação.</p>
-        <div class="post-meta">
-          <span class="post-date">15 Ago 2026</span>
-          <span class="read-time">8 min</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="post-card">
-      <div class="post-thumbnail">
-        <img src="assets/images/blog-implementacao.jpg" alt="Implementação ISO 27001">
-        <div class="post-thumbnail-overlay"></div>
+    <a class="post-card" href="artigo-como-implementar-iso-27001-9-meses.html" data-category="implementacao">
+      <div class="post-thumbnail thumb-1">
+        <span class="thumb-icon">🛡️</span>
         <span class="post-category">Implementação</span>
       </div>
       <div class="post-body">
-        <h3 class="post-title">Como implementar ISO 27001 em 6 meses</h3>
-        <p class="post-excerpt">Roteiro prático com etapas, responsabilidades e marcos para uma implementação eficiente.</p>
-        <div class="post-meta">
-          <span class="post-date">10 Ago 2026</span>
-          <span class="read-time">15 min</span>
-        </div>
+        <h3 class="post-title">Como implementar ISO 27001 em 9 meses</h3>
+        <p class="post-excerpt">Roteiro prático com as etapas para conduzir a certificação do início ao fim.</p>
+        <span class="post-link">Ler artigo →</span>
       </div>
-    </article>
+    </a>
 
-    <article class="post-card">
-      <div class="post-thumbnail">
-        <img src="assets/images/blog-lgpd.jpg" alt="LGPD">
-        <div class="post-thumbnail-overlay"></div>
-        <span class="post-category">LGPD</span>
+    <a class="post-card" href="artigo-iso-27001-software-house.html" data-category="software-house">
+      <div class="post-thumbnail thumb-2">
+        <span class="thumb-icon">💻</span>
+        <span class="post-category">Software House</span>
       </div>
       <div class="post-body">
-        <h3 class="post-title">LGPD e ISO 27001: como alinhar as duas normas</h3>
-        <p class="post-excerpt">Estratégias para integrar os requisitos da LGPD ao seu SGSI existente.</p>
-        <div class="post-meta">
-          <span class="post-date">05 Ago 2026</span>
-          <span class="read-time">10 min</span>
-        </div>
+        <h3 class="post-title">ISO 27001 para software houses</h3>
+        <p class="post-excerpt">O que uma empresa de software precisa saber sobre a norma e seus requisitos.</p>
+        <span class="post-link">Ler artigo →</span>
       </div>
-    </article>
+    </a>
 
-    <article class="post-card">
-      <div class="post-thumbnail">
-        <img src="assets/images/blog-cloud.jpg" alt="Cloud Security">
-        <div class="post-thumbnail-overlay"></div>
-        <span class="post-category">Cloud Security</span>
+    <a class="post-card" href="artigo-quanto-custa-iso-27001.html" data-category="custos">
+      <div class="post-thumbnail thumb-3">
+        <span class="thumb-icon">📊</span>
+        <span class="post-category">Custos</span>
       </div>
       <div class="post-body">
-        <h3 class="post-title">Segurança em ambientes cloud: AWS, Azure e GCP</h3>
-        <p class="post-excerpt">Boas práticas e controles essenciais para proteger sua infraestrutura na nuvem.</p>
-        <div class="post-meta">
-          <span class="post-date">28 Jul 2026</span>
-          <span class="read-time">14 min</span>
-        </div>
+        <h3 class="post-title">Quanto custa a certificação ISO 27001?</h3>
+        <p class="post-excerpt">Entenda os fatores que influenciam o investimento necessário na certificação.</p>
+        <span class="post-link">Ler artigo →</span>
       </div>
-    </article>
-
-    <article class="post-card">
-      <div class="post-thumbnail">
-        <img src="assets/images/blog-riscos.jpg" alt="Gestão de Riscos">
-        <div class="post-thumbnail-overlay"></div>
-        <span class="post-category">ISO 27001</span>
-      </div>
-      <div class="post-body">
-        <h3 class="post-title">Gestão de riscos de segurança: metodologias e ferramentas</h3>
-        <p class="post-excerpt">Comparativo entre as principais abordagens de análise de riscos para SGSI.</p>
-        <div class="post-meta">
-          <span class="post-date">22 Jul 2026</span>
-          <span class="read-time">11 min</span>
-        </div>
-      </div>
-    </article>
+    </a>
 
   </div>
 </section>
@@ -785,9 +625,9 @@
 <section class="newsletter-section">
   <div class="newsletter-box">
     <div class="newsletter-content">
-      <div class="newsletter-icon"></div>
+      <div class="newsletter-icon">📬</div>
       <h2>Receba conteúdos exclusivos</h2>
-      <p>Inscreva-se e receba semanalmente artigos, guias e novidades sobre segurança da informação.</p>
+      <p>Inscreva-se para receber nossos próximos artigos e novidades sobre segurança da informação.</p>
       <form class="newsletter-form" onsubmit="event.preventDefault();">
         <input type="email" placeholder="Seu melhor e-mail" required>
         <button type="submit">Inscrever</button>
@@ -801,11 +641,24 @@
 </footer>
 
 <script>
-  // Filtros interativos
-  document.querySelectorAll('.pill').forEach(pill => {
+  // Filtros funcionais
+  const pills = document.querySelectorAll('.pill');
+  const cards = document.querySelectorAll('.post-card');
+
+  pills.forEach(pill => {
     pill.addEventListener('click', function() {
-      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      pills.forEach(p => p.classList.remove('active'));
       this.classList.add('active');
+
+      const filter = this.dataset.filter;
+
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
 </script>
