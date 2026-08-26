@@ -6,10 +6,100 @@
 <title>Política de Privacidade | Blind Corp Seg</title>
 <meta name="description" content="Conheça como a Blind Corp Seg coleta, usa e protege seus dados pessoais em conformidade com a LGPD.">
 <meta name="robots" content="index, follow">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo-blindcorp.png">
+<meta property="og:image" content="assets/og-blindcorp.png">
 
 <style>
+  /* ===== Fontes locais (self-hosted) ===== */
+
+  /* Inter */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-900.woff2') format('woff2');
+  }
+
+  /* Montserrat */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-900.woff2') format('woff2');
+  }
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Inter', sans-serif;
@@ -148,7 +238,7 @@
 <header>
   <div class="header-inner">
     <a href="/" class="brand">
-      <img src="https://i.ibb.co/67kvJTDc/gen-3-HCB2j42-SCUkv-QJv2-Vnuh-Lgpesh.png" alt="Blind Corp Seg">
+      <img src="assets/logo-blindcorp.png" alt="Blind Corp Seg">
       <span>Blind Corp Seg</span>
     </a>
     <a href="/" class="back-link">&#8592; Voltar ao site</a>
@@ -173,9 +263,9 @@
 
   <section>
     <h2>1. Identificação do controlador</h2>
-    <p><strong>Razão social:</strong> F H D MIRANDA BLIND CORP CONSULTORIA EM SEGURANCA DA INFORMACAO SLU</p>
-    <p><strong>CNPJ:</strong> 68.672.206/0001-00</p>
-    <p><strong>Endereço:</strong> Rua João Batista Zagonel Passos, 485, Xaxim, Curitiba, PR, 81830-290</p>
+    <p><strong>Razão social:</strong> [PREENCHER: Nome completo da empresa conforme CNPJ]</p>
+    <p><strong>CNPJ:</strong> [PREENCHER: 00.000.000/0000-00]</p>
+    <p><strong>Endereço:</strong> [PREENCHER: Rua, número, bairro, cidade, UF, CEP]</p>
     <p><strong>Atividade:</strong> Segurança da informação e consultoria em proteção de dados</p>
     <p><strong>E-mail de contato:</strong> <a href="mailto:contato@blindcorpseg.com.br">contato@blindcorpseg.com.br</a></p>
   </section>
@@ -424,9 +514,8 @@
     // Botão para gerenciar cookies
     document.getElementById('manageCookies').addEventListener('click', function () {
       localStorage.removeItem('bc_cookie_consent');
-      // Desabilitar GA se estava ativo
+      // Limpar cookies do GA se estava ativo
       if (window.__gaLoaded) {
-        // Limpar cookies do GA
         document.cookie.split(";").forEach(function(c) {
           document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
         });
