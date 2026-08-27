@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico de Maturidade ISO 27001 | Blind Corp</title>
+<meta name="description" content="Descubra em 3 minutos se sua software house está pronta para disputar contratos com grandes players. 10 perguntas, resultado imediato, diagnóstico gratuito.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blindcorpseg.com.br/diagnostico.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Blind Corp">
+<meta property="og:title" content="Diagnóstico de Maturidade ISO 27001 | Blind Corp">
+<meta property="og:description" content="Descubra em 3 minutos se sua software house está pronta para grandes players. 10 perguntas, resultado imediato, gratuito.">
+<meta property="og:url" content="https://blindcorpseg.com.br/diagnostico.html">
+<meta property="og:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+
+<style>
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal; font-weight: 400; font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal; font-weight: 600; font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal; font-weight: 700; font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal; font-weight: 800; font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal; font-weight: 900; font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-900.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal; font-weight: 400; font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal; font-weight: 600; font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal; font-weight: 700; font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-700.woff2') format('woff2');
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050D1A;
+    color: #F5F2EB;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(900px 420px at 72% 18%, rgba(107,114,128,.10) 0%, transparent 42%),
+      radial-gradient(800px 380px at 30% 25%, rgba(10,31,61,.9) 0%, transparent 52%),
+      linear-gradient(180deg, #0A1F3D 0%, #0D1525 45%, #050D1A 100%);
+  }
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .18;
+    background-image: radial-gradient(rgba(107,114,128,.06) .8px, transparent .8px);
+    background-size: 24px 24px;
+  }
+
+  .gt {
+    background: linear-gradient(135deg, #6B7280 0%, #D1D5DB 50%, #6B7280 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+  @keyframes shimmer { 0% { background-position: -200% center } 100% { background-position: 200% center } }
+
+  .nav-bar {
+    position: relative; z-index: 100;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(5,13,26,.78); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(107,114,128,.08);
+  }
+  .nav-logo { font-size: 22px; font-weight: 900; letter-spacing: .05em; color: #F5F2EB; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; }
+  .nav-back { color: #9CA3AF; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; transition: color .3s ease; }
+  .nav-back:hover { color: #D1D5DB; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  /* Barra de progresso */
+  .progress-shell {
+    width: 100%; height: 6px; border-radius: 999px;
+    background: rgba(107,114,128,.15);
+    margin: 24px 0 8px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; width: 0; border-radius: 999px;
+    background: linear-gradient(90deg, #6B7280, #9CA3AF);
+    transition: width .35s cubic-bezier(.22,1,.36,1);
+  }
+  .progress-meta { display: flex; justify-content: space-between; font-size: 12px; color: rgba(156,163,175,.6); font-weight: 600; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 32px; }
+
+  /* Título da pergunta */
+  .q-head { margin-bottom: 28px; }
+  .q-head h1 { font-size: clamp(26px, 5vw, 34px); font-weight: 800; letter-spacing: -.02em; line-height: 1.25; }
+
+  /* Opções */
+  .opcoes { display: flex; flex-direction: column; gap: 12px; }
+  .opcao {
+    display: flex; align-items: center; gap: 16px;
+    padding: 18px 20px;
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(107,114,128,.15);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: border-color .3s ease, background .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .opcao:hover { border-color: rgba(107,114,128,.4); background: rgba(107,114,128,.05); transform: translateY(-2px); }
+  .opcao input { display: none; }
+  .opcao .radio {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 2px solid rgba(107,114,128,.5);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: all .3s ease;
+  }
+  .opcao .radio::after {
+    content: ''; width: 10px; height: 10px; border-radius: 50%;
+    background: #D1D5DB; transform: scale(0); transition: transform .3s ease;
+  }
+  .opcao.selected { border-color: rgba(107,114,128,.6); background: rgba(107,114,128,.08); box-shadow: 0 8px 24px rgba(0,0,0,.3); }
+  .opcao.selected .radio { border-color: #D1D5DB; }
+  .opcao.selected .radio::after { transform: scale(1); }
+  .opcao .txt { font-size: 15px; color: #D1D5DB; font-weight: 500; line-height: 1.5; }
+
+  /* Navegação */
+  .q-nav { display: flex; gap: 12px; margin-top: 32px; }
+  .btn-back {
+    padding: 14px 24px; border-radius: 999px;
+    background: transparent; border: 1px solid rgba(107,114,128,.4);
+    color: #9CA3AF; font-weight: 600; font-size: 14px;
+    font-family: 'Inter', sans-serif; cursor: pointer;
+    transition: all .3s ease;
+  }
+  .btn-back:hover { border-color: #9CA3AF; color: #D1D5DB; }
+  .btn-next {
+    flex: 1; padding: 14px 24px; border-radius: 999px;
+    background: linear-gradient(135deg, #6B7280, #9CA3AF);
+    color: #050D1A; font-weight: 700; font-size: 14px;
+    font-family: 'Inter', sans-serif; letter-spacing: .02em;
+    border: none; cursor: pointer;
+    box-shadow: 0 8px 30px rgba(107,114,128,.25);
+    transition: all .3s ease; opacity: .4; pointer-events: none;
+  }
+  .btn-next.active { opacity: 1; pointer-events: all; }
+  .btn-next.active:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+
+  /* Tela de captura */
+  .capture-title h1 { font-size: clamp(26px, 5vw, 32px); font-weight: 800; line-height: 1.25; margin-bottom: 10px; }
+  .capture-sub { font-size: 15px; color: #9CA3AF; line-height: 1.7; margin-bottom: 28px; }
+  .capture-sub strong { color: #D1D5DB; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 700; color: rgba(156,163,175,.7); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; }
+  .form-group input {
+    width: 100%; padding: 14px 18px;
+    background: rgba(255,255,255,.04); border: 1px solid rgba(107,114,128,.15);
+    border-radius: 12px; color: #F5F2EB; font-size: 15px;
+    font-family: 'Inter', sans-serif; outline: none;
+    transition: border-color .3s ease, background .3s ease, box-shadow .3s ease;
+  }
+  .form-group input::placeholder { color: rgba(156,163,175,.35); }
+  .form-group input:focus { border-color: rgba(107,114,128,.5); background: rgba(107,114,128,.04); box-shadow: 0 0 0 3px rgba(107,114,128,.08); }
+  .form-group.has-error input { border-color: #F87171; box-shadow: 0 0 0 3px rgba(248,113,113,.12); }
+  .field-error { display: none; font-size: 12px; color: #F87171; margin-top: 6px; }
+  .field-error.show { display: block; }
+
+  .consent-check { display: flex; align-items: flex-start; gap: 10px; font-size: 12.5px; line-height: 1.6; color: #9CA3AF; cursor: pointer; margin: 4px 0 20px; }
+  .consent-check input { margin-top: 3px; width: 16px; height: 16px; flex-shrink: 0; accent-color: #9CA3AF; cursor: pointer; }
+  .consent-check a { color: #D1D5DB; text-decoration: underline; }
+
+  .btn-submit {
+    width: 100%; padding: 16px 24px; border-radius: 999px;
+    background: linear-gradient(135deg, #6B7280, #9CA3AF);
+    color: #050D1A; font-weight: 700; font-size: 15px;
+    font-family: 'Inter', sans-serif; letter-spacing: .02em;
+    border: none; cursor: pointer;
+    box-shadow: 0 8px 30px rgba(107,114,128,.25);
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    transition: all .3s ease;
+  }
+  .btn-submit:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+  .btn-submit:disabled { opacity: .6; cursor: not-allowed; }
+
+  /* Tela de resultado */
+  .result-card {
+    background: linear-gradient(145deg, rgba(10,20,35,.95), rgba(13,21,37,.98));
+    border: 1px solid rgba(107,114,128,.2);
+    border-radius: 24px;
+    padding: 40px 32px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  }
+  .score-ring {
+    width: 96px; height: 96px; border-radius: 50%;
+    margin: 0 auto 24px;
+    display: flex; align-items: center; justify-content: center;
+    border: 3px solid rgba(107,114,128,.4);
+    position: relative;
+  }
+  .score-ring .num { font-size: 32px; font-weight: 900; color: #F5F2EB; }
+  .score-ring .den { font-size: 13px; color: rgba(156,163,175,.6); font-weight: 600; margin-top: 4px; }
+  .score-ring .inner { text-align: center; }
+  .result-veredict { text-align: center; font-size: clamp(22px, 4vw, 28px); font-weight: 800; margin-bottom: 12px; line-height: 1.3; }
+  .result-text { text-align: center; font-size: 15px; color: #9CA3AF; line-height: 1.75; max-width: 480px; margin: 0 auto 28px; }
+  .gaps-title { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 14px; text-align: center; }
+  .gap-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 14px 16px; margin-bottom: 10px;
+    background: rgba(255,255,255,.02); border: 1px solid rgba(107,114,128,.12);
+    border-radius: 12px; font-size: 14px; color: #D1D5DB; line-height: 1.55;
+  }
+  .gap-item .g-num {
+    width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+    background: rgba(107,114,128,.15); border: 1px solid rgba(107,114,128,.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: #D1D5DB; margin-top: 1px;
+  }
+  .result-cta { margin-top: 24px; }
+  .btn-cta {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 16px 24px; border-radius: 999px;
+    background: linear-gradient(135deg, #6B7280, #9CA3AF);
+    color: #050D1A; font-weight: 700; font-size: 15px;
+    font-family: 'Inter', sans-serif; letter-spacing: .02em;
+    text-decoration: none; border: none; cursor: pointer;
+    box-shadow: 0 8px 30px rgba(107,114,128,.25);
+    transition: all .3s ease;
+  }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+  .result-note { text-align: center; font-size: 12px; color: rgba(156,163,175,.5); margin-top: 14px; line-height: 1.6; }
+
+  .fade { animation: fadeUp .4s ease both; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px) } to { opacity: 1; transform: translateY(0) } }
+
+  .hidden { display: none !important; }
+
+  @media (max-width: 600px) {
+    .nav-bar { padding: 14px 20px; }
+    .result-card { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav-bar">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo-blindcorp.png" alt="Blind Corp" width="36" height="36">
+    Blind Corp
+  </a>
+  <a href="index.html" class="nav-back">← Voltar ao site</a>
+</nav>
+
+<main class="wrap">
+
+  <!-- ETAPA 1: PERGUNTAS -->
+  <div id="etapaPerguntas">
+    <div class="progress-shell">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="progress-meta">
+      <span id="progressAtual">Pergunta 1 de 10</span>
+      <span id="progressPct">0%</span>
+    </div>
+    <div class="q-head fade" id="qHead"></div>
+    <div class="opcoes fade" id="qOpcoes"></div>
+    <div class="q-nav">
+      <button class="btn-back hidden" id="btnBack">Voltar</button>
+      <button class="btn-next" id="btnNext">Próxima</button>
+    </div>
+  </div>
+
+  <!-- ETAPA 2: CAPTURA -->
+  <div id="etapaCaptura" class="hidden">
+    <div class="capture-title fade">
+      <h1>Pronto. Agora, onde devo <span class="gt">enviar seu diagnóstico</span> e os 3 buracos mais críticos?</h1>
+      <p class="capture-sub">Sua pontuação está calculada. Deixe seus dados e veja o resultado <strong>imediatamente</strong>. Sem compromisso.</p>
+    </div>
+    <form id="captureForm" novalidate class="fade">
+      <div class="form-group">
+        <label for="inputNome">Nome</label>
+        <input type="text" id="inputNome" placeholder="Seu nome completo" required autocomplete="name">
+        <div class="field-error">Informe seu nome.</div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail">E-mail corporativo</label>
+        <input type="email" id="inputEmail" placeholder="seu@empresa.com" required autocomplete="email">
+        <div class="field-error">Informe um e-mail válido.</div>
+      </div>
+      <div class="form-group">
+        <label for="inputWhatsapp">WhatsApp</label>
+        <input type="tel" id="inputWhatsapp" placeholder="(41) 99999-9999" required autocomplete="tel">
+        <div class="field-error">Informe um WhatsApp válido.</div>
+      </div>
+      <div class="form-group">
+        <label class="consent-check" for="lgpdConsent">
+          <input type="checkbox" id="lgpdConsent">
+          <span>Li e aceito a <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a> e autorizo o tratamento dos meus dados para fins de contato.</span>
+        </label>
+        <div class="field-error" id="lgpdConsentError" style="display:block; display:none;">Para continuar, marque esta opção.</div>
+      </div>
+      <!-- Honeypot -->
+      <div style="position:absolute;left:-9999px;top:-9999px;height:1px;width:1px;overflow:hidden;" aria-hidden="true">
+        <label for="website">Não preencha este campo</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <button type="submit" class="btn-submit" id="btnSubmit">
+        Ver meu resultado
+      </button>
+    </form>
+  </div>
+
+  <!-- ETAPA 3: RESULTADO -->
+  <div id="etapaResultado" class="hidden">
+    <div class="result-card fade">
+      <div class="score-ring">
+        <div class="inner">
+          <div class="num" id="scoreNum">0</div>
+          <div class="den">de 20</div>
+        </div>
+      </div>
+      <h2 class="result-veredict" id="resultVeredict"></h2>
+      <p class="result-text" id="resultText"></p>
+      <p class="gaps-title">Seus 3 buracos mais críticos</p>
+      <div id="resultGaps"></div>
+      <div class="result-cta">
+        <a class="btn-cta" id="btnCta" href="#" target="_blank" rel="noopener">
+          Agendar diagnóstico gratuito de 30 minutos
+        </a>
+      </div>
+      <p class="result-note">Diagnóstico gratuito e sem compromisso. Em até 24 horas úteis, um especialista da Blind Corp entra em contato.</p>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9E9aza5x-MwePyUSVE1LHN2V_hnEI-iz24C57PIqNfeuYxMfRGOlxnxrrS204sZi2/exec';
+  const WHATSAPP_NUM = '5541998089060';
+
+  // ===== AS 10 PERGUNTAS =====
+  // "gap" é a mensagem do buraco crítico. Perguntas de qualificação (4 e 7) não têm gap.
+  const perguntas = [
+    {
+      pergunta: 'Sua empresa tem uma política de segurança da informação documentada?',
+      opcoes: [
+        { texto: 'Não, não temos nada documentado', pontos: 0 },
+        { texto: 'Temos algo, mas não é formalizado ou não é seguido', pontos: 1 },
+        { texto: 'Sim, temos uma política documentada e em uso', pontos: 2 }
+      ],
+      gap: 'Falta uma política de segurança documentada, o primeiro item que grandes players exigem.'
+    },
+    {
+      pergunta: 'Você faz análise de risco formal antes de aceitar contratos grandes?',
+      opcoes: [
+        { texto: 'Não, aceitamos contratos sem análise formal de risco', pontos: 0 },
+        { texto: 'Fazemos uma análise informal, mas não documentada', pontos: 1 },
+        { texto: 'Sim, fazemos análise de risco formal e documentada', pontos: 2 }
+      ],
+      gap: 'Você aceita contratos sem análise formal de risco, assumindo riscos que não enxerga.'
+    },
+    {
+      pergunta: 'Sua equipe recebe treinamento em segurança da informação?',
+      opcoes: [
+        { texto: 'Não, não temos treinamento formal', pontos: 0 },
+        { texto: 'Fazemos treinamento esporádico, mas não é recorrente', pontos: 1 },
+        { texto: 'Sim, temos treinamento recorrente e documentado', pontos: 2 }
+      ],
+      gap: 'Seu time não recebe treinamento recorrente, o principal vetor de incidentes.'
+    },
+    {
+      pergunta: 'Quantas pessoas trabalham na sua software house?',
+      opcoes: [
+        { texto: '1 a 9 pessoas', pontos: 0 },
+        { texto: '10 a 20 pessoas', pontos: 1 },
+        { texto: '20 a 100 pessoas', pontos: 2 },
+        { texto: 'Mais de 100 pessoas', pontos: 2 }
+      ],
+      gap: null // qualificação
+    },
+    {
+      pergunta: 'Você tem um processo formal de resposta a incidentes de segurança?',
+      opcoes: [
+        { texto: 'Não, não temos processo documentado', pontos: 0 },
+        { texto: 'Temos algo, mas não é formalizado', pontos: 1 },
+        { texto: 'Sim, temos um processo formal e testado', pontos: 2 }
+      ],
+      gap: 'Sem processo de resposta a incidentes, um vazamento vira uma crise sem controle.'
+    },
+    {
+      pergunta: 'Você faz auditoria interna antes de auditoria externa?',
+      opcoes: [
+        { texto: 'Não, não fazemos auditoria interna', pontos: 0 },
+        { texto: 'Fazemos auditoria interna, mas não é recorrente', pontos: 1 },
+        { texto: 'Sim, fazemos auditoria interna recorrente', pontos: 2 }
+      ],
+      gap: 'Sem auditoria interna, você descobre os gaps no pior momento: na auditoria oficial.'
+    },
+    {
+      pergunta: 'Sua empresa disputa contratos com grandes players (multinacionais, bancos, governo)?',
+      opcoes: [
+        { texto: 'Não, não disputamos contratos grandes', pontos: 0 },
+        { texto: 'Em breve, estamos nos preparando para isso', pontos: 1 },
+        { texto: 'Sim, já disputamos contratos grandes', pontos: 2 }
+      ],
+      gap: null // qualificação
+    },
+    {
+      pergunta: 'Você tem controle de acesso documentado e revisado?',
+      opcoes: [
+        { texto: 'Não, não temos controle de acesso formal', pontos: 0 },
+        { texto: 'Temos controle de acesso, mas não é documentado ou revisado', pontos: 1 },
+        { texto: 'Sim, temos controle de acesso documentado e revisado', pontos: 2 }
+      ],
+      gap: 'Controle de acesso frágil expõe dados e sistemas a acessos indevidos.'
+    },
+    {
+      pergunta: 'Você faz backup e teste de recuperação de dados?',
+      opcoes: [
+        { texto: 'Não, não fazemos backup ou teste de recuperação', pontos: 0 },
+        { texto: 'Fazemos backup, mas não testamos recuperação', pontos: 1 },
+        { texto: 'Sim, fazemos backup e teste de recuperação recorrente', pontos: 2 }
+      ],
+      gap: 'Backup sem teste de recuperação é uma falsa sensação de segurança.'
+    },
+    {
+      pergunta: 'Você usa ISO 27001 como ferramenta de venda?',
+      opcoes: [
+        { texto: 'Não, não usamos ISO 27001 comercialmente', pontos: 0 },
+        { texto: 'Temos ISO 27001, mas não usamos ativamente para vender', pontos: 1 },
+        { texto: 'Sim, usamos ISO 27001 para conquistar contratos maiores', pontos: 2 }
+      ],
+      gap: 'Você não usa segurança como diferencial competitivo, deixando dinheiro na mesa.'
+    }
+  ];
+
+  // ===== ESTADO =====
+  let step = 0;
+  const respostas = new Array(perguntas.length).fill(null);
+
+  // ===== ELEMENTOS =====
+  const etapaPerguntas = document.getElementById('etapaPerguntas');
+  const etapaCaptura = document.getElementById('etapaCaptura');
+  const etapaResultado = document.getElementById('etapaResultado');
+  const progressFill = document.getElementById('progressFill');
+  const progressAtual = document.getElementById('progressAtual');
+  const progressPct = document.getElementById('progressPct');
+  const qHead = document.getElementById('qHead');
+  const qOpcoes = document.getElementById('qOpcoes');
+  const btnBack = document.getElementById('btnBack');
+  const btnNext = document.getElementById('btnNext');
+
+  function renderPergunta() {
+    const q = perguntas[step];
+    const pct = Math.round((step / perguntas.length) * 100);
+
+    progressFill.style.width = pct + '%';
+    progressAtual.textContent = 'Pergunta ' + (step + 1) + ' de ' + perguntas.length;
+    progressPct.textContent = pct + '%';
+
+    qHead.innerHTML = '<h1>' + q.pergunta + '</h1>';
+
+    qOpcoes.innerHTML = '';
+    q.opcoes.forEach((opcao, i) => {
+      const label = document.createElement('label');
+      label.className = 'opcao' + (respostas[step] === i ? ' selected' : '');
+      label.innerHTML =
+        '<input type="radio" name="q" value="' + i + '">' +
+        '<span class="radio"></span>' +
+        '<span class="txt">' + opcao.texto + '</span>';
+      label.addEventListener('click', () => {
+        respostas[step] = i;
+        document.querySelectorAll('.opcao').forEach(o => o.classList.remove('selected'));
+        label.classList.add('selected');
+        btnNext.classList.add('active');
+        if (step === perguntas.length - 1) btnNext.textContent = 'Ver resultado';
+      });
+      qOpcoes.appendChild(label);
+    });
+
+    btnBack.classList.toggle('hidden', step === 0);
+    btnNext.classList.remove('active');
+    btnNext.textContent = step === perguntas.length - 1 ? 'Ver resultado' : 'Próxima';
+    if (respostas[step] !== null) btnNext.classList.add('active');
+
+    // reanima a transição
+    qHead.classList.remove('fade'); qOpcoes.classList.remove('fade');
+    void qHead.offsetWidth;
+    qHead.classList.add('fade'); qOpcoes.classList.add('fade');
+  }
+
+  btnNext.addEventListener('click', () => {
+    if (respostas[step] === null) return;
+    if (step < perguntas.length - 1) {
+      step++;
+      renderPergunta();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // foi para a captura
+      etapaPerguntas.classList.add('hidden');
+      etapaCaptura.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  btnBack.addEventListener('click', () => {
+    if (step > 0) {
+      step--;
+      renderPergunta();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  // ===== CÁLCULO =====
+  function calcularPontuacao() {
+    return respostas.reduce((soma, r, i) => soma + perguntas[i].opcoes[r].pontos, 0);
+  }
+
+  function calcularGaps() {
+    const comGap = perguntas
+      .map((q, i) => ({ ...q, index: i }))
+      .filter(q => q.gap !== null);
+    // ordena do menor ponto para o maior (0 primeiro, depois 1)
+    comGap.sort((a, b) => {
+      const pa = a.opcoes[respostas[a.index]].pontos;
+      const pb = b.opcoes[respostas[b.index]].pontos;
+      return pa - pb;
+    });
+    return comGap.slice(0, 3).map(q => q.gap);
+  }
+
+  function gerarVeredicto(pontos) {
+    if (pontos <= 6) {
+      return {
+        titulo: 'Você está <span class="gt">exposto</span>.',
+        texto: 'Na prática, isso significa que um contrato com grande player pode travar na due diligence e ir para o concorrente. Você tem gaps críticos que precisam ser fechados antes de disputar contratos maiores.'
+      };
+    } else if (pontos <= 13) {
+      return {
+        titulo: 'Você está <span class="gt">no caminho</span>, mas ainda há gaps críticos.',
+        texto: 'Você tem uma base sólida, mas ainda há gaps que podem custar um contrato grande. O próximo passo é fechar esses gaps e usar ISO 27001 como ferramenta de venda.'
+      };
+    } else {
+      return {
+        titulo: 'Você está <span class="gt">maduro</span>.',
+        texto: 'Você tem uma base sólida e está pronto para usar ISO 27001 como ferramenta de venda. O próximo passo é transformar isso em contratos maiores.'
+      };
+    }
+  }
+
+  function montarResultado() {
+    const pontos = calcularPontuacao();
+    const gaps = calcularGaps();
+    const veredicto = gerarVeredicto(pontos);
+
+    document.getElementById('scoreNum').textContent = pontos;
+    document.getElementById('resultVeredict').innerHTML = veredicto.titulo;
+    document.getElementById('resultText').textContent = veredicto.texto;
+
+    const gapContainer = document.getElementById('resultGaps');
+    gapContainer.innerHTML = '';
+    gaps.forEach((gap, i) => {
+      const div = document.createElement('div');
+      div.className = 'gap-item';
+      div.innerHTML = '<span class="g-num">' + (i + 1) + '</span><span>' + gap + '</span>';
+      gapContainer.appendChild(div);
+    });
+
+    // CTA WhatsApp com mensagem pré-preenchida (inclui a pontuação)
+    const msg = encodeURIComponent(
+      'Olá, fiz o diagnóstico de maturidade ISO 27001 no site da Blind Corp e quero agendar o diagnóstico gratuito de 30 minutos. Minha pontuação: ' + pontos + '/20.'
+    );
+    document.getElementById('btnCta').href = 'https://wa.me/' + WHATSAPP_NUM + '?text=' + msg;
+  }
+
+  // ===== CAPTURA =====
+  document.getElementById('inputWhatsapp').addEventListener('input', function() {
+    let v = this.value.replace(/\D/g, '').slice(0, 11);
+    if (v.length > 6) v = '(' + v.slice(0,2) + ') ' + v.slice(2,7) + '-' + v.slice(7);
+    else if (v.length > 2) v = '(' + v.slice(0,2) + ') ' + v.slice(2);
+    else if (v.length > 0) v = '(' + v;
+    this.value = v;
+  });
+
+  function mostrarErro(id, mostrar) {
+    const group = document.getElementById(id).closest('.form-group');
+    const err = group.querySelector('.field-error');
+    if (mostrar) { group.classList.add('has-error'); if (err) err.classList.add('show'); }
+    else { group.classList.remove('has-error'); if (err) err.classList.remove('show'); }
+  }
+
+  ['inputNome', 'inputEmail', 'inputWhatsapp'].forEach(id => {
+    document.getElementById(id).addEventListener('input', () => mostrarErro(id, false));
+  });
+
+  document.getElementById('lgpdConsent').addEventListener('change', function() {
+    if (this.checked) {
+      this.closest('.form-group').classList.remove('has-error');
+      document.getElementById('lgpdConsentError').classList.remove('show');
+    }
+  });
+
+  document.getElementById('captureForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('btnSubmit');
+    let valido = true;
+
+    const nome = document.getElementById('inputNome').value.trim();
+    const email = document.getElementById('inputEmail').value.trim();
+    const whatsapp = document.getElementById('inputWhatsapp').value.trim();
+
+    if (nome === '') { mostrarErro('inputNome', true); valido = false; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { mostrarErro('inputEmail', true); valido = false; }
+    if (whatsapp.replace(/\D/g, '').length < 10) { mostrarErro('inputWhatsapp', true); valido = false; }
+
+    const lgpd = document.getElementById('lgpdConsent');
+    if (!lgpd.checked) {
+      lgpd.closest('.form-group').classList.add('has-error');
+      document.getElementById('lgpdConsentError').classList.add('show');
+      valido = false;
+    }
+
+    if (!valido) return;
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+
+    const pontos = calcularPontuacao();
+    const gaps = calcularGaps();
+    const resumoRespostas = perguntas
+      .map((q, i) => q.opcoes[respostas[i]].texto)
+      .join(' | ');
+
+    const honeypot = document.getElementById('website') ? document.getElementById('website').value : '';
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({
+          origem: 'scorecard',
+          nome, email, whatsapp,
+          pontuacao: pontos,
+          gaps: gaps.join(' || '),
+          respostas: resumoRespostas,
+          consentimento: 'Aceito',
+          consentimentoData: new Date().toISOString(),
+          website: honeypot
+        })
+      });
+
+      montarResultado();
+      etapaCaptura.classList.add('hidden');
+      etapaResultado.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = 'Ver meu resultado';
+      alert('Não foi possível enviar agora. Verifique sua conexão ou fale conosco no WhatsApp.');
+    }
+  });
+
+  // ===== INIT =====
+  renderPergunta();
+</script>
+
+</body>
+</html>
