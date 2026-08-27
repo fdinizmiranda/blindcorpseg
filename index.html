@@ -236,6 +236,11 @@
   .problema-destaque strong { color: #D1D5DB; }
   .stats-grid-problema { margin: 0; max-width: 100%; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 
+  /* SCORECARD (seção de destaque do diagnóstico) */
+  #scorecard .passos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 0 0 40px; }
+  #scorecard .passo { text-align: center; padding: 28px 20px; }
+  #scorecard .passo .passo-icone { font-size: 34px; margin-bottom: 10px; }
+
   /* METODO 3P */
   .metodo-intro { margin-bottom: 48px; }
   .metodo-intro .metodo-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px; background: rgba(107,114,128,.08); border: 1px solid rgba(107,114,128,.18); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 16px; }
@@ -309,6 +314,9 @@
   .cta-inner h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; position: relative; z-index: 1; }
   .cta-inner p { font-size: 16px; color: #9CA3AF; max-width: 620px; margin: 0 auto 40px; line-height: 1.8; position: relative; z-index: 1; }
   .cta-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; }
+  .cta-linksub { margin-top: 22px; font-size: 13px; color: #9CA3AF; position: relative; z-index: 1; }
+  .cta-linksub a { color: #D1D5DB; text-decoration: underline; }
+  .cta-linksub a:hover { color: #F5F2EB; }
 
   /* CONTATO */
   .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
@@ -402,7 +410,7 @@
     background: linear-gradient(135deg, #6B7280, #9CA3AF);
     color: #050D1A; font-weight: 700; font-size: 15px;
     font-family: 'Inter', sans-serif; letter-spacing: .02em;
-    border: none; cursor: pointer;
+    border: none; cursor: pointer; text-decoration: none;
     box-shadow: 0 8px 30px rgba(107,114,128,.25);
     transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
   }
@@ -448,8 +456,8 @@
     .metodo-fase { grid-template-columns: 1fr; gap: 16px; padding: 28px 22px; }
     .metodo-fase h3 { font-size: 22px; }
     .para-grid { grid-template-columns: 1fr; }
-    .dif-grid, .stats-grid, .contact-grid { grid-template-columns: 1fr; }
-    .dif-grid > *, .stats-grid > *, .para-grid > *, .contact-grid > * { min-width: 0; }
+    .dif-grid, .stats-grid, .contact-grid, #scorecard .passos-grid { grid-template-columns: 1fr; }
+    .dif-grid > *, .stats-grid > *, .para-grid > *, .contact-grid > *, #scorecard .passos-grid > * { min-width: 0; }
     .cookie-banner { flex-direction: column; align-items: stretch; bottom: 88px; }
     .cookie-actions { justify-content: flex-end; }
     .mobile-cta-bar { display: block; }
@@ -663,7 +671,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
       <h3>Quanto você perdeu em <span class="gt">contrato</span>?</h3>
-      <p class="modal-sub">Solicite um diagnóstico. Em até 24 horas, um especialista da <strong>Blind Corp</strong> vai entender quanto sua software house está deixando de ganhar por falta de blindagem.</p>
+      <p class="modal-sub">Solicite um contato. Em até 24 horas úteis, um especialista da <strong>Blind Corp</strong> vai entender quanto sua software house está deixando de ganhar por falta de blindagem.</p>
       <form id="captureForm" novalidate>
         <div class="form-group">
           <label for="inputNome">Nome e Sobrenome</label>
@@ -722,7 +730,7 @@
         </div>
         <button type="submit" class="form-submit" id="formSubmitBtn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-          Solicitar Diagnóstico
+          Solicitar Contato
         </button>
       </form>
       <p class="form-privacy">
@@ -759,6 +767,7 @@
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#problema">O Problema</a></li>
+    <li><a href="#scorecard">Diagnóstico</a></li>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#metodo">Método</a></li>
     <li><a href="#diferenciais">Diferenciais</a></li>
@@ -768,7 +777,7 @@
     <li><a href="#time">Time</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
-  <button class="nav-cta desktop-only" onclick="openModal()">Solicitar Diagnóstico</button>
+  <a class="nav-cta desktop-only" href="diagnostico.html">Solicitar Diagnóstico</a>
   <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
@@ -788,10 +797,10 @@
     <p class="hero-subtitle au d3">Blindar para crescer. Sua software house pronta para grandes players em 9 meses. Método 3P: Padronização, Proteção, Prevenção.</p>
     <p class="hero-tagline au d4">Consultoria · SGSI · ISO 27001 · ISO 27701</p>
     <div class="hero-buttons au d5">
-      <button class="btn-primary" onclick="openModal()">
+      <a class="btn-primary" href="diagnostico.html">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Quero Blindar Minha Software House
-      </button>
+        Fazer Diagnóstico Gratuito
+      </a>
       <a href="#metodo" class="btn-outline">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         Ver o Método
@@ -837,6 +846,42 @@
         <div style="font-size:40px; margin-bottom:10px;">⏱️</div>
         <div class="stat-label" style="margin-bottom:6px;">Consultorias lentas</div>
         <p style="font-size:13px; color:#9CA3AF;">Projetos de 12 a 18 meses que não entregam resultado concreto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scorecard">
+    <div class="gl au"></div>
+    <h2 class="au d1">Faça o <span class="gt">diagnóstico gratuito</span></h2>
+    <p class="au d2 section-lead sm">Em 3 minutos você descobre, com nota de 0 a 20, se sua software house está pronta para disputar contratos com grandes players. E exatamente onde estão os 3 buracos mais críticos da sua blindagem.</p>
+
+    <div class="passos-grid au d3">
+      <div class="card passo">
+        <div class="passo-icone">📝</div>
+        <div class="stat-label" style="margin-bottom:6px;">1. Responda</div>
+        <p style="font-size:13px; color:#9CA3AF;">10 perguntas rápidas sobre a sua operação.</p>
+      </div>
+      <div class="card passo">
+        <div class="passo-icone">🎯</div>
+        <div class="stat-label" style="margin-bottom:6px;">2. Receba sua nota</div>
+        <p style="font-size:13px; color:#9CA3AF;">Resultado imediato, de 0 a 20, com o seu veredito.</p>
+      </div>
+      <div class="card passo">
+        <div class="passo-icone">🛡️</div>
+        <div class="stat-label" style="margin-bottom:6px;">3. Veja os 3 buracos</div>
+        <p style="font-size:13px; color:#9CA3AF;">Os gaps exatos que travam a sua due diligence.</p>
+      </div>
+    </div>
+
+    <div class="cta-inner as">
+      <div class="gl ce"></div>
+      <h2>Descubra em <span class="gt">3 minutos</span> onde você está exposto</h2>
+      <p>Gratuito, imediato e sem compromisso. Ao final, você recebe os 3 buracos mais críticos e a chance de agendar um diagnóstico de 30 minutos com um especialista.</p>
+      <div class="cta-buttons">
+        <a class="btn-primary" href="diagnostico.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Fazer Diagnóstico Gratuito
+        </a>
       </div>
     </div>
   </section>
@@ -1114,15 +1159,16 @@
       <h2><span class="gt">Pronto</span> para conquistar grandes players?</h2>
       <p>Solicite um <strong style="color:#F5F2EB;">diagnóstico</strong>. Em até 24 horas úteis, um especialista da Blind Corp vai entender quanto sua software house está deixando de ganhar por falta de blindagem.</p>
       <div class="cta-buttons">
-        <button class="btn-primary" onclick="openModal()">
+        <a class="btn-primary" href="diagnostico.html">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-          Solicitar Diagnóstico
-        </button>
+          Fazer Diagnóstico Gratuito
+        </a>
         <a href="https://wa.me/5541998089060" target="_blank" rel="noopener" class="btn-outline">
           <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Falar no WhatsApp
         </a>
       </div>
+      <p class="cta-linksub">Prefere falar direto com um especialista? <a href="#" onclick="openModal(); return false;">Clique aqui</a></p>
     </div>
   </section>
 
@@ -1173,10 +1219,10 @@
 
 <!-- CTA fixo mobile -->
 <div class="mobile-cta-bar" id="mobileCtaBar">
-  <button class="mc-btn" onclick="openModal()">
+  <a class="mc-btn" href="diagnostico.html">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-    Solicitar Diagnóstico
-  </button>
+    Fazer Diagnóstico Gratuito
+  </a>
 </div>
 
 <script>
@@ -1195,7 +1241,7 @@
     document.querySelectorAll('.has-error').forEach(g => g.classList.remove('has-error'));
     document.querySelectorAll('.field-error').forEach(e => e.classList.remove('show'));
     document.getElementById('formSubmitBtn').disabled = false;
-    document.getElementById('formSubmitBtn').innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Diagnóstico';
+    document.getElementById('formSubmitBtn').innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Contato';
   }
 
   document.getElementById('modalClose').addEventListener('click', closeModal);
@@ -1284,18 +1330,15 @@
     btn.disabled = true;
     btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Enviando...';
 
-    // Campo honeypot (deve vir vazio)
     const honeypot = document.getElementById('website') ? document.getElementById('website').value : '';
 
     try {
-      // O Google Apps Script responde POST com redirecionamento 302.
-      // O navegador não consegue ler a resposta, então usamos "no-cors"
-      // e tratamos o envio como concluído assim que a requisição é enviada.
       await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({
+          origem: 'modal',
           nome, email, whatsapp, empresa, porte, preocupacao,
           consentimento: 'Aceito',
           consentimentoData: new Date().toISOString(),
@@ -1303,13 +1346,11 @@
         })
       });
 
-      // Envio concluído: mostra o sucesso imediatamente.
       document.getElementById('modalFormContent').classList.add('hide');
       document.getElementById('modalSuccess').classList.add('show');
     } catch (err) {
-      // Só cai aqui em falha REAL de rede (offline, DNS, sem internet).
       btn.disabled = false;
-      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Diagnóstico';
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Solicitar Contato';
       alert('Não foi possível enviar agora. Verifique sua conexão ou fale conosco no WhatsApp.');
     }
 
