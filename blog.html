@@ -325,6 +325,10 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.1);
   }
 
+  .post-card.hidden {
+    display: none;
+  }
+
   /* Thumbnail sem imagem: gradiente + ícone */
   .post-thumbnail {
     position: relative;
@@ -622,7 +626,7 @@
       </div>
     </a>
 
-    <a class="post-card" href="artigo-iso-27001-vs-soc-2.html" data-category="comparativo">
+    <a class="post-card" href="artigo-iso-27001-vs-soc-2.html" data-category="comparativo software-house">
       <div class="post-thumbnail thumb-4">
         <span class="thumb-icon">⚖️</span>
         <span class="post-category">Comparativo</span>
@@ -665,7 +669,7 @@
 </footer>
 
 <script>
-  // Filtros funcionais
+  // Filtros funcionais com suporte a múltiplas categorias por card
   const pills = document.querySelectorAll('.pill');
   const cards = document.querySelectorAll('.post-card');
 
@@ -677,10 +681,14 @@
       const filter = this.dataset.filter;
 
       cards.forEach(card => {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = 'flex';
+        // Divide as categorias do card por espaço (ex: "comparativo software-house")
+        const categories = card.dataset.category.split(' ');
+
+        // Se o filtro for "all" ou o card contiver a categoria filtrada, mostra
+        if (filter === 'all' || categories.includes(filter)) {
+          card.classList.remove('hidden');
         } else {
-          card.style.display = 'none';
+          card.classList.add('hidden');
         }
       });
     });
