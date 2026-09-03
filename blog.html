@@ -417,106 +417,6 @@
     gap: 10px;
   }
 
-  /* ===== NEWSLETTER ===== */
-  .newsletter-section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px 80px;
-  }
-
-  .newsletter-box {
-    position: relative;
-    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-card) 100%);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 60px 40px;
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .newsletter-box::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .newsletter-content {
-    position: relative;
-    z-index: 1;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .newsletter-icon {
-    font-size: 40px;
-    margin-bottom: 20px;
-  }
-
-  .newsletter-box h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-    margin-bottom: 12px;
-    letter-spacing: -0.02em;
-  }
-
-  .newsletter-box p {
-    color: var(--text-secondary);
-    font-size: 15px;
-    margin-bottom: 28px;
-  }
-
-  .newsletter-form {
-    display: flex;
-    gap: 12px;
-    max-width: 440px;
-    margin: 0 auto;
-  }
-
-  .newsletter-form input {
-    flex: 1;
-    padding: 14px 18px;
-    background: rgba(5, 13, 26, 0.6);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text-primary);
-    font-size: 14px;
-    font-family: inherit;
-  }
-
-  .newsletter-form input::placeholder {
-    color: var(--text-muted);
-  }
-
-  .newsletter-form input:focus {
-    outline: none;
-    border-color: var(--accent);
-  }
-
-  .newsletter-form button {
-    padding: 14px 28px;
-    background: var(--accent);
-    border: none;
-    border-radius: 10px;
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: inherit;
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
-  }
-
-  .newsletter-form button:hover {
-    background: #2563EB;
-    transform: translateY(-2px);
-  }
-
   /* ===== FOOTER ===== */
   footer {
     border-top: 1px solid var(--border);
@@ -541,7 +441,6 @@
     nav a { font-size: 11px; }
     .hero { padding: 80px 24px 60px; }
     .posts-grid { grid-template-columns: 1fr; }
-    .newsletter-form { flex-direction: column; }
   }
 
   @media (max-width: 480px) {
@@ -650,17 +549,6 @@
       </div>
     </a>
 
-  </div>
-</section>
-
-<section class="newsletter-section">
-  <div class="newsletter-box">
-    <div class="newsletter-content">
-      <div class="newsletter-icon">📬</div>
-      <h2>Receba conteúdos exclusivos</h2>
-      <p>Inscreva-se para receber nossos próximos artigos e novidades sobre segurança da informação.</p>
-         <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="aa0ebad1-04a9-4a49-9c66-f61ab7507209"></script>
-    </div>
   </div>
 </section>
 
