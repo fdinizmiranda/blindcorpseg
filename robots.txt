@@ -1,13 +1,25 @@
 # robots.txt - Blind Corp
-# Permite rastreamento total do site
 
 User-agent: *
 Allow: /
 
-# Bloqueia arquivos internos desnecessários
+# Bloqueia diretórios sensíveis (inexistentes hoje, mas por segurança)
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /private/
+
+# Permite crawlers de IA para descoberta em busca generativa
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
 
 # Sitemap
 Sitemap: https://blindcorpseg.com.br/sitemap.xml
