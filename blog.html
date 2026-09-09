@@ -513,37 +513,35 @@
     display: none;
   }
 
-  /* Thumbnail sem imagem: gradiente + ícone */
+  /* Thumbnail com imagem */
   .post-thumbnail {
     position: relative;
     height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
   }
 
-  .post-thumbnail::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 28px 28px;
+  .post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s cubic-bezier(.22,1,.36,1), filter .5s ease;
+    filter: grayscale(30%) brightness(.7);
   }
 
-  .thumb-1 { background: linear-gradient(135deg, #0A1F3D 0%, #12386e 100%); }
-  .thumb-2 { background: linear-gradient(135deg, #0A1F3D 0%, #0e3a5c 100%); }
-  .thumb-3 { background: linear-gradient(135deg, #0A1F3D 0%, #14355a 100%); }
-  .thumb-4 { background: linear-gradient(135deg, #0A1F3D 0%, #14404f 100%); }
-  .thumb-5 { background: linear-gradient(135deg, #0A1F3D 0%, #1a2f5c 100%); }
+  .post-card:hover .post-thumbnail img {
+    transform: scale(1.06);
+    filter: grayscale(0%) brightness(.9);
+  }
 
-  .thumb-icon {
-    position: relative;
+  .post-thumbnail::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 55%;
+    background: linear-gradient(to top, rgba(5,13,26,.95) 0%, rgba(5,13,26,.4) 50%, transparent 100%);
+    pointer-events: none;
     z-index: 1;
-    font-size: 56px;
-    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.5));
   }
 
   .post-category {
@@ -674,8 +672,8 @@
   <div class="posts-grid">
 
     <a class="post-card" href="artigo-como-implementar-iso-27001-9-meses.html" data-category="implementacao">
-      <div class="post-thumbnail thumb-1">
-        <span class="thumb-icon" role="img" aria-label="Escudo representando implementação ISO 27001">🛡️</span>
+      <div class="post-thumbnail">
+        <img src="assets/passopasso.jpg" alt="Como implementar ISO 27001 em 9 meses" loading="lazy" width="600" height="338">
         <span class="post-category">Implementação</span>
       </div>
       <div class="post-body">
@@ -686,8 +684,8 @@
     </a>
 
     <a class="post-card" href="artigo-iso-27001-software-house.html" data-category="software-house">
-      <div class="post-thumbnail thumb-2">
-        <span class="thumb-icon" role="img" aria-label="Computador representando software house">💻</span>
+      <div class="post-thumbnail">
+        <img src="assets/guia.jpg" alt="ISO 27001 para software houses" loading="lazy" width="600" height="338">
         <span class="post-category">Software House</span>
       </div>
       <div class="post-body">
@@ -698,8 +696,8 @@
     </a>
 
     <a class="post-card" href="artigo-quanto-custa-iso-27001.html" data-category="custos">
-      <div class="post-thumbnail thumb-3">
-        <span class="thumb-icon" role="img" aria-label="Gráfico representando custos de certificação">📊</span>
+      <div class="post-thumbnail">
+        <img src="assets/custo.jpg" alt="Quanto custa a certificação ISO 27001" loading="lazy" width="600" height="338">
         <span class="post-category">Custos</span>
       </div>
       <div class="post-body">
@@ -710,8 +708,8 @@
     </a>
 
     <a class="post-card" href="artigo-iso-27001-vs-soc-2.html" data-category="comparativo software-house">
-      <div class="post-thumbnail thumb-4">
-        <span class="thumb-icon" role="img" aria-label="Balança representando comparação entre certificações">⚖️</span>
+      <div class="post-thumbnail">
+        <img src="assets/soc2.jpg" alt="ISO 27001 vs SOC 2: qual a escolha certa" loading="lazy" width="600" height="338">
         <span class="post-category">Comparativo</span>
       </div>
       <div class="post-body">
@@ -722,8 +720,8 @@
     </a>
 
     <a class="post-card" href="artigo-iso-27001-vs-27701.html" data-category="comparativo">
-      <div class="post-thumbnail thumb-5">
-        <span class="thumb-icon" role="img" aria-label="Cadeado representando privacidade e proteção de dados">🔐</span>
+      <div class="post-thumbnail">
+        <img src="assets/27701.jpg" alt="ISO 27001 vs ISO 27701: qual sua empresa precisa" loading="lazy" width="600" height="338">
         <span class="post-category">Comparativo</span>
       </div>
       <div class="post-body">
