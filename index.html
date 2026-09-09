@@ -236,10 +236,54 @@
   .problema-destaque strong { color: #D1D5DB; }
   .stats-grid-problema { margin: 0; max-width: 100%; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 
+  /* CARDS COM IMAGEM */
+  .card-img-wrapper {
+    position: relative;
+    width: calc(100% + 56px);
+    margin: -28px -28px 20px -28px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 22px 22px 0 0;
+  }
+  .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s cubic-bezier(.22,1,.36,1), filter .5s ease;
+    filter: grayscale(30%) brightness(.7);
+  }
+  .card:hover .card-img-wrapper img {
+    transform: scale(1.06);
+    filter: grayscale(0%) brightness(.85);
+  }
+  .card-img-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(5,13,26,.95) 0%, rgba(5,13,26,.4) 50%, transparent 100%);
+    pointer-events: none;
+  }
+
+  /* Passo cards (diagnóstico) - imagem menor */
+  .passo .card-img-wrapper {
+    width: calc(100% + 40px);
+    margin: -28px -20px 16px -20px;
+    height: 150px;
+    border-radius: 22px 22px 0 0;
+  }
+  .passo .card-img-wrapper img {
+    filter: grayscale(40%) brightness(.65);
+  }
+  .passo:hover .card-img-wrapper img {
+    transform: scale(1.06);
+    filter: grayscale(0%) brightness(.8);
+  }
+
   /* SCORECARD (seção de destaque do diagnóstico) */
   #scorecard .passos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin: 0 0 40px; }
   #scorecard .passo { text-align: center; padding: 28px 20px; }
-  #scorecard .passo .passo-icone { font-size: 34px; margin-bottom: 10px; }
 
   /* METODO 3P */
   .metodo-intro { margin-bottom: 48px; }
@@ -612,7 +656,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Implementação ISO 27701",
-              "description": "Implementação de controles de privacidade integrados à ISO 27001 para conformidade com LGPD."
+              "description": "Controles de privacidade implementados e sustentáveis. Integração total com a operação de segurança existente."
             }
           },
           {
@@ -855,18 +899,24 @@
       "A gente era a melhor opção tecnicamente. Mas o cliente exigiu segurança. E a gente não tinha." <strong>CEO de software house</strong>, contrato perdido de <strong>R$ 2 milhões</strong>.
     </div>
     <div class="stats-grid stats-grid-problema au d4">
-      <div class="card" style="text-align:center; padding:28px 20px;">
-        <div style="font-size:40px; margin-bottom:10px;">📉</div>
+      <div class="card" style="text-align:center; padding:0 20px 28px;">
+        <div class="card-img-wrapper">
+          <img src="assets/contrato.jpg" alt="Contratos perdidos por falta de ISO 27001" loading="lazy" width="400" height="200">
+        </div>
         <div class="stat-label" style="margin-bottom:6px;">Contratos perdidos</div>
         <p style="font-size:13px; color:#9CA3AF;">Software houses perdem contratos de R$ 200 mil a R$ 2 milhões por falta de ISO 27001.</p>
       </div>
-      <div class="card" style="text-align:center; padding:28px 20px;">
-        <div style="font-size:40px; margin-bottom:10px;">🏦</div>
+      <div class="card" style="text-align:center; padding:0 20px 28px;">
+        <div class="card-img-wrapper">
+          <img src="assets/bigtechs.jpg" alt="Exigência de segurança dos grandes players" loading="lazy" width="400" height="200">
+        </div>
         <div class="stat-label" style="margin-bottom:6px;">Exigência dos grandes players</div>
         <p style="font-size:13px; color:#9CA3AF;">Bancos, seguradoras e indústrias não negociam sem comprovação de segurança.</p>
       </div>
-      <div class="card" style="text-align:center; padding:28px 20px;">
-        <div style="font-size:40px; margin-bottom:10px;">⏱️</div>
+      <div class="card" style="text-align:center; padding:0 20px 28px;">
+        <div class="card-img-wrapper">
+          <img src="assets/lentidao.jpg" alt="Consultorias lentas que não entregam resultado" loading="lazy" width="400" height="200">
+        </div>
         <div class="stat-label" style="margin-bottom:6px;">Consultorias lentas</div>
         <p style="font-size:13px; color:#9CA3AF;">Projetos de 12 a 18 meses que não entregam resultado concreto.</p>
       </div>
@@ -879,18 +929,24 @@
     <p class="au d2 section-lead sm">Em 3 minutos você descobre, com nota de 0 a 20, se sua software house está pronta para disputar contratos com grandes players. E exatamente onde estão os 3 buracos mais críticos da sua blindagem.</p>
 
     <div class="passos-grid au d3">
-      <div class="card passo">
-        <div class="passo-icone">📝</div>
+      <div class="card passo" style="padding:0 20px 28px;">
+        <div class="card-img-wrapper">
+          <img src="assets/diagnostico.jpg" alt="Diagnóstico de segurança da informação" loading="lazy" width="400" height="150">
+        </div>
         <div class="stat-label" style="margin-bottom:6px;">1. Responda</div>
         <p style="font-size:13px; color:#9CA3AF;">10 perguntas rápidas sobre a sua operação.</p>
       </div>
-      <div class="card passo">
-        <div class="passo-icone">🎯</div>
+      <div class="card passo" style="padding:0 20px 28px;">
+        <div class="card-img-wrapper">
+          <img src="assets/nota.jpg" alt="Nota de maturidade em segurança" loading="lazy" width="400" height="150">
+        </div>
         <div class="stat-label" style="margin-bottom:6px;">2. Receba sua nota</div>
         <p style="font-size:13px; color:#9CA3AF;">Resultado imediato, de 0 a 20, com o seu veredito.</p>
       </div>
-      <div class="card passo">
-        <div class="passo-icone">🛡️</div>
+      <div class="card passo" style="padding:0 20px 28px;">
+        <div class="card-img-wrapper">
+          <img src="assets/error.jpg" alt="Gaps de segurança identificados" loading="lazy" width="400" height="150">
+        </div>
         <div class="stat-label" style="margin-bottom:6px;">3. Veja os 3 buracos</div>
         <p style="font-size:13px; color:#9CA3AF;">Os gaps exatos que travam a sua due diligence.</p>
       </div>
