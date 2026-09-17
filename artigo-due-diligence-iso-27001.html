@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Due Diligence de Segurança: Como ISO 27001 Desbloqueia Contratos | Blind Corp</title>
+<meta name="description" content="Due diligence de segurança: o que grandes players avaliam, como a ISO 27001 responde cada ponto e por que sua software house perde contrato sem ela.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blindcorpseg.com.br/artigo-due-diligence-iso-27001.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Blind Corp">
+<meta property="og:title" content="Due Diligence de Segurança: Como ISO 27001 Desbloqueia Contratos | Blind Corp">
+<meta property="og:description" content="Due diligence de segurança: o que grandes players avaliam, como a ISO 27001 responde cada ponto e por que sua software house perde contrato sem ela.">
+<meta property="og:url" content="https://blindcorpseg.com.br/artigo-due-diligence-iso-27001.html">
+<meta property="og:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Due Diligence de Segurança e ISO 27001 da Blind Corp">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:modified_time" content="2026-09-17">
+<meta property="article:author" content="https://www.linkedin.com/in/fdinizmiranda/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Due Diligence de Segurança: Como ISO 27001 Desbloqueia Contratos | Blind Corp">
+<meta name="twitter:description" content="O que grandes players avaliam na due diligence e como a ISO 27001 responde cada ponto.">
+<meta name="twitter:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta name="twitter:image:alt" content="Due Diligence de Segurança e ISO 27001 da Blind Corp">
+
+<style>
+  /* ===== Fontes locais (self-hosted) ===== */
+
+  /* Inter */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-900.woff2') format('woff2');
+  }
+
+  /* Montserrat */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-900.woff2') format('woff2');
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050D1A;
+    color: #F5F2EB;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.8;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(900px 420px at 72% 18%, rgba(107,114,128,.10) 0%, transparent 42%),
+      radial-gradient(800px 380px at 30% 25%, rgba(10,31,61,.9) 0%, transparent 52%),
+      linear-gradient(180deg, #0A1F3D 0%, #0D1525 45%, #050D1A 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .18;
+    background-image: radial-gradient(rgba(107,114,128,.06) .8px, transparent .8px);
+    background-size: 24px 24px;
+  }
+
+  .gt {
+    background: linear-gradient(135deg, #6B7280 0%, #D1D5DB 50%, #6B7280 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .nav-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(5,13,26,.78); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(107,114,128,.08);
+  }
+  .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: .05em; color: #F5F2EB; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { color: #9CA3AF; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; transition: color .3s ease; }
+  .nav-links a:hover, .nav-links a.active { color: #D1D5DB; }
+  .nav-cta { padding: 10px 22px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 13px; text-decoration: none; transition: all .3s ease; border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(107,114,128,.35); }
+
+  .article-wrap { padding: 120px 20px 80px; max-width: 760px; margin: 0 auto; }
+
+  .breadcrumb { font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 28px; letter-spacing: .03em; }
+  .breadcrumb a { color: #9CA3AF; text-decoration: none; }
+  .breadcrumb a:hover { color: #D1D5DB; }
+
+  .article-tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 18px; }
+
+  .article-title { font-size: clamp(30px, 5vw, 44px); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 20px; }
+
+  .article-meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(107,114,128,.1); }
+
+  .article-body h2 { font-size: 26px; font-weight: 800; margin: 44px 0 18px; letter-spacing: -.02em; }
+  .article-body h3 { font-size: 20px; font-weight: 700; margin: 32px 0 14px; }
+  .article-body p { font-size: 17px; color: #B0B5BD; margin-bottom: 22px; }
+  .article-body ul, .article-body ol { margin: 0 0 24px 24px; }
+  .article-body li { font-size: 16px; color: #B0B5BD; margin-bottom: 10px; }
+  .article-body strong { color: #F5F2EB; }
+  .article-body a { color: #D1D5DB; text-decoration: underline; text-underline-offset: 3px; }
+  .article-body table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+  .article-body th { text-align: left; padding: 14px 16px; border: 1px solid rgba(107,114,128,.2); background: rgba(107,114,128,.08); color: #F5F2EB; font-size: 14px; font-weight: 700; }
+  .article-body td { padding: 14px 16px; border: 1px solid rgba(107,114,128,.15); color: #B0B5BD; vertical-align: top; }
+  .article-body td strong { color: #F5F2EB; }
+
+  .callout { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-left: 3px solid #6B7280; border-radius: 14px; padding: 24px 26px; margin: 32px 0; }
+  .callout p { margin: 0; font-size: 16px; }
+
+  .cta-box { margin: 56px 0; text-align: center; padding: 48px 40px; background: linear-gradient(145deg, rgba(10,20,35,.95), rgba(13,21,37,.98)); border: 1px solid rgba(107,114,128,.15); border-radius: 24px; }
+  .cta-box h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+  .cta-box p { font-size: 15px; color: #9CA3AF; margin-bottom: 28px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 15px; text-decoration: none; transition: all .3s ease; box-shadow: 0 8px 30px rgba(107,114,128,.25); border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+
+  .related { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(107,114,128,.1); }
+  .related h3 { font-size: 18px; margin-bottom: 20px; }
+  .related a { display: block; color: #9CA3AF; text-decoration: none; font-size: 15px; margin-bottom: 12px; transition: color .3s ease; }
+  .related a:hover { color: #D1D5DB; }
+
+  .footer-bar { text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(107,114,128,.08); }
+  .footer-bar p { font-size: 13px; color: rgba(156,163,175,.35); letter-spacing: .05em; }
+  .footer-bar a { color: #9CA3AF; text-decoration: none; }
+
+  .mobile-menu-toggle { display: none; background: none; border: none; color: #D1D5DB; cursor: pointer; padding: 6px; }
+
+  @keyframes shimmer { 0% { background-position: -200% center } 100% { background-position: 200% center } }
+
+  @media (max-width: 900px) {
+    .nav-bar { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(5,13,26,.96); padding: 20px; gap: 16px; align-items: flex-start; }
+    .mobile-menu-toggle { display: block; }
+    .nav-cta.desktop-only { display: none; }
+    .article-wrap { padding: 100px 20px 60px; }
+  }
+</style>
+
+<!-- JSON-LD: BlogPosting -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Due Diligence de Segurança: Como ISO 27001 Desbloqueia Contratos com Grandes Players",
+  "description": "Due diligence de segurança: o que grandes players avaliam, como a ISO 27001 responde cada ponto e por que sua software house perde contrato sem ela.",
+  "url": "https://blindcorpseg.com.br/artigo-due-diligence-iso-27001.html",
+  "image": "https://blindcorpseg.com.br/assets/og-blindcorp.png",
+  "datePublished": "2026-09-17",
+  "dateModified": "2026-09-17",
+  "author": {
+    "@type": "Person",
+    "name": "Fernando",
+    "url": "https://www.linkedin.com/in/fdinizmiranda/"
+  },
+  "publisher": {
+    "@id": "https://blindcorpseg.com.br/#empresa"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blindcorpseg.com.br/artigo-due-diligence-iso-27001.html"
+  },
+  "keywords": ["due diligence", "ISO 27001", "segurança da informação", "grandes players", "contrato", "software house", "fornecedor"],
+  "articleSection": "Software House",
+  "inLanguage": "pt-BR"
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://blindcorpseg.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://blindcorpseg.com.br/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Due Diligence de Segurança e ISO 27001"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav-bar">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo-blindcorp.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses">
+    Blind Corp
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="index.html#servicos">Serviços</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+  </ul>
+  <a href="index.html#diagnostico" class="nav-cta desktop-only">Solicitar Diagnóstico</a>
+  <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="index.html">Início</a> &gt; <a href="blog.html">Blog</a> &gt; <span>Due Diligence de Segurança</span>
+  </nav>
+
+  <span class="article-tag">Software House</span>
+  <h1 class="article-title">Due diligence de segurança: como a <span class="gt">ISO 27001</span> desbloqueia contratos</h1>
+
+  <div class="article-meta">
+    <span>Por Blind Corp</span>
+    <span>17 de setembro de 2026</span>
+    <span>Leitura: 12 min</span>
+  </div>
+
+  <div class="article-body">
+
+    <p>Vou te contar uma cena que se repete toda semana no mercado de software. O Ricardo, CEO de uma software house de 40 pessoas, está em negociação avançada com um grande player. Banco, seguradora, multinacional, empresa de saúde. O contrato vale R$ 800 mil, talvez R$ 2 milhões. O produto é bom. O preço é justo. O time está pronto.</p>
+
+    <p>Aí chega a fase de <strong>due diligence</strong>. O jurídico do grande player manda um questionário de 120 perguntas sobre segurança da informação. O Ricardo responde o que dá. O time de segurança do grande player analisa. Devolvem com uma frase educada e definitiva: <em>"Infelizmente, neste momento, não podemos seguir com a contratação."</em></p>
+
+    <p>O contrato não foi para o concorrente porque o produto era melhor. Foi porque o concorrente tinha ISO 27001. E o Ricardo não.</p>
+
+    <p>Se essa cena te parece familiar, você não está sozinho. Due diligence de segurança virou o principal filtro de grandes players na hora de escolher fornecedor de software. E a ISO 27001 é a resposta que eles esperam receber.</p>
+
+    <p>Este artigo explica o que é due diligence de segurança, o que exatamente eles avaliam, como a ISO 27001 responde cada ponto e o que sua software house precisa fazer para passar nesse filtro. Sem teoria. Sem enrolação. Com o que eu vejo na prática.</p>
+
+    <h2>O que é due diligence de segurança (e por que todo grande player faz)</h2>
+
+    <p>Due diligence é uma investigação. Quando um grande player contrata um fornecedor crítico, ele não olha só preço e qualidade do produto. Ele investiga se esse fornecedor vai trazer risco para o negócio dele. É uma auditoria pré-contrato.</p>
+
+    <p>No caso de software houses, a due diligence foca em <strong>segurança da informação e privacidade</strong>. Porque o grande player sabe que, se ele integrar seu software ao ambiente dele, a segurança dele passa a depender da sua. Um vazamento no seu sistema vira um vazamento no sistema dele. Uma falha sua vira uma multa LGPD dele.</p>
+
+    <div class="callout">
+      <p><strong>A regra do mercado:</strong> o grande player não contrata fornecedor de software sem due diligence de segurança. Se ele não te investigou, ele não confia em você. E se ele não confia, ele não assina.</p>
+    </div>
+
+    <p>Isso vale para bancos, fintechs, seguradoras, empresas de saúde, varejo grande, indústria, governo. Qualquer setor regulado ou que lide com dados sensíveis faz due diligence de fornecedor. E essa lista só cresce, porque a LGPD e as normas setoriais estão apertando a responsabilidade sobre toda a cadeia.</p>
+
+    <h2>O que eles avaliam na due diligence</h2>
+
+    <p>Aqui está o que ninguém te conta: o questionário de due diligence não é aleatório. Ele segue um padrão. A maioria das empresas usa frameworks reconhecidos (SIG, CSA STAR, questionários setoriais), e as perguntas caem sempre nos mesmos blocos.</p>
+
+    <p>Depois de acompanhar dezenas desses processos, os pontos que mais travam software houses são:</p>
+
+    <h3>1. Política de segurança da informação documentada</h3>
+
+    <p>A primeira pergunta é quase sempre: <em>"Vocês têm uma política de segurança da informação formal, aprovada pela diretoria e comunicada a todos os colaboradores?"</em></p>
+
+    <p>Se a resposta é "a gente se organiza" ou "cada um faz o que acha certo", você já começou mal. Política documentada é o mínimo. É a prova de que segurança não é improviso na sua empresa.</p>
+
+    <h3>2. Análise de risco formal</h3>
+
+    <p><em>"Vocês fazem análise de risco de segurança antes de aceitar contratos grandes? Como vocês identificam e tratam riscos?"</em></p>
+
+    <p>Software houses em crescimento tendem a pular essa etapa. Aceitam contrato, entregam, resolvem os problemas no caminho. Funciona até o dia em que o grande player pergunta como você gerencia risco. Se você não tem processo formal, a resposta é "não gerenciamos formalmente". E isso é eliminatório.</p>
+
+    <h3>3. Controle de acesso documentado</h3>
+
+    <p><em>"Como vocês controlam acesso a ambientes de produção? Quem tem acesso ao quê? Como vocês revisam esses acessos?"</em></p>
+
+    <p>Aqui o grande player quer saber se você tem princípio do menor privilégio, revisão periódica de acessos, segregação de funções e controle de acesso de administradores. Se seu dev sênior tem acesso a tudo, inclusive produção, sem registro, você tem um problema.</p>
+
+    <h3>4. Criptografia e proteção de dados</h3>
+
+    <p><em>"Vocês criptografam dados em trânsito e em repouso? Quais algoritmos? Como gerenciam chaves?"</em></p>
+
+    <p>Essa pergunta é técnica, mas o avaliador não quer detalhes de implementação. Ele quer saber se existe política, se é seguida e se é auditável. Se você usa HTTPS mas não tem política de criptografia documentada, a resposta fica fraca.</p>
+
+    <h3>5. Gestão de incidentes</h3>
+
+    <p><em>"Vocês têm processo de resposta a incidentes de segurança? Já tiveram algum? Como foi tratado?"</em></p>
+
+    <p>Toda empresa tem ou vai ter incidente. O que diferencia uma empresa madura de uma amadora é ter processo de resposta. Se você não tem, o grande player entende que, no dia em que acontecer um incidente, você vai demorar para reagir. E o prejuízo vai cair na cadeia dele.</p>
+
+    <h3>6. Backup e recuperação de desastres</h3>
+
+    <p><em>"Vocês fazem backup? Testam a recuperação? Qual o RPO e RTO?"</em></p>
+
+    <p>Fazer backup todo mundo faz. Testar a recuperação é outra história. O grande player quer saber se você já testou, quanto tempo leva para recuperar e se tem plano de continuidade. Se você não sabe responder RPO e RTO, você não tem plano de recuperação. Você tem esperança.</p>
+
+    <h3>7. Treinamento de segurança</h3>
+
+    <p><em>"Vocês treinam colaboradores em segurança da informação? Com que frequência?"</em></p>
+
+    <p>O maior vetor de incidente ainda é o humano. Phishing, engenharia social, erro de configuração. O grande player quer saber se você investe em conscientização. Se a resposta é "mandamos um e-mail uma vez por ano", não conta.</p>
+
+    <h3>8. Segurança no desenvolvimento</h3>
+
+    <p><em>"Vocês seguem práticas de desenvolvimento seguro? Fazem revisão de código, testes de penetração, análise de vulnerabilidade em dependências?"</em></p>
+
+    <p>Para software house, essa é específica. O grande player quer saber se segurança está no ciclo de desenvolvimento, não só na infraestrutura. Se você não faz code review com foco em segurança, não testa vulnerabilidades em bibliotecas de terceiros e não tem pipeline seguro, você é risco.</p>
+
+    <h3>9. Due diligence com seus próprios fornecedores</h3>
+
+    <p><em>"Vocês avaliam a segurança dos seus fornecedores? Cloud, SaaS que vocês usam, parceiros?"</em></p>
+
+    <p>Essa é a pergunta que pega muita gente. O grande player quer saber se você estende a mesma exigência para sua cadeia. Se você usa AWS, Azure, Google, mas não tem contrato com cláusulas de segurança, não avalia a segurança deles, você tem um ponto fraco.</p>
+
+    <h3>10. Certificações e conformidade</h3>
+
+    <p><em>"Vocês têm certificação ISO 27001, SOC 2 ou equivalente? Se não, qual o plano para obter?"</em></p>
+
+    <p>Aqui está o ponto. Ter certificação não é obrigatório em todos os casos. Mas é o atalho mais reconhecido. Se você tem ISO 27001, o questionário de due diligence encolhe de 120 perguntas para 20. Porque o certificado prova que um terceiro independente já auditou seu sistema. Se você não tem, o grande player vai auditar você. E isso é mais lento, mais caro e mais invasivo.</p>
+
+    <h2>Como a ISO 27001 responde cada ponto da due diligence</h2>
+
+    <p>Agora a parte que importa. A ISO 27001 não é um checklist. É um <strong>sistema de gestão</strong>. Mas quando você implementa a ISO 27001 de verdade, cada ponto da due diligence tem resposta documentada, processo definido e evidência auditável.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Ponto da due diligence</th>
+          <th>Como a ISO 27001 responde</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Política de segurança</strong></td>
+          <td>Requisito 5.2 da norma. Política formal, aprovada pela direção, comunicada e revisada.</td>
+        </tr>
+        <tr>
+          <td><strong>Análise de risco</strong></td>
+          <td>Cláusula 6.1.2. Metodologia formal de análise de risco, com critérios de aceitação definidos.</td>
+        </tr>
+        <tr>
+          <td><strong>Controle de acesso</strong></td>
+          <td>Anexo A.5 e A.9. Controles de identificação, autenticação, privilégios e revisão.</td>
+        </tr>
+        <tr>
+          <td><strong>Criptografia</strong></td>
+          <td>Anexo A.10. Controles de proteção criptográfica com política definida.</td>
+        </tr>
+        <tr>
+          <td><strong>Gestão de incidentes</strong></td>
+          <td>Anexo A.16. Processo de reporte, avaliação, resposta e lições aprendidas.</td>
+        </tr>
+        <tr>
+          <td><strong>Backup e recuperação</strong></td>
+          <td>Anexo A.12 e A.17. Backup com política definida e plano de continuidade de negócio.</td>
+        </tr>
+        <tr>
+          <td><strong>Treinamento</strong></td>
+          <td>Cláusula 7.2 e 7.3. Competência e conscientização obrigatórias para todos.</td>
+        </tr>
+        <tr>
+          <td><strong>Segurança no desenvolvimento</strong></td>
+          <td>Anexo A.14. Requisitos de segurança na aquisição, desenvolvimento e manutenção.</td>
+        </tr>
+        <tr>
+          <td><strong>Due diligence com fornecedores</strong></td>
+          <td>Anexo A.15. Gestão de segurança na relação com fornecedores.</td>
+        </tr>
+        <tr>
+          <td><strong>Certificação</strong></td>
+          <td>O próprio certificado ISO 27001, emitido por organismo acreditado.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Perceba o padrão: não é que a ISO 27001 "cobre" cada ponto. É que ela <strong>obriga você a ter processo, documentação e evidência</strong> para cada um. E é exatamente isso que o grande player quer ver.</p>
+
+    <div class="callout">
+      <p><strong>O atalho da ISO 27001:</strong> com o certificado, você não responde 120 perguntas do zero. Você mostra o certificado, entrega o escopo e a declaração de aplicabilidade (SoA), e responde só o que é específico do contrato. O tempo de due diligence cai de semanas para dias.</p>
+    </div>
+
+    <h2>O que acontece quando você não tem ISO 27001 na due diligence</h2>
+
+    <p>Vou ser direto sobre o que acontece, porque muita gente acha que "a gente resolve na conversa". Não resolve. O que acontece na prática:</p>
+
+    <h3>Cenário 1: você perde o contrato</h3>
+
+    <p>O mais comum. O grande player tem política interna que exige certificação de fornecedores críticos. Sem ISO 27001 (ou equivalente), você não passa no filtro. Não é negociação. É política.</p>
+
+    <h3>Cenário 2: você ganha, mas com condições pesadas</h3>
+
+    <p>O grande player aceita, mas impõe cláusulas específicas, auditorias trimestrais às suas custas, multas contratuais pesadas em caso de incidente e direito de rescisão se você não cumprir certos marcos de segurança. O contrato sai mais caro e mais arriscado do que seria com certificação.</p>
+
+    <h3>Cenário 3: você ganha, mas demora meses</h3>
+
+    <p>O grande player aceita fazer a due diligence sem certificado, mas o processo leva 3 a 6 meses. Porque ele vai auditar você no lugar de confiar num terceiro. Enquanto isso, o concorrente certificado fecha outros contratos. Você perde tempo e oportunidade.</p>
+
+    <h3>Cenário 4: você nem chega a saber que perdeu</h3>
+
+    <p>O mais silencioso e mais comum. Você participa da RFP, responde o questionário, manda a proposta. Nunca recebe feedback. O contrato foi para o concorrente certificado, e você nem sabe que o motivo foi segurança. Você acha que foi preço. Não foi.</p>
+
+    <div class="callout">
+      <p><strong>O custo invisível:</strong> o maior prejuízo de não ter ISO 27001 não é o contrato que você perdeu. É o contrato que você nem sabe que perdeu. Porque ninguém te conta.</p>
+    </div>
+
+    <h2>Quanto tempo leva para estar pronto para due diligence</h2>
+
+    <p>Aqui tem uma confusão comum. Muita gente acha que implementar ISO 27001 leva 18 meses. Não precisa. Com método certo e foco em software house, o prazo realista é de <strong>9 meses</strong> para estar certificado.</p>
+
+    <p>Dividindo em fases:</p>
+
+    <ul>
+      <li><strong>Meses 1 a 3 (Padronização):</strong> diagnóstico, análise de GAP, definição de escopo, políticas, SoA. Aqui você constrói o chão.</li>
+      <li><strong>Meses 4 a 6 (Proteção):</strong> implementação dos controles, SGSI funcionando, treinamento do time. Aqui a estrutura fica de pé.</li>
+      <li><strong>Meses 7 a 9 (Prevenção):</strong> auditoria interna, ajustes, preparação para auditoria de certificação. Aqui você passa no teste.</li>
+    </ul>
+
+    <p>Depois disso, você tem o certificado. E a partir do certificado, toda due diligence vira conversa rápida, não investigação profunda.</p>
+
+    <p>Se você ainda não tem nada, 9 meses é o prazo realista. Se você já tem processos informais, pode ser menos. Se você acha que vai fazer em 3 meses, está subestimando. E vai travar no meio do caminho.</p>
+
+    <h2>Checklist: sua software house passa na due diligence?</h2>
+
+    <p>Antes de qualquer coisa, faça esse diagnóstico honesto. Se você não consegue responder "sim" para pelo menos 7 dos 10 pontos abaixo, sua software house não passa em due diligence de grande player:</p>
+
+    <ol>
+      <li>Você tem política de segurança da informação documentada e aprovada pela diretoria?</li>
+      <li>Você faz análise de risco formal antes de aceitar contratos grandes?</li>
+      <li>Você tem controle de acesso documentado, com revisão periódica?</li>
+      <li>Você tem política de criptografia para dados em trânsito e em repouso?</li>
+      <li>Você tem processo formal de resposta a incidentes?</li>
+      <li>Você faz backup e testa recuperação periodicamente?</li>
+      <li>Você treina o time em segurança com frequência (não só uma vez por ano)?</li>
+      <li>Você aplica práticas de desenvolvimento seguro no ciclo de vida?</li>
+      <li>Você avalia a segurança dos seus próprios fornecedores?</li>
+      <li>Você tem certificação ISO 27001 ou equivalente reconhecido?</li>
+    </ol>
+
+    <p>Se você respondeu "não" para mais de 3, você está exposto. E não é questão de tempo até um grande player perceber. É questão de quando.</p>
+
+    <h2>O argumento que fecha a decisão</h2>
+
+    <p>Vamos falar de números, porque decisão de CEO se toma com números.</p>
+
+    <p>Um contrato com grande player vale, em média, entre <strong>R$ 500 mil e R$ 2 milhões</strong>. Uma multa LGPD pode chegar a <strong>2% do faturamento</strong>, limitada a R$ 50 milhões por infração. Um incidente de segurança custa, em média, entre <strong>R$ 4 milhões e R$ 10 milhões</strong> somando resposta, multas, perda de clientes e dano reputacional.</p>
+
+    <p>Implementar ISO 27001 em 9 meses custa uma fração disso. E o retorno não é só evitar perda. É <strong>destravar receita</strong>. É participar de licitações que hoje você não participa. É entrar em negociações que hoje travam na due diligence.</p>
+
+    <p>A conta não é "quanto custa ISO 27001". A conta é "quanto custa não ter ISO 27001". E essa conta, cedo ou tarde, chega.</p>
+
+    <h2>Próximos passos</h2>
+
+    <p>Due diligence de segurança não é mais diferencial. É requisito. Grandes players não contratam software house sem investigar segurança. E a ISO 27001 é o atalho mais reconhecido para passar nessa investigação com confiança.</p>
+
+    <p>Se você quer saber exatamente onde sua software house está hoje em relação ao que o grande player espera, o primeiro passo é um <strong>diagnóstico gratuito</strong>. Em 24 horas, você recebe:</p>
+
+    <ul>
+      <li>O estado atual da sua segurança em relação aos 10 pontos da due diligence</li>
+      <li>Os gaps críticos que precisam ser corrigidos antes da próxima negociação</li>
+      <li>Uma estimativa de tempo e investimento para estar pronto</li>
+      <li>O caminho mais curto até a certificação ISO 27001</li>
+    </ul>
+
+    <p>Sem compromisso. Sem venda agressiva. Só clareza sobre onde você está e o que falta para destravar os contratos que você quer.</p>
+
+  </div>
+
+  <div class="cta-box">
+    <h3>Sua software house passa na <span class="gt">due diligence</span> de um grande player?</h3>
+    <p>Solicite um diagnóstico gratuito e descubra em 24 horas onde estão os gaps que travam seus contratos.</p>
+    <a href="index.html#diagnostico" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+      Solicitar Diagnóstico
+    </a>
+  </div>
+
+  <div class="related">
+    <h3>Leia também</h3>
+    <a href="artigo-iso-27001-software-house.html">ISO 27001 para software houses: o guia completo</a>
+    <a href="artigo-como-implementar-iso-27001-9-meses.html">Como implementar a ISO 27001 em 9 meses</a>
+    <a href="artigo-quanto-custa-iso-27001.html">Quanto custa a certificação ISO 27001?</a>
+    <a href="artigo-iso-27001-vs-soc-2.html">ISO 27001 vs SOC 2: qual a escolha certa?</a>
+    <a href="artigo-iso-27001-vs-27701.html">ISO 27001 vs ISO 27701: qual sua empresa precisa?</a>
+    <a href="blog.html">Ver todos os artigos →</a>
+  </div>
+
+</main>
+
+<div class="footer-bar">
+  <p>© 2026 Blind Corp. Todos os direitos reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+</div>
+
+<script>
+  document.getElementById('mobileToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
