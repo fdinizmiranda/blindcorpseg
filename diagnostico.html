@@ -450,6 +450,23 @@
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9E9aza5x-MwePyUSVE1LHN2V_hnEI-iz24C57PIqNfeuYxMfRGOlxnxrrS204sZi2/exec';
   const WHATSAPP_NUM = '5541988608849';
 
+  // Identificador único de sessão: o rate limit no Apps Script passa a usar
+  // este ID em vez de IP, evitando bloquear leads legítimos que compartilham IP.
+  function gerarSessionId() {
+    return 'sess_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }
+  const sessionId = gerarSessionId();
+
+  async function obterIp() {
+    try {
+      const r = await fetch('https://api.ipify.org?format=json');
+      const j = await r.json();
+      return j.ip || 'desconhecido';
+    } catch (e) {
+      return 'desconhecido';
+    }
+  }
+
   // ===== AS 10 PERGUNTAS =====
   // "gap" é a mensagem do buraco crítico. Perguntas de qualificação (4 e 7) não têm gap.
   const perguntas = [
@@ -746,12 +763,15 @@
     const honeypot = document.getElementById('website') ? document.getElementById('website').value : '';
 
     try {
+      const ip = await obterIp();
       await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({
           origem: 'scorecard',
+          sessionId: sessionId,
+          ip: ip,
           nome, email, whatsapp,
           pontuacao: pontos,
           gaps: gaps.join(' || '),
