@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultoria ISO 27701 e Adequação à LGPD | Blind Corp</title>
+<meta name="description" content="Consultoria ISO 27701 e adequação à LGPD para software houses e SaaS: gestão da privacidade e certificação, isolada ou integrada à ISO 27001.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blindcorpseg.com.br/consultoria-iso-27701-lgpd.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Blind Corp">
+<meta property="og:title" content="Consultoria ISO 27701 e Adequação à LGPD | Blind Corp">
+<meta property="og:description" content="Consultoria ISO 27701 e adequação à LGPD para software houses e SaaS: gestão da privacidade e certificação, isolada ou integrada à ISO 27001.">
+<meta property="og:url" content="https://blindcorpseg.com.br/consultoria-iso-27701-lgpd.html">
+<meta property="og:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Consultoria ISO 27701 e LGPD | Blind Corp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Consultoria ISO 27701 e Adequação à LGPD | Blind Corp">
+<meta name="twitter:description" content="Consultoria ISO 27701 e adequação à LGPD para software houses e SaaS: gestão da privacidade e certificação, isolada ou integrada à ISO 27001.">
+<meta name="twitter:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.jpg">
+
+<style>
+  /* ===== Fontes locais (self-hosted) ===== */
+
+  /* Inter */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-900.woff2') format('woff2');
+  }
+
+  /* Montserrat */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-900.woff2') format('woff2');
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050D1A;
+    color: #F5F2EB;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.8;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(900px 420px at 72% 18%, rgba(107,114,128,.10) 0%, transparent 42%),
+      radial-gradient(800px 380px at 30% 25%, rgba(10,31,61,.9) 0%, transparent 52%),
+      linear-gradient(180deg, #0A1F3D 0%, #0D1525 45%, #050D1A 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .18;
+    background-image: radial-gradient(rgba(107,114,128,.06) .8px, transparent .8px);
+    background-size: 24px 24px;
+  }
+
+  .gt {
+    background: linear-gradient(135deg, #6B7280 0%, #D1D5DB 50%, #6B7280 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .nav-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(5,13,26,.78); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(107,114,128,.08);
+  }
+  .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: .05em; color: #F5F2EB; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { color: #9CA3AF; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; transition: color .3s ease; }
+  .nav-links a:hover, .nav-links a.active { color: #D1D5DB; }
+  .nav-cta { padding: 10px 22px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 13px; text-decoration: none; transition: all .3s ease; border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(107,114,128,.35); }
+
+  .article-wrap { padding: 120px 20px 80px; max-width: 760px; margin: 0 auto; }
+
+  .breadcrumb { font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 28px; letter-spacing: .03em; }
+  .breadcrumb a { color: #9CA3AF; text-decoration: none; }
+  .breadcrumb a:hover { color: #D1D5DB; }
+
+  .article-tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 18px; }
+
+  .article-title { font-size: clamp(30px, 5vw, 44px); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 20px; }
+
+  .article-meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(107,114,128,.1); }
+
+  .article-body h2 { font-size: 26px; font-weight: 800; margin: 44px 0 18px; letter-spacing: -.02em; }
+  .article-body h3 { font-size: 20px; font-weight: 700; margin: 32px 0 14px; }
+  .article-body p { font-size: 17px; color: #B0B5BD; margin-bottom: 22px; }
+  .article-body ul, .article-body ol { margin: 0 0 24px 24px; }
+  .article-body li { font-size: 16px; color: #B0B5BD; margin-bottom: 10px; }
+  .article-body strong { color: #F5F2EB; }
+  .article-body a { color: #D1D5DB; text-decoration: underline; text-underline-offset: 3px; }
+  .article-body table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+  .article-body th { text-align: left; padding: 14px 16px; border: 1px solid rgba(107,114,128,.2); background: rgba(107,114,128,.08); color: #F5F2EB; font-size: 14px; font-weight: 700; }
+  .article-body td { padding: 14px 16px; border: 1px solid rgba(107,114,128,.15); color: #B0B5BD; vertical-align: top; }
+  .article-body td strong { color: #F5F2EB; }
+
+  .callout { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-left: 3px solid #6B7280; border-radius: 14px; padding: 24px 26px; margin: 32px 0; }
+  .callout p { margin: 0; font-size: 16px; }
+
+  .cta-box { margin: 56px 0; text-align: center; padding: 48px 40px; background: linear-gradient(145deg, rgba(10,20,35,.95), rgba(13,21,37,.98)); border: 1px solid rgba(107,114,128,.15); border-radius: 24px; }
+  .cta-box h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+  .cta-box p { font-size: 15px; color: #9CA3AF; margin-bottom: 28px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 15px; text-decoration: none; transition: all .3s ease; box-shadow: 0 8px 30px rgba(107,114,128,.25); border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+
+  .related { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(107,114,128,.1); }
+  .related h3 { font-size: 18px; margin-bottom: 20px; }
+  .related a { display: block; color: #9CA3AF; text-decoration: none; font-size: 15px; margin-bottom: 12px; transition: color .3s ease; }
+  .related a:hover { color: #D1D5DB; }
+
+  .footer-bar { text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(107,114,128,.08); }
+  .footer-bar p { font-size: 13px; color: rgba(156,163,175,.35); letter-spacing: .05em; }
+  .footer-bar a { color: #9CA3AF; text-decoration: none; }
+
+  .mobile-menu-toggle { display: none; background: none; border: none; color: #D1D5DB; cursor: pointer; padding: 6px; }
+
+  @keyframes shimmer { 0% { background-position: -200% center } 100% { background-position: 200% center } }
+
+  @media (max-width: 900px) {
+    .nav-bar { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(5,13,26,.96); padding: 20px; gap: 16px; align-items: flex-start; }
+    .mobile-menu-toggle { display: block; }
+    .nav-cta.desktop-only { display: none; }
+    .article-wrap { padding: 100px 20px 60px; }
+  }
+</style>
+<style>
+  .svc-hero { margin-bottom: 36px; }
+  .svc-lead { font-size: 19px; color: #B0B5BD; line-height: 1.7; margin-bottom: 28px; }
+  .svc-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+  .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 26px; border-radius: 999px; border: 1px solid rgba(107,114,128,.4); color: #D1D5DB; font-weight: 700; font-size: 15px; text-decoration: none; font-family: 'Inter', sans-serif; }
+  .btn-ghost:hover { border-color: #9CA3AF; color: #F5F2EB; }
+  .svc-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 32px 0 8px; }
+  .svc-fact { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-radius: 14px; padding: 18px; }
+  .svc-fact strong { display: block; font-size: 22px; font-weight: 900; color: #F5F2EB; line-height: 1.2; }
+  .svc-fact span { font-size: 13px; color: #9CA3AF; }
+  .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0 32px; }
+  .svc-card { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-radius: 16px; padding: 22px; }
+  .svc-card h3 { font-size: 17px !important; margin: 0 0 8px !important; }
+  .svc-card p { font-size: 15px !important; margin: 0 !important; }
+  .svc-steps { counter-reset: s; list-style: none; margin: 24px 0 32px !important; padding: 0; }
+  .svc-steps li { counter-increment: s; position: relative; padding: 0 0 22px 56px; }
+  .svc-steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 38px; height: 38px; border-radius: 50%; background: rgba(107,114,128,.15); border: 1px solid rgba(107,114,128,.35); color: #F5F2EB; font-weight: 800; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; }
+  .svc-steps li strong { display: block; font-size: 17px; margin-bottom: 4px; }
+  .faq-list details { border-bottom: 1px solid rgba(107,114,128,.15); padding: 18px 0; }
+  .faq-list summary { cursor: pointer; font-weight: 700; font-size: 17px; color: #F5F2EB; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary::after { content: '+'; color: #9CA3AF; font-size: 22px; line-height: 1; }
+  .faq-list details[open] summary::after { content: '−'; }
+  .faq-list details p { margin: 12px 0 0 !important; }
+  .svc-who { display: flex; gap: 20px; align-items: center; margin: 40px 0; padding: 26px; background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-radius: 18px; }
+  .svc-who img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+  .svc-who p { margin: 0 0 6px !important; font-size: 15px !important; }
+  .svc-who .n { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #F5F2EB; font-size: 18px !important; }
+  .svc-other { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+  .svc-other a { display: block; padding: 14px 16px; border: 1px solid rgba(107,114,128,.18); border-radius: 12px; color: #D1D5DB !important; text-decoration: none !important; font-size: 15px; }
+  .svc-other a:hover { border-color: #9CA3AF; }
+  @media (max-width: 700px) { .svc-facts, .svc-grid, .svc-other { grid-template-columns: 1fr; } .svc-who { flex-direction: column; align-items: flex-start; } }
+</style>
+
+<!-- JSON-LD: Serviço, FAQ e breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://blindcorpseg.com.br/consultoria-iso-27701-lgpd.html#servico",
+      "name": "Consultoria ISO 27701 e adequação à LGPD",
+      "serviceType": "Consultoria em privacidade e proteção de dados",
+      "description": "Consultoria ISO 27701 e adequação à LGPD para software houses e SaaS: gestão da privacidade e certificação, isolada ou integrada à ISO 27001.",
+      "url": "https://blindcorpseg.com.br/consultoria-iso-27701-lgpd.html",
+      "provider": {
+        "@id": "https://blindcorpseg.com.br/#empresa"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        {
+          "@type": "City",
+          "name": "Curitiba"
+        },
+        {
+          "@type": "City",
+          "name": "São Paulo"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Software houses e empresas de tecnologia"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blindcorpseg.com.br/consultoria-iso-27701-lgpd.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso ter ISO 27001 para fazer a ISO 27701?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não desde a versão 2025, que é independente. Mas para software houses recomendamos integrar as duas, porque a proteção de dados pessoais depende de controles de segurança como acesso, criptografia e backup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A ISO 27701 garante conformidade com a LGPD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não garante sozinha, mas é um dos melhores caminhos para estruturar a conformidade e comprovar boas práticas a clientes e autoridades. A LGPD tem exigências jurídicas que também precisam ser tratadas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo leva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Partindo de uma ISO 27001 já implementada, em geral de 3 a 6 meses. Partindo do zero, o prazo é definido no diagnóstico, de acordo com o volume e a sensibilidade dos dados tratados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Minha software house é controladora ou operadora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de cada tratamento. Em geral, a software house é operadora dos dados que processa para os clientes e controladora dos dados dos próprios colaboradores e leads. Essa definição é uma das primeiras etapas do projeto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês fazem o papel de encarregado (DPO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O projeto inclui a estruturação da função de encarregado e a capacitação de quem vai exercê-la. Se a empresa precisar de um encarregado externo, avaliamos o caso no diagnóstico."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://blindcorpseg.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Serviços",
+          "item": "https://blindcorpseg.com.br/#servicos"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Consultoria ISO 27701 e LGPD"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blindcorpseg.com.br/consultoria-iso-27701-lgpd.html",
+      "url": "https://blindcorpseg.com.br/consultoria-iso-27701-lgpd.html",
+      "name": "Consultoria ISO 27701 e Adequação à LGPD | Blind Corp",
+      "description": "Consultoria ISO 27701 e adequação à LGPD para software houses e SaaS: gestão da privacidade e certificação, isolada ou integrada à ISO 27001.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://blindcorpseg.com.br/#website"
+      },
+      "about": {
+        "@id": "https://blindcorpseg.com.br/consultoria-iso-27701-lgpd.html#servico"
+      },
+      "dateModified": "2026-11-25"
+    }
+  ]
+}
+</script>
+<script>
+  // Eventos do Google Analytics (só disparam se o visitante aceitou cookies)
+  window.dataLayer = window.dataLayer || [];
+  window.bcTrack = function (nome, params) { if (window.__gaLoaded && window.gtag) window.gtag('event', nome, params || {}); };
+</script>
+</head>
+<body>
+
+
+<nav class="nav-bar">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo-blindcorp.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses">
+    Blind Corp
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="index.html#servicos" class="active">Serviços</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+  </ul>
+  <a href="index.html#diagnostico" class="nav-cta desktop-only">Solicitar Diagnóstico</a>
+  <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="index.html">Início</a> &gt; <a href="index.html#servicos">Serviços</a> &gt; <span>Consultoria ISO 27701 e LGPD</span>
+  </nav>
+
+  <div class="svc-hero">
+    <span class="article-tag">Serviço</span>
+    <h1 class="article-title">Consultoria ISO 27701 e <span class="gt">adequação à LGPD</span></h1>
+    <p class="svc-lead">Estruturamos a gestão da privacidade da sua software house com a ISO 27701 e a adequação à LGPD: mapeamento de dados pessoais, papéis de controlador e operador, direitos dos titulares, fornecedores e incidentes. Implementação isolada ou integrada à ISO 27001.</p>
+    <div class="svc-ctas">
+      <a href="diagnostico.html" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Fazer diagnóstico gratuito</a>
+      <a href="https://wa.me/5541988608849?text=Quero%20falar%20sobre%20ISO%2027701%20e%20LGPD" class="btn-ghost" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+    <div class="svc-facts"><div class="svc-fact"><strong>ISO 27701:2025</strong><span>norma independente desde 2025</span></div><div class="svc-fact"><strong>LGPD</strong><span>Lei 13.709/2018</span></div><div class="svc-fact"><strong>27001 + 27701</strong><span>implementação integrada</span></div></div>
+  </div>
+
+  <div class="article-body">
+
+    <h2>Para quem é</h2>
+    <p>Para software houses e SaaS que tratam dados pessoais dos clientes dos seus clientes: sistemas de RH, saúde, financeiro, CRM, educação, varejo. Nesses casos, o cliente quer saber não só se o sistema é seguro, mas como os dados pessoais são tratados, por quem e com qual base legal.</p>
+
+    <h2>ISO 27701 em 2025: o que mudou</h2>
+    <p>Em outubro de 2025 foi publicada a ISO/IEC 27701:2025. Ela deixou de ser uma extensão da ISO 27001 e virou uma norma independente de gestão da privacidade, que pode ser certificada sozinha. Para software houses, integrar as duas continua sendo o caminho mais eficiente, porque a proteção de dados pessoais depende dos mesmos controles de segurança. Explicamos em detalhe no comparativo <a href="artigo-iso-27001-vs-27701.html">ISO 27001 vs ISO 27701</a>.</p>
+
+    <h2>O que está incluído</h2>
+    <div class="svc-grid">
+      <div class="svc-card"><h3>Mapeamento de dados pessoais</h3><p>Quais dados a empresa trata, de onde vêm, onde ficam, quem acessa e por quanto tempo.</p></div>
+      <div class="svc-card"><h3>Controlador ou operador</h3><p>Definição do papel da software house em cada tratamento, que muda as obrigações e os controles.</p></div>
+      <div class="svc-card"><h3>Bases legais e registros</h3><p>Registro das operações de tratamento e enquadramento de cada uma nas bases legais da LGPD.</p></div>
+      <div class="svc-card"><h3>Avaliação de impacto à privacidade</h3><p>Relatório de impacto para os tratamentos de maior risco aos titulares.</p></div>
+      <div class="svc-card"><h3>Direitos dos titulares</h3><p>Processo para atender pedidos de acesso, correção, exclusão e portabilidade dentro do prazo.</p></div>
+      <div class="svc-card"><h3>Fornecedores e contratos</h3><p>Cláusulas de proteção de dados e avaliação de suboperadores, incluindo serviços em nuvem.</p></div>
+      <div class="svc-card"><h3>Incidentes com dados pessoais</h3><p>Fluxo de resposta e comunicação, inclusive à ANPD e aos titulares quando necessário.</p></div>
+      <div class="svc-card"><h3>Auditoria interna de privacidade</h3><p>Verificação dos controles antes da certificação ou da due diligence do cliente.</p></div>
+    </div>
+
+    <h2>Como funciona</h2>
+    <ol class="svc-steps">
+      <li><strong>Diagnóstico de privacidade</strong>Levantamento do estado atual frente à LGPD e à ISO 27701, com prioridades por risco.</li>
+      <li><strong>Estrutura do SGPI</strong>Escopo, papéis, políticas, inventário de dados e avaliação de riscos à privacidade.</li>
+      <li><strong>Implementação dos controles</strong>Processos de direitos dos titulares, contratos, incidentes, retenção e descarte.</li>
+      <li><strong>Auditoria interna e certificação</strong>Verificação antes da auditoria externa e acompanhamento até o certificado, quando o objetivo for certificar.</li>
+    </ol>
+
+    <div class="callout">
+      <p><strong>Importante:</strong> a ISO 27701 não substitui a LGPD nem garante sozinha que a empresa esteja livre de sanções. Ela organiza a gestão da privacidade e gera evidências de conformidade. Questões jurídicas específicas devem ser tratadas com assessoria jurídica, e trabalhamos em conjunto com o advogado da sua empresa quando necessário.</p>
+    </div>
+
+    <h2>Já tem ISO 27001?</h2>
+    <p>O caminho é mais curto: o SGSI já existente serve de base, e o projeto se concentra nos controles específicos de privacidade. Em geral, a integração leva de 3 a 6 meses, dependendo da complexidade dos tratamentos.</p>
+
+
+    <aside class="svc-who" aria-label="Quem conduz">
+      <img src="assets/fernando.jpg" alt="Fernando Miranda, fundador da Blind Corp" width="84" height="84" loading="lazy">
+      <div>
+        <p class="n">Quem conduz: Fernando Miranda</p>
+        <p>Fundador e consultor líder da Blind Corp. 16 anos de experiência em processos, sistemas de gestão e auditoria. Liderou a implementação de SGPI e ISO 20000 do zero, na prática, em software house.</p>
+        <p><a href="https://www.linkedin.com/in/fdinizmiranda/" target="_blank" rel="noopener author">Conectar no LinkedIn</a></p>
+      </div>
+    </aside>
+
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-list">
+      <details><summary>Preciso ter ISO 27001 para fazer a ISO 27701?</summary><p>Não desde a versão 2025, que é independente. Mas para software houses recomendamos integrar as duas, porque a proteção de dados pessoais depende de controles de segurança como acesso, criptografia e backup.</p></details>
+      <details><summary>A ISO 27701 garante conformidade com a LGPD?</summary><p>Não garante sozinha, mas é um dos melhores caminhos para estruturar a conformidade e comprovar boas práticas a clientes e autoridades. A LGPD tem exigências jurídicas que também precisam ser tratadas.</p></details>
+      <details><summary>Quanto tempo leva?</summary><p>Partindo de uma ISO 27001 já implementada, em geral de 3 a 6 meses. Partindo do zero, o prazo é definido no diagnóstico, de acordo com o volume e a sensibilidade dos dados tratados.</p></details>
+      <details><summary>Minha software house é controladora ou operadora?</summary><p>Depende de cada tratamento. Em geral, a software house é operadora dos dados que processa para os clientes e controladora dos dados dos próprios colaboradores e leads. Essa definição é uma das primeiras etapas do projeto.</p></details>
+      <details><summary>Vocês fazem o papel de encarregado (DPO)?</summary><p>O projeto inclui a estruturação da função de encarregado e a capacitação de quem vai exercê-la. Se a empresa precisar de um encarregado externo, avaliamos o caso no diagnóstico.</p></details>
+    </div>
+
+  </div>
+
+  <div class="cta-box">
+    <h3>Sua software house está pronta para a <span class="gt">due diligence de privacidade</span>?</h3>
+    <p>Comece pelo diagnóstico gratuito e descubra os pontos mais críticos da sua operação.</p>
+    <a href="diagnostico.html" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Fazer diagnóstico gratuito</a>
+  </div>
+
+  <div class="related">
+    <h3>Outros serviços da Blind Corp</h3>
+    <div class="svc-other"><a href="consultoria-iso-27001.html">Consultoria e implementação ISO 27001 →</a><a href="formacao-auditor-interno-iso-27001.html">Formação de auditores internos ISO 27001 →</a><a href="treinamento-seguranca-da-informacao.html">Treinamento e palestras de segurança da informação →</a></div>
+  </div>
+
+</main>
+
+
+<div class="footer-bar">
+  <p>© 2026 Blind Corp. Todos os direitos reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+</div>
+
+<script>
+  document.getElementById('mobileToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+<!-- Consentimento de cookies (LGPD) + Google Analytics -->
+<style>
+  .bc-cookie { position: fixed; bottom: 24px; left: 24px; right: 24px; max-width: 680px; margin: 0 auto; z-index: 3000; background: rgba(10,20,35,.97); border: 1px solid rgba(107,114,128,.25); border-radius: 16px; padding: 20px 24px; display: none; align-items: center; gap: 20px; flex-wrap: wrap; box-shadow: 0 20px 60px rgba(0,0,0,.6); backdrop-filter: blur(16px); font-family: 'Inter', sans-serif; }
+  .bc-cookie.show { display: flex; }
+  .bc-cookie p { flex: 1; min-width: 220px; font-size: 13px; color: #9CA3AF; line-height: 1.6; margin: 0; }
+  .bc-cookie a { color: #D1D5DB; text-decoration: underline; }
+  .bc-cookie-actions { display: flex; gap: 10px; }
+  .bc-cookie button { padding: 10px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; font-family: 'Inter', sans-serif; cursor: pointer; border: none; }
+  .bc-cookie .bc-accept { background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; }
+  .bc-cookie .bc-reject { background: transparent; border: 1px solid rgba(107,114,128,.4); color: #9CA3AF; }
+  @media (max-width: 600px) { .bc-cookie { flex-direction: column; align-items: stretch; left: 16px; right: 16px; bottom: 16px; } .bc-cookie-actions { justify-content: flex-end; } }
+</style>
+<div class="bc-cookie" id="bcCookie" role="dialog" aria-label="Consentimento de cookies">
+  <p>Este site usa cookies para melhorar sua experiência e analisar o tráfego, em conformidade com a LGPD. Consulte nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+  <div class="bc-cookie-actions">
+    <button type="button" class="bc-accept" id="bcCookieAccept">Aceitar</button>
+    <button type="button" class="bc-reject" id="bcCookieReject">Recusar</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'bc_cookie_consent';
+    var banner = document.getElementById('bcCookie');
+    function ler() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function salvar(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SDQMP70Q9X';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-SDQMP70Q9X');
+    }
+    var estado = ler();
+    if (estado === 'accepted') loadGA();
+    else if (estado !== 'rejected') banner.classList.add('show');
+    document.getElementById('bcCookieAccept').addEventListener('click', function () { salvar('accepted'); banner.classList.remove('show'); loadGA(); });
+    document.getElementById('bcCookieReject').addEventListener('click', function () { salvar('rejected'); banner.classList.remove('show'); });
+
+    // Cliques nos CTAs
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (/wa\.me|whatsapp/i.test(href)) window.bcTrack && bcTrack('whatsapp_click', { pagina: location.pathname });
+      else if (/diagnostico/i.test(href)) window.bcTrack && bcTrack('cta_diagnostico_click', { pagina: location.pathname, link: href });
+    });
+  })();
+</script>
+</body>
+</html>

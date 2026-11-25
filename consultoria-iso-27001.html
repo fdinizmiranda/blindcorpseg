@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultoria ISO 27001: Implementação e Certificação | Blind Corp</title>
+<meta name="description" content="Consultoria e implementação ISO 27001 para software houses: do diagnóstico à certificação em 9 meses com o Método 3P. Curitiba, São Paulo e todo o Brasil.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blindcorpseg.com.br/consultoria-iso-27001.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Blind Corp">
+<meta property="og:title" content="Consultoria ISO 27001: Implementação e Certificação | Blind Corp">
+<meta property="og:description" content="Consultoria e implementação ISO 27001 para software houses: do diagnóstico à certificação em 9 meses com o Método 3P. Curitiba, São Paulo e todo o Brasil.">
+<meta property="og:url" content="https://blindcorpseg.com.br/consultoria-iso-27001.html">
+<meta property="og:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Consultoria ISO 27001 | Blind Corp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Consultoria ISO 27001: Implementação e Certificação | Blind Corp">
+<meta name="twitter:description" content="Consultoria e implementação ISO 27001 para software houses: do diagnóstico à certificação em 9 meses com o Método 3P. Curitiba, São Paulo e todo o Brasil.">
+<meta name="twitter:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.jpg">
+
+<style>
+  /* ===== Fontes locais (self-hosted) ===== */
+
+  /* Inter */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-900.woff2') format('woff2');
+  }
+
+  /* Montserrat */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-900.woff2') format('woff2');
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050D1A;
+    color: #F5F2EB;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.8;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(900px 420px at 72% 18%, rgba(107,114,128,.10) 0%, transparent 42%),
+      radial-gradient(800px 380px at 30% 25%, rgba(10,31,61,.9) 0%, transparent 52%),
+      linear-gradient(180deg, #0A1F3D 0%, #0D1525 45%, #050D1A 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .18;
+    background-image: radial-gradient(rgba(107,114,128,.06) .8px, transparent .8px);
+    background-size: 24px 24px;
+  }
+
+  .gt {
+    background: linear-gradient(135deg, #6B7280 0%, #D1D5DB 50%, #6B7280 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .nav-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(5,13,26,.78); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(107,114,128,.08);
+  }
+  .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: .05em; color: #F5F2EB; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { color: #9CA3AF; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; transition: color .3s ease; }
+  .nav-links a:hover, .nav-links a.active { color: #D1D5DB; }
+  .nav-cta { padding: 10px 22px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 13px; text-decoration: none; transition: all .3s ease; border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(107,114,128,.35); }
+
+  .article-wrap { padding: 120px 20px 80px; max-width: 760px; margin: 0 auto; }
+
+  .breadcrumb { font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 28px; letter-spacing: .03em; }
+  .breadcrumb a { color: #9CA3AF; text-decoration: none; }
+  .breadcrumb a:hover { color: #D1D5DB; }
+
+  .article-tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 18px; }
+
+  .article-title { font-size: clamp(30px, 5vw, 44px); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 20px; }
+
+  .article-meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(107,114,128,.1); }
+
+  .article-body h2 { font-size: 26px; font-weight: 800; margin: 44px 0 18px; letter-spacing: -.02em; }
+  .article-body h3 { font-size: 20px; font-weight: 700; margin: 32px 0 14px; }
+  .article-body p { font-size: 17px; color: #B0B5BD; margin-bottom: 22px; }
+  .article-body ul, .article-body ol { margin: 0 0 24px 24px; }
+  .article-body li { font-size: 16px; color: #B0B5BD; margin-bottom: 10px; }
+  .article-body strong { color: #F5F2EB; }
+  .article-body a { color: #D1D5DB; text-decoration: underline; text-underline-offset: 3px; }
+  .article-body table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+  .article-body th { text-align: left; padding: 14px 16px; border: 1px solid rgba(107,114,128,.2); background: rgba(107,114,128,.08); color: #F5F2EB; font-size: 14px; font-weight: 700; }
+  .article-body td { padding: 14px 16px; border: 1px solid rgba(107,114,128,.15); color: #B0B5BD; vertical-align: top; }
+  .article-body td strong { color: #F5F2EB; }
+
+  .callout { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-left: 3px solid #6B7280; border-radius: 14px; padding: 24px 26px; margin: 32px 0; }
+  .callout p { margin: 0; font-size: 16px; }
+
+  .cta-box { margin: 56px 0; text-align: center; padding: 48px 40px; background: linear-gradient(145deg, rgba(10,20,35,.95), rgba(13,21,37,.98)); border: 1px solid rgba(107,114,128,.15); border-radius: 24px; }
+  .cta-box h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+  .cta-box p { font-size: 15px; color: #9CA3AF; margin-bottom: 28px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 15px; text-decoration: none; transition: all .3s ease; box-shadow: 0 8px 30px rgba(107,114,128,.25); border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+
+  .related { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(107,114,128,.1); }
+  .related h3 { font-size: 18px; margin-bottom: 20px; }
+  .related a { display: block; color: #9CA3AF; text-decoration: none; font-size: 15px; margin-bottom: 12px; transition: color .3s ease; }
+  .related a:hover { color: #D1D5DB; }
+
+  .footer-bar { text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(107,114,128,.08); }
+  .footer-bar p { font-size: 13px; color: rgba(156,163,175,.35); letter-spacing: .05em; }
+  .footer-bar a { color: #9CA3AF; text-decoration: none; }
+
+  .mobile-menu-toggle { display: none; background: none; border: none; color: #D1D5DB; cursor: pointer; padding: 6px; }
+
+  @keyframes shimmer { 0% { background-position: -200% center } 100% { background-position: 200% center } }
+
+  @media (max-width: 900px) {
+    .nav-bar { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(5,13,26,.96); padding: 20px; gap: 16px; align-items: flex-start; }
+    .mobile-menu-toggle { display: block; }
+    .nav-cta.desktop-only { display: none; }
+    .article-wrap { padding: 100px 20px 60px; }
+  }
+</style>
+<style>
+  .svc-hero { margin-bottom: 36px; }
+  .svc-lead { font-size: 19px; color: #B0B5BD; line-height: 1.7; margin-bottom: 28px; }
+  .svc-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+  .btn-ghost { display: inline-flex; align-items: center; gap: 8px; padding: 14px 26px; border-radius: 999px; border: 1px solid rgba(107,114,128,.4); color: #D1D5DB; font-weight: 700; font-size: 15px; text-decoration: none; font-family: 'Inter', sans-serif; }
+  .btn-ghost:hover { border-color: #9CA3AF; color: #F5F2EB; }
+  .svc-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 32px 0 8px; }
+  .svc-fact { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-radius: 14px; padding: 18px; }
+  .svc-fact strong { display: block; font-size: 22px; font-weight: 900; color: #F5F2EB; line-height: 1.2; }
+  .svc-fact span { font-size: 13px; color: #9CA3AF; }
+  .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0 32px; }
+  .svc-card { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-radius: 16px; padding: 22px; }
+  .svc-card h3 { font-size: 17px !important; margin: 0 0 8px !important; }
+  .svc-card p { font-size: 15px !important; margin: 0 !important; }
+  .svc-steps { counter-reset: s; list-style: none; margin: 24px 0 32px !important; padding: 0; }
+  .svc-steps li { counter-increment: s; position: relative; padding: 0 0 22px 56px; }
+  .svc-steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 38px; height: 38px; border-radius: 50%; background: rgba(107,114,128,.15); border: 1px solid rgba(107,114,128,.35); color: #F5F2EB; font-weight: 800; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; }
+  .svc-steps li strong { display: block; font-size: 17px; margin-bottom: 4px; }
+  .faq-list details { border-bottom: 1px solid rgba(107,114,128,.15); padding: 18px 0; }
+  .faq-list summary { cursor: pointer; font-weight: 700; font-size: 17px; color: #F5F2EB; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary::after { content: '+'; color: #9CA3AF; font-size: 22px; line-height: 1; }
+  .faq-list details[open] summary::after { content: '−'; }
+  .faq-list details p { margin: 12px 0 0 !important; }
+  .svc-who { display: flex; gap: 20px; align-items: center; margin: 40px 0; padding: 26px; background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-radius: 18px; }
+  .svc-who img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+  .svc-who p { margin: 0 0 6px !important; font-size: 15px !important; }
+  .svc-who .n { font-family: 'Montserrat', sans-serif; font-weight: 800; color: #F5F2EB; font-size: 18px !important; }
+  .svc-other { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+  .svc-other a { display: block; padding: 14px 16px; border: 1px solid rgba(107,114,128,.18); border-radius: 12px; color: #D1D5DB !important; text-decoration: none !important; font-size: 15px; }
+  .svc-other a:hover { border-color: #9CA3AF; }
+  @media (max-width: 700px) { .svc-facts, .svc-grid, .svc-other { grid-template-columns: 1fr; } .svc-who { flex-direction: column; align-items: flex-start; } }
+</style>
+
+<!-- JSON-LD: Serviço, FAQ e breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://blindcorpseg.com.br/consultoria-iso-27001.html#servico",
+      "name": "Consultoria e implementação ISO 27001",
+      "serviceType": "Consultoria em segurança da informação",
+      "description": "Consultoria e implementação ISO 27001 para software houses: do diagnóstico à certificação em 9 meses com o Método 3P. Curitiba, São Paulo e todo o Brasil.",
+      "url": "https://blindcorpseg.com.br/consultoria-iso-27001.html",
+      "provider": {
+        "@id": "https://blindcorpseg.com.br/#empresa"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        {
+          "@type": "City",
+          "name": "Curitiba"
+        },
+        {
+          "@type": "City",
+          "name": "São Paulo"
+        }
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Software houses e empresas de tecnologia"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blindcorpseg.com.br/consultoria-iso-27001.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quanto tempo leva para obter a certificação ISO 27001?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Com o Método 3P, a preparação leva 9 meses para a maioria das software houses de 20 a 100 pessoas. Depois disso vem a auditoria do organismo certificador, em duas etapas. Empresas com maior maturidade podem levar menos tempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A Blind Corp emite o certificado ISO 27001?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O certificado é emitido por um organismo certificador independente. A consultoria prepara a empresa e acompanha as auditorias. Separar as duas funções garante a imparcialidade da certificação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês atendem empresas fora de Curitiba?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. A Blind Corp tem sede em Curitiba e atende empresas de São Paulo e de todo o Brasil, com encontros on-line e visitas presenciais quando fazem sentido."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A ISO 27001 é obrigatória?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não é obrigatória por lei, mas é exigida por bancos, seguradoras, indústrias e grandes empresas na contratação de fornecedores de software. Na prática, é um pré-requisito comercial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre consultoria e implementação?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na Blind Corp as duas andam juntas: além de orientar, a equipe estrutura com o seu time a documentação, os riscos e os controles. Sua empresa termina o projeto operando o SGSI, não apenas com documentos prontos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo do meu time o projeto consome?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O projeto exige um responsável interno pelo SGSI e a participação pontual de desenvolvimento, infraestrutura, RH e direção. O cronograma é montado para não travar as entregas da software house."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://blindcorpseg.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Serviços",
+          "item": "https://blindcorpseg.com.br/#servicos"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Consultoria ISO 27001"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://blindcorpseg.com.br/consultoria-iso-27001.html",
+      "url": "https://blindcorpseg.com.br/consultoria-iso-27001.html",
+      "name": "Consultoria ISO 27001: Implementação e Certificação | Blind Corp",
+      "description": "Consultoria e implementação ISO 27001 para software houses: do diagnóstico à certificação em 9 meses com o Método 3P. Curitiba, São Paulo e todo o Brasil.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://blindcorpseg.com.br/#website"
+      },
+      "about": {
+        "@id": "https://blindcorpseg.com.br/consultoria-iso-27001.html#servico"
+      },
+      "dateModified": "2026-11-25"
+    }
+  ]
+}
+</script>
+<script>
+  // Eventos do Google Analytics (só disparam se o visitante aceitou cookies)
+  window.dataLayer = window.dataLayer || [];
+  window.bcTrack = function (nome, params) { if (window.__gaLoaded && window.gtag) window.gtag('event', nome, params || {}); };
+</script>
+</head>
+<body>
+
+
+<nav class="nav-bar">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo-blindcorp.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses">
+    Blind Corp
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="index.html#servicos" class="active">Serviços</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+  </ul>
+  <a href="index.html#diagnostico" class="nav-cta desktop-only">Solicitar Diagnóstico</a>
+  <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="index.html">Início</a> &gt; <a href="index.html#servicos">Serviços</a> &gt; <span>Consultoria ISO 27001</span>
+  </nav>
+
+  <div class="svc-hero">
+    <span class="article-tag">Serviço</span>
+    <h1 class="article-title">Consultoria e implementação <span class="gt">ISO 27001</span> para software houses</h1>
+    <p class="svc-lead">Preparamos sua software house para a certificação ISO 27001 em 9 meses: diagnóstico, SGSI, análise de riscos, controles, auditoria interna e acompanhamento até a auditoria do organismo certificador. Tudo com o Método 3P.</p>
+    <div class="svc-ctas">
+      <a href="diagnostico.html" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Fazer diagnóstico gratuito</a>
+      <a href="https://wa.me/5541988608849?text=Quero%20falar%20sobre%20consultoria%20ISO%2027001" class="btn-ghost" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+    <div class="svc-facts"><div class="svc-fact"><strong>9 meses</strong><span>da base à auditoria de certificação</span></div><div class="svc-fact"><strong>3 pilares</strong><span>Padronização, Proteção e Prevenção</span></div><div class="svc-fact"><strong>ISO 27001:2022</strong><span>versão vigente da norma</span></div></div>
+  </div>
+
+  <div class="article-body">
+
+    <h2>Para quem é esta consultoria</h2>
+    <p>Para software houses e empresas de tecnologia que estão perdendo ou deixando de disputar contratos porque o cliente exige ISO 27001. Bancos, seguradoras, indústrias e grandes empresas pedem a certificação nos processos de compra e de <a href="artigo-due-diligence-iso-27001.html">due diligence de segurança</a>. Sem ela, a proposta nem chega à mesa.</p>
+    <p>Atendemos principalmente empresas de 20 a 100 pessoas, com sede em Curitiba, São Paulo ou qualquer lugar do Brasil, com encontros on-line e presenciais quando faz sentido.</p>
+
+    <h2>O que está incluído</h2>
+    <div class="svc-grid">
+      <div class="svc-card"><h3>Diagnóstico e GAP analysis</h3><p>Onde sua empresa está em relação aos requisitos da norma e o que falta para a certificação.</p></div>
+      <div class="svc-card"><h3>Escopo do SGSI</h3><p>Definição do que entra no sistema de gestão: produtos, processos, ambientes e locais.</p></div>
+      <div class="svc-card"><h3>Análise e tratamento de riscos</h3><p>Metodologia, critérios de aceitação e plano de tratamento. Veja <a href="artigo-riscos.html">como fazemos</a>.</p></div>
+      <div class="svc-card"><h3>Declaração de Aplicabilidade</h3><p>Os 93 controles do Anexo A avaliados um a um, com justificativa e evidência. <a href="artigo-declaracao-de-aplicabilidade-iso-27001.html">Entenda a SoA</a>.</p></div>
+      <div class="svc-card"><h3>Políticas e procedimentos</h3><p>Documentação escrita para a sua operação, não um modelo genérico.</p></div>
+      <div class="svc-card"><h3>Implementação dos controles</h3><p>Acesso, desenvolvimento seguro, nuvem, fornecedores, incidentes, continuidade e o que mais os riscos exigirem.</p></div>
+      <div class="svc-card"><h3>Treinamento do time</h3><p>Conscientização para todos e capacitação específica para quem opera o SGSI.</p></div>
+      <div class="svc-card"><h3>Auditoria interna e análise crítica</h3><p>Ensaio geral antes da certificação, com <a href="artigo-tratamento-nao-conformidades-iso-27001.html">tratamento das não conformidades</a>.</p></div>
+    </div>
+
+    <h2>Como funciona: o Método 3P em 9 meses</h2>
+    <ol class="svc-steps">
+      <li><strong>Padronização (meses 1 a 3)</strong>Análise de maturidade, GAP analysis, escopo do SGSI, mapa de riscos, Declaração de Aplicabilidade, políticas e roadmap de adequação.</li>
+      <li><strong>Proteção (meses 4 a 6)</strong>Implementação do SGSI: controles de segurança ativos, gestão de riscos operando no dia a dia e monitoramento contínuo.</li>
+      <li><strong>Prevenção (meses 7 a 9)</strong>Time treinado, auditoria interna pré-certificação, análise crítica pela direção e preparação para a auditoria externa.</li>
+      <li><strong>Auditoria de certificação</strong>Acompanhamos sua empresa nas duas etapas da auditoria do organismo certificador e no tratamento de eventuais apontamentos.</li>
+    </ol>
+    <p>O passo a passo completo está no artigo <a href="artigo-como-implementar-iso-27001-9-meses.html">como implementar a ISO 27001 em 9 meses</a>.</p>
+
+    <div class="callout">
+      <p><strong>Transparência sobre o processo:</strong> a consultoria prepara a empresa, mas quem emite o certificado é um organismo certificador independente, escolhido pela sua empresa. Isso garante a imparcialidade da certificação. Ajudamos você a comparar organismos e a se preparar para cada etapa.</p>
+    </div>
+
+    <h2>Por que uma consultoria focada em software houses</h2>
+    <ul>
+      <li><strong>Linguagem de quem desenvolve software.</strong> Repositórios, pipelines, ambientes de homologação e produção, nuvem e fornecedores SaaS fazem parte do escopo desde o primeiro dia.</li>
+      <li><strong>Foco em contrato, não em selo.</strong> O objetivo é destravar a venda para grandes clientes. A certificação é o meio.</li>
+      <li><strong>Sem templates.</strong> Cada política, risco e controle é escrito para a sua operação, porque o auditor vai conferir se o papel bate com a prática.</li>
+      <li><strong>Transparência.</strong> Se o diagnóstico encontra 47 lacunas, o relatório mostra 47.</li>
+    </ul>
+
+    <h2>Investimento</h2>
+    <p>O valor depende do tamanho da empresa, do escopo e da maturidade atual. Abrimos os componentes de custo (consultoria, organismo certificador e esforço interno) no artigo <a href="artigo-quanto-custa-iso-27001.html">quanto custa a ISO 27001</a>. Depois do diagnóstico, você recebe uma proposta com escopo e prazo definidos.</p>
+
+
+    <aside class="svc-who" aria-label="Quem conduz">
+      <img src="assets/fernando.jpg" alt="Fernando Miranda, fundador da Blind Corp" width="84" height="84" loading="lazy">
+      <div>
+        <p class="n">Quem conduz: Fernando Miranda</p>
+        <p>Fundador e consultor líder da Blind Corp. 16 anos de experiência em processos, sistemas de gestão e auditoria. Liderou a implementação de SGPI e ISO 20000 do zero, na prática, em software house.</p>
+        <p><a href="https://www.linkedin.com/in/fdinizmiranda/" target="_blank" rel="noopener author">Conectar no LinkedIn</a></p>
+      </div>
+    </aside>
+
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-list">
+      <details><summary>Quanto tempo leva para obter a certificação ISO 27001?</summary><p>Com o Método 3P, a preparação leva 9 meses para a maioria das software houses de 20 a 100 pessoas. Depois disso vem a auditoria do organismo certificador, em duas etapas. Empresas com maior maturidade podem levar menos tempo.</p></details>
+      <details><summary>A Blind Corp emite o certificado ISO 27001?</summary><p>Não. O certificado é emitido por um organismo certificador independente. A consultoria prepara a empresa e acompanha as auditorias. Separar as duas funções garante a imparcialidade da certificação.</p></details>
+      <details><summary>Vocês atendem empresas fora de Curitiba?</summary><p>Sim. A Blind Corp tem sede em Curitiba e atende empresas de São Paulo e de todo o Brasil, com encontros on-line e visitas presenciais quando fazem sentido.</p></details>
+      <details><summary>A ISO 27001 é obrigatória?</summary><p>Não é obrigatória por lei, mas é exigida por bancos, seguradoras, indústrias e grandes empresas na contratação de fornecedores de software. Na prática, é um pré-requisito comercial.</p></details>
+      <details><summary>Qual a diferença entre consultoria e implementação?</summary><p>Na Blind Corp as duas andam juntas: além de orientar, a equipe estrutura com o seu time a documentação, os riscos e os controles. Sua empresa termina o projeto operando o SGSI, não apenas com documentos prontos.</p></details>
+      <details><summary>Quanto tempo do meu time o projeto consome?</summary><p>O projeto exige um responsável interno pelo SGSI e a participação pontual de desenvolvimento, infraestrutura, RH e direção. O cronograma é montado para não travar as entregas da software house.</p></details>
+    </div>
+
+  </div>
+
+  <div class="cta-box">
+    <h3>Descubra quanto falta para a <span class="gt">sua certificação</span></h3>
+    <p>O diagnóstico gratuito leva 3 minutos e mostra os pontos mais críticos entre a sua software house e a ISO 27001.</p>
+    <a href="diagnostico.html" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Fazer diagnóstico gratuito</a>
+  </div>
+
+  <div class="related">
+    <h3>Outros serviços da Blind Corp</h3>
+    <div class="svc-other"><a href="consultoria-iso-27701-lgpd.html">Consultoria ISO 27701 e adequação à LGPD →</a><a href="formacao-auditor-interno-iso-27001.html">Formação de auditores internos ISO 27001 →</a><a href="treinamento-seguranca-da-informacao.html">Treinamento e palestras de segurança da informação →</a></div>
+  </div>
+
+</main>
+
+
+<div class="footer-bar">
+  <p>© 2026 Blind Corp. Todos os direitos reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+</div>
+
+<script>
+  document.getElementById('mobileToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+<!-- Consentimento de cookies (LGPD) + Google Analytics -->
+<style>
+  .bc-cookie { position: fixed; bottom: 24px; left: 24px; right: 24px; max-width: 680px; margin: 0 auto; z-index: 3000; background: rgba(10,20,35,.97); border: 1px solid rgba(107,114,128,.25); border-radius: 16px; padding: 20px 24px; display: none; align-items: center; gap: 20px; flex-wrap: wrap; box-shadow: 0 20px 60px rgba(0,0,0,.6); backdrop-filter: blur(16px); font-family: 'Inter', sans-serif; }
+  .bc-cookie.show { display: flex; }
+  .bc-cookie p { flex: 1; min-width: 220px; font-size: 13px; color: #9CA3AF; line-height: 1.6; margin: 0; }
+  .bc-cookie a { color: #D1D5DB; text-decoration: underline; }
+  .bc-cookie-actions { display: flex; gap: 10px; }
+  .bc-cookie button { padding: 10px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; font-family: 'Inter', sans-serif; cursor: pointer; border: none; }
+  .bc-cookie .bc-accept { background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; }
+  .bc-cookie .bc-reject { background: transparent; border: 1px solid rgba(107,114,128,.4); color: #9CA3AF; }
+  @media (max-width: 600px) { .bc-cookie { flex-direction: column; align-items: stretch; left: 16px; right: 16px; bottom: 16px; } .bc-cookie-actions { justify-content: flex-end; } }
+</style>
+<div class="bc-cookie" id="bcCookie" role="dialog" aria-label="Consentimento de cookies">
+  <p>Este site usa cookies para melhorar sua experiência e analisar o tráfego, em conformidade com a LGPD. Consulte nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+  <div class="bc-cookie-actions">
+    <button type="button" class="bc-accept" id="bcCookieAccept">Aceitar</button>
+    <button type="button" class="bc-reject" id="bcCookieReject">Recusar</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'bc_cookie_consent';
+    var banner = document.getElementById('bcCookie');
+    function ler() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function salvar(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SDQMP70Q9X';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-SDQMP70Q9X');
+    }
+    var estado = ler();
+    if (estado === 'accepted') loadGA();
+    else if (estado !== 'rejected') banner.classList.add('show');
+    document.getElementById('bcCookieAccept').addEventListener('click', function () { salvar('accepted'); banner.classList.remove('show'); loadGA(); });
+    document.getElementById('bcCookieReject').addEventListener('click', function () { salvar('rejected'); banner.classList.remove('show'); });
+
+    // Cliques nos CTAs
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (/wa\.me|whatsapp/i.test(href)) window.bcTrack && bcTrack('whatsapp_click', { pagina: location.pathname });
+      else if (/diagnostico/i.test(href)) window.bcTrack && bcTrack('cta_diagnostico_click', { pagina: location.pathname, link: href });
+    });
+  })();
+</script>
+</body>
+</html>
