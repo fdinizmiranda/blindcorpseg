@@ -2,68 +2,110 @@
 
 ## Sobre a empresa
 
-A Blind Corp é uma consultoria especializada em ISO 27001 e segurança da
-informação para empresas de tecnologia e software houses no Brasil.
+A Blind Corp é uma consultoria especializada em ISO 27001 e ISO 27701 para software houses no Brasil.
+O foco é preparar software houses para conquistar contratos com grandes players (bancos, seguradoras,
+indústrias), que exigem fornecedores com segurança da informação comprovada.
 
-Atuamos com:
+Fundador e consultor líder: Fernando Miranda, com 16 anos de experiência em processos, sistemas de
+gestão e auditoria. Sede em Curitiba (PR), com atendimento em todo o Brasil.
 
-- Implementação da norma ISO 27001
-- Preparação para certificação
-- Gestão de riscos de segurança da informação
-- Adequação à LGPD
+## Método 3P
+
+Método proprietário em três pilares, executado em nove meses. Cada pilar constrói a base do seguinte.
+
+### Pilar 1: Padronização (meses 1 a 3)
+
+Estruturar a base: análise de maturidade, GAP analysis ISO 27001, mapa de riscos, políticas,
+escopo do SGSI, Declaração de Aplicabilidade (SoA) e roadmap de implementação.
+
+### Pilar 2: Proteção (meses 4 a 6)
+
+Blindar a operação: SGSI implementado, controles de segurança ativos, adequação ISO 27001/27701,
+gestão de riscos operacional e monitoramento contínuo.
+
+### Pilar 3: Prevenção (meses 7 a 9)
+
+Cultura que se sustenta: time treinado, auditoria interna, preparação para a certificação e
+cultura de segurança consolidada.
 
 ## Serviços
 
-### Consultoria ISO 27001
-
-Implementação completa da norma, do diagnóstico inicial à preparação para
-a auditoria de certificação. Trabalhamos junto ao time interno para
-estruturar o Sistema de Gestão de Segurança da Informação (SGSI),
-mapear riscos, definir controles e produzir a documentação necessária.
-
-### Preparação para certificação
-
-Acompanhamento do processo de auditoria, adequação aos requisitos da
-norma e correção de não conformidades identificadas pelo organismo
-certificador.
-
-### Diagnóstico inicial
-
-Avaliação gratuita do nível de maturidade em segurança da informação,
-identificando os principais gaps antes de iniciar o projeto de
-certificação.
+- Consultoria ISO 27001: preparação para certificação em 9 meses com o Método 3P.
+- Implementação ISO 27001: SGSI completo, controles de segurança e preparação para auditoria.
+- Consultoria e implementação ISO 27701: gestão da privacidade de dados pessoais alinhada à LGPD.
+  Desde a versão 2025, a ISO 27701 é uma norma independente; a Blind Corp implementa de forma
+  isolada ou integrada à ISO 27001.
+- Adequação à LGPD: mapeamento de dados, políticas de privacidade e governança.
+- Auditoria interna ISO 27001 e ISO 27701: relatório de gaps e plano de ação.
+- Formação de auditores internos ISO 27001: método, checklist e simulação prática.
+- Cultura de segurança da informação: palestras e treinamentos.
+- Diagnóstico gratuito: avaliação de maturidade antes de iniciar o projeto.
 
 ## Blog
 
-### Como implementar ISO 27001 em 9 meses
+### Declaração de Aplicabilidade (SoA): por que a sua não pode ser uma planilha copiada
 
-Roteiro prático com as etapas para conduzir a certificação do início ao
-fim.
+Como montar a Declaração de Aplicabilidade (SoA) da ISO 27001, ligar riscos aos controles do Anexo A e justificar exclusões sem reprovar na auditoria.
 
-Principais etapas:
+https://blindcorpseg.com.br/artigo-declaracao-de-aplicabilidade-iso-27001.html
 
-1. Definição do escopo e da política de segurança da informação
-2. Mapeamento de ativos e análise de riscos
-3. Definição dos controles do Anexo A da norma
-4. Produção da documentação e das políticas
-5. Treinamento da equipe e operação do SGSI
-6. Auditoria interna e revisão pela direção
-7. Auditoria de certificação
+### Análise de riscos ISO 27001: documentar é fácil, usar é o que protege
 
-### ISO 27001 para software houses
+A análise de riscos é o coração da ISO 27001 e o requisito que mais reprova auditorias. Veja como fazer com método e por que uma vez não basta.
 
-O que uma empresa de desenvolvimento de software precisa saber sobre a
-norma e seus requisitos. Aborda os desafios específicos de ambientes de
-desenvolvimento, proteção do código-fonte, segurança no ciclo de vida do
-software e requisitos de clientes que exigem fornecedores certificados.
+https://blindcorpseg.com.br/artigo-riscos.html
 
-### Quanto custa a certificação ISO 27001?
+### Não conformidade: apontar é o começo, tratar é o que resolve
 
-Entenda os fatores que influenciam o investimento necessário na
-certificação, incluindo tamanho da empresa, escopo, maturidade atual,
-necessidade de consultoria e taxas do organismo certificador.
+Tratar não conformidade separa empresa certificada de reprovada. Veja o ciclo: correção, causa raiz, ação corretiva e verificação de eficácia.
+
+https://blindcorpseg.com.br/artigo-tratamento-nao-conformidades-iso-27001.html
+
+### Auditoria interna ISO 27001: o ensaio geral que salva o certificado
+
+A auditoria interna é o ensaio da certificação: encontra as não conformidades que a auditoria externa reprovaria. Veja como fazer a sua.
+
+https://blindcorpseg.com.br/artigo-auditoria-interna-iso-27001.html
+
+### Due diligence de segurança: como a ISO 27001 desbloqueia contratos
+
+Due diligence de segurança: o que grandes players avaliam, como a ISO 27001 responde cada ponto e por que sua software house perde contrato sem ela.
+
+https://blindcorpseg.com.br/artigo-due-diligence-iso-27001.html
+
+### ISO 27001 vs ISO 27701: qual sua empresa precisa?
+
+ISO 27001 vs ISO 27701: entenda a diferença entre as duas, quando cada uma se aplica, como integrar e qual caminho seguir para sua software house.
+
+https://blindcorpseg.com.br/artigo-iso-27001-vs-27701.html
+
+### ISO 27001 vs SOC 2: qual a escolha certa para sua software house?
+
+ISO 27001 vs SOC 2: entenda as diferenças entre as duas, para quem cada uma serve, custos, prazos e como escolher a certa para sua software house.
+
+https://blindcorpseg.com.br/artigo-iso-27001-vs-soc-2.html
+
+### Como implementar ISO 27001 em 9 meses: o passo a passo
+
+Como implementar a ISO 27001 em 9 meses com o Método 3P. Guia prático para software houses conquistarem grandes players sem burocracia.
+
+https://blindcorpseg.com.br/artigo-como-implementar-iso-27001-9-meses.html
+
+### ISO 27001 para software houses: o guia completo
+
+Guia completo sobre ISO 27001 para software houses. Entenda a certificação, requisitos, etapas e como se preparar em 9 meses sem retrabalho.
+
+https://blindcorpseg.com.br/artigo-iso-27001-software-house.html
+
+### Quanto custa a ISO 27001? Guia completo de investimento
+
+Descubra os custos reais da certificação ISO 27001 para sua empresa. Entenda o investimento necessário e como planejar seu orçamento de forma estratégica.
+
+https://blindcorpseg.com.br/artigo-quanto-custa-iso-27001.html
 
 ## Contato
 
 - E-mail: contato@blindcorpseg.com.br
+- WhatsApp: +55 41 98860-8849
 - Site: https://blindcorpseg.com.br/
+- Diagnóstico: https://blindcorpseg.com.br/diagnostico.html

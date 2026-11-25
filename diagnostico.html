@@ -21,18 +21,18 @@
 <meta property="og:title" content="Diagnóstico de Maturidade ISO 27001 | Blind Corp">
 <meta property="og:description" content="Descubra em 3 minutos se sua software house está pronta para grandes players. 10 perguntas, resultado imediato, gratuito.">
 <meta property="og:url" content="https://blindcorpseg.com.br/diagnostico.html">
-<meta property="og:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
-<meta property="og:image:secure_url" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta property="og:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.jpg">
+<meta property="og:image:secure_url" content="https://blindcorpseg.com.br/assets/og-blindcorp.jpg">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
 <meta property="og:image:alt" content="Blind Corp - Diagnóstico de Maturidade ISO 27001">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Diagnóstico de Maturidade ISO 27001 | Blind Corp">
 <meta name="twitter:description" content="Descubra em 3 minutos se sua software house está pronta para grandes players. Resultado imediato e gratuito.">
-<meta name="twitter:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta name="twitter:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.jpg">
 <meta name="twitter:image:alt" content="Blind Corp - Diagnóstico de Maturidade ISO 27001">
 
 <script type="application/ld+json">
@@ -352,6 +352,11 @@
     .result-card { padding: 28px 20px; }
   }
 </style>
+<script>
+  // Eventos do Google Analytics (só disparam se o visitante aceitou cookies)
+  window.dataLayer = window.dataLayer || [];
+  window.bcTrack = function (nome, params) { if (window.__gaLoaded && window.gtag) window.gtag('event', nome, params || {}); };
+</script>
 </head>
 <body>
 
@@ -588,6 +593,7 @@
     progressPct.textContent = pct + '%';
 
     qHead.innerHTML = '<h1>' + q.pergunta + '</h1>';
+    window.bcTrack && bcTrack('diagnostico_etapa', { etapa: step + 1 });
 
     qOpcoes.innerHTML = '';
     q.opcoes.forEach((opcao, i) => {
@@ -782,6 +788,7 @@
         })
       });
 
+      window.bcTrack && bcTrack('generate_lead', { origem: 'diagnostico', pontuacao: pontos });
       montarResultado();
       etapaCaptura.classList.add('hidden');
       etapaResultado.classList.remove('hidden');
@@ -797,5 +804,58 @@
   renderPergunta();
 </script>
 
+<!-- Consentimento de cookies (LGPD) + Google Analytics -->
+<style>
+  .bc-cookie { position: fixed; bottom: 24px; left: 24px; right: 24px; max-width: 680px; margin: 0 auto; z-index: 3000; background: rgba(10,20,35,.97); border: 1px solid rgba(107,114,128,.25); border-radius: 16px; padding: 20px 24px; display: none; align-items: center; gap: 20px; flex-wrap: wrap; box-shadow: 0 20px 60px rgba(0,0,0,.6); backdrop-filter: blur(16px); font-family: 'Inter', sans-serif; }
+  .bc-cookie.show { display: flex; }
+  .bc-cookie p { flex: 1; min-width: 220px; font-size: 13px; color: #9CA3AF; line-height: 1.6; margin: 0; }
+  .bc-cookie a { color: #D1D5DB; text-decoration: underline; }
+  .bc-cookie-actions { display: flex; gap: 10px; }
+  .bc-cookie button { padding: 10px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; font-family: 'Inter', sans-serif; cursor: pointer; border: none; }
+  .bc-cookie .bc-accept { background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; }
+  .bc-cookie .bc-reject { background: transparent; border: 1px solid rgba(107,114,128,.4); color: #9CA3AF; }
+  @media (max-width: 600px) { .bc-cookie { flex-direction: column; align-items: stretch; left: 16px; right: 16px; bottom: 16px; } .bc-cookie-actions { justify-content: flex-end; } }
+</style>
+<div class="bc-cookie" id="bcCookie" role="dialog" aria-label="Consentimento de cookies">
+  <p>Este site usa cookies para melhorar sua experiência e analisar o tráfego, em conformidade com a LGPD. Consulte nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+  <div class="bc-cookie-actions">
+    <button type="button" class="bc-accept" id="bcCookieAccept">Aceitar</button>
+    <button type="button" class="bc-reject" id="bcCookieReject">Recusar</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'bc_cookie_consent';
+    var banner = document.getElementById('bcCookie');
+    function ler() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function salvar(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+    function loadGA() {
+      if (window.__gaLoaded) return;
+      window.__gaLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-SDQMP70Q9X';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-SDQMP70Q9X');
+    }
+    var estado = ler();
+    if (estado === 'accepted') loadGA();
+    else if (estado !== 'rejected') banner.classList.add('show');
+    document.getElementById('bcCookieAccept').addEventListener('click', function () { salvar('accepted'); banner.classList.remove('show'); loadGA(); });
+    document.getElementById('bcCookieReject').addEventListener('click', function () { salvar('rejected'); banner.classList.remove('show'); });
+
+    // Cliques nos CTAs
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (/wa\.me|whatsapp/i.test(href)) window.bcTrack && bcTrack('whatsapp_click', { pagina: location.pathname });
+      else if (/diagnostico/i.test(href)) window.bcTrack && bcTrack('cta_diagnostico_click', { pagina: location.pathname, link: href });
+    });
+  })();
+</script>
 </body>
 </html>
