@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Declaração de Aplicabilidade (SoA) ISO 27001: Por Que a Sua Não Pode Ser uma Planilha Copiada | Blind Corp</title>
+<meta name="description" content="A Declaração de Aplicabilidade liga os riscos aos controles do Anexo A. Veja como montar a SoA da sua software house, justificar exclusões e evitar os erros que reprovam auditorias.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://blindcorpseg.com.br/artigo-declaracao-de-aplicabilidade-iso-27001.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Blind Corp">
+<meta property="og:title" content="Declaração de Aplicabilidade (SoA) ISO 27001: Por Que a Sua Não Pode Ser uma Planilha Copiada | Blind Corp">
+<meta property="og:description" content="A Declaração de Aplicabilidade liga os riscos aos controles do Anexo A. Veja como montar a SoA da sua software house, justificar exclusões e evitar os erros que reprovam auditorias.">
+<meta property="og:url" content="https://blindcorpseg.com.br/artigo-declaracao-de-aplicabilidade-iso-27001.html">
+<meta property="og:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Declaração de Aplicabilidade ISO 27001 da Blind Corp">
+<meta property="article:published_time" content="2026-11-25">
+<meta property="article:modified_time" content="2026-11-25">
+<meta property="article:author" content="https://www.linkedin.com/in/fdinizmiranda/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Declaração de Aplicabilidade (SoA) ISO 27001: Por Que a Sua Não Pode Ser uma Planilha Copiada | Blind Corp">
+<meta name="twitter:description" content="A SoA liga os riscos aos controles do Anexo A. Veja como montar a sua, justificar exclusões e evitar os erros que reprovam auditorias.">
+<meta name="twitter:image" content="https://blindcorpseg.com.br/assets/og-blindcorp.png">
+<meta name="twitter:image:alt" content="Declaração de Aplicabilidade ISO 27001 da Blind Corp">
+
+<style>
+  /* ===== Fontes locais (self-hosted) ===== */
+
+  /* Inter */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/inter-v20-latin-900.woff2') format('woff2');
+  }
+
+  /* Montserrat */
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-700.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-800.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('assets/fonts/montserrat-v31-latin-900.woff2') format('woff2');
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050D1A;
+    color: #F5F2EB;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.8;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: -2; pointer-events: none;
+    background:
+      radial-gradient(900px 420px at 72% 18%, rgba(107,114,128,.10) 0%, transparent 42%),
+      radial-gradient(800px 380px at 30% 25%, rgba(10,31,61,.9) 0%, transparent 52%),
+      linear-gradient(180deg, #0A1F3D 0%, #0D1525 45%, #050D1A 100%);
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .18;
+    background-image: radial-gradient(rgba(107,114,128,.06) .8px, transparent .8px);
+    background-size: 24px 24px;
+  }
+
+  .gt {
+    background: linear-gradient(135deg, #6B7280 0%, #D1D5DB 50%, #6B7280 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .nav-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(5,13,26,.78); backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(107,114,128,.08);
+  }
+  .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: .05em; color: #F5F2EB; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { color: #9CA3AF; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; transition: color .3s ease; }
+  .nav-links a:hover, .nav-links a.active { color: #D1D5DB; }
+  .nav-cta { padding: 10px 22px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 13px; text-decoration: none; transition: all .3s ease; border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(107,114,128,.35); }
+
+  .article-wrap { padding: 120px 20px 80px; max-width: 760px; margin: 0 auto; }
+
+  .breadcrumb { font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 28px; letter-spacing: .03em; }
+  .breadcrumb a { color: #9CA3AF; text-decoration: none; }
+  .breadcrumb a:hover { color: #D1D5DB; }
+
+  .article-tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: rgba(107,114,128,.1); border: 1px solid rgba(107,114,128,.2); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 18px; }
+
+  .article-title { font-size: clamp(30px, 5vw, 44px); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 20px; }
+
+  .article-meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: rgba(156,163,175,.55); margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid rgba(107,114,128,.1); }
+
+  .article-body h2 { font-size: 26px; font-weight: 800; margin: 44px 0 18px; letter-spacing: -.02em; }
+  .article-body h3 { font-size: 20px; font-weight: 700; margin: 32px 0 14px; }
+  .article-body p { font-size: 17px; color: #B0B5BD; margin-bottom: 22px; }
+  .article-body ul, .article-body ol { margin: 0 0 24px 24px; }
+  .article-body li { font-size: 16px; color: #B0B5BD; margin-bottom: 10px; }
+  .article-body strong { color: #F5F2EB; }
+  .article-body a { color: #D1D5DB; text-decoration: underline; text-underline-offset: 3px; }
+  .article-body table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+  .article-body th { text-align: left; padding: 14px 16px; border: 1px solid rgba(107,114,128,.2); background: rgba(107,114,128,.08); color: #F5F2EB; font-size: 14px; font-weight: 700; }
+  .article-body td { padding: 14px 16px; border: 1px solid rgba(107,114,128,.15); color: #B0B5BD; vertical-align: top; }
+  .article-body td strong { color: #F5F2EB; }
+
+  .callout { background: rgba(107,114,128,.06); border: 1px solid rgba(107,114,128,.18); border-left: 3px solid #6B7280; border-radius: 14px; padding: 24px 26px; margin: 32px 0; }
+  .callout p { margin: 0; font-size: 16px; }
+
+  .cta-box { margin: 56px 0; text-align: center; padding: 48px 40px; background: linear-gradient(145deg, rgba(10,20,35,.95), rgba(13,21,37,.98)); border: 1px solid rgba(107,114,128,.15); border-radius: 24px; }
+  .cta-box h3 { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
+  .cta-box p { font-size: 15px; color: #9CA3AF; margin-bottom: 28px; }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 15px 32px; border-radius: 999px; background: linear-gradient(135deg, #6B7280, #9CA3AF); color: #050D1A; font-weight: 700; font-size: 15px; text-decoration: none; transition: all .3s ease; box-shadow: 0 8px 30px rgba(107,114,128,.25); border: none; font-family: 'Inter', sans-serif; cursor: pointer; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(107,114,128,.4); filter: brightness(1.08); }
+
+  .related { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(107,114,128,.1); }
+  .related h3 { font-size: 18px; margin-bottom: 20px; }
+  .related a { display: block; color: #9CA3AF; text-decoration: none; font-size: 15px; margin-bottom: 12px; transition: color .3s ease; }
+  .related a:hover { color: #D1D5DB; }
+
+  .footer-bar { text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(107,114,128,.08); }
+  .footer-bar p { font-size: 13px; color: rgba(156,163,175,.35); letter-spacing: .05em; }
+  .footer-bar a { color: #9CA3AF; text-decoration: none; }
+
+  .mobile-menu-toggle { display: none; background: none; border: none; color: #D1D5DB; cursor: pointer; padding: 6px; }
+
+  @keyframes shimmer { 0% { background-position: -200% center } 100% { background-position: 200% center } }
+
+  @media (max-width: 900px) {
+    .nav-bar { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(5,13,26,.96); padding: 20px; gap: 16px; align-items: flex-start; }
+    .mobile-menu-toggle { display: block; }
+    .nav-cta.desktop-only { display: none; }
+    .article-wrap { padding: 100px 20px 60px; }
+  }
+</style>
+
+<!-- JSON-LD: BlogPosting -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Declaração de Aplicabilidade (SoA) ISO 27001: Por Que a Sua Não Pode Ser uma Planilha Copiada",
+  "description": "A Declaração de Aplicabilidade liga os riscos aos controles do Anexo A. Veja como montar a SoA da sua software house, justificar exclusões e evitar os erros que reprovam auditorias.",
+  "url": "https://blindcorpseg.com.br/artigo-declaracao-de-aplicabilidade-iso-27001.html",
+  "image": "https://blindcorpseg.com.br/assets/og-blindcorp.png",
+  "datePublished": "2026-11-25",
+  "dateModified": "2026-11-25",
+  "author": {
+    "@type": "Person",
+    "name": "Fernando",
+    "url": "https://www.linkedin.com/in/fdinizmiranda/"
+  },
+  "publisher": {
+    "@id": "https://blindcorpseg.com.br/#empresa"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://blindcorpseg.com.br/artigo-declaracao-de-aplicabilidade-iso-27001.html"
+  },
+  "keywords": ["declaração de aplicabilidade", "SoA", "ISO 27001", "Anexo A", "controles", "tratamento de riscos", "SGSI", "software house", "auditoria"],
+  "articleSection": "Implementação",
+  "inLanguage": "pt-BR"
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://blindcorpseg.com.br/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://blindcorpseg.com.br/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Declaração de Aplicabilidade"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav-bar">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo-blindcorp.png" alt="Blind Corp - Consultoria ISO 27001 para Software Houses">
+    Blind Corp
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="index.html#servicos">Serviços</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+  </ul>
+  <a href="index.html#diagnostico" class="nav-cta desktop-only">Solicitar Diagnóstico</a>
+  <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<main class="article-wrap">
+
+  <nav class="breadcrumb">
+    <a href="index.html">Início</a> &gt; <a href="blog.html">Blog</a> &gt; <span>Declaração de Aplicabilidade</span>
+  </nav>
+
+  <span class="article-tag">Implementação</span>
+  <h1 class="article-title">Declaração de Aplicabilidade (SoA): por que a sua <span class="gt">não pode ser uma planilha copiada</span></h1>
+
+  <div class="article-meta">
+    <span>Por Blind Corp</span>
+    <span>25 de novembro de 2026</span>
+    <span>Leitura: 10 min</span>
+  </div>
+
+  <div class="article-body">
+
+    <p>O auditor parou na linha do controle 8.31. "Separação dos ambientes de desenvolvimento, teste e produção: aplicável, implementado." Ele pediu para ver. O time abriu o console da nuvem e mostrou um único ambiente, com o banco de produção acessível pela máquina de quem desenvolvia. A planilha dizia uma coisa. A operação dizia outra. O achado foi registrado em menos de cinco minutos.</p>
+
+    <p>A Declaração de Aplicabilidade, conhecida como SoA (do inglês <em>Statement of Applicability</em>), é o documento onde esse tipo de contradição aparece primeiro. E é também o documento que mais circula pronto pela internet: baixa-se um modelo, marca-se "aplicável" em quase tudo e pronto. Só que a SoA de outra empresa descreve os riscos de outra empresa.</p>
+
+    <p>No <a href="artigo-riscos.html">artigo sobre análise de riscos</a>, mostramos que a matriz de riscos é o motor do SGSI. A SoA é o painel que mostra para onde esse motor está levando a empresa. Este artigo explica o que ela é, como montar a sua e onde a maioria erra.</p>
+
+    <h2>O que é a Declaração de Aplicabilidade</h2>
+
+    <p>A SoA é um documento obrigatório da ISO 27001, exigido na cláusula 6.1.3, dentro do tratamento de riscos. Ela lista os 93 controles do Anexo A e, para cada um, registra quatro informações:</p>
+
+    <ul>
+      <li><strong>Se o controle é necessário</strong> para a sua empresa</li>
+      <li><strong>A justificativa da inclusão</strong>, normalmente ligada a um risco, a um requisito legal ou a uma exigência contratual</li>
+      <li><strong>Se ele já está implementado</strong> ou ainda em implementação</li>
+      <li><strong>A justificativa da exclusão</strong>, quando o controle não se aplica</li>
+    </ul>
+
+    <p>Na prática, ela responde a uma pergunta simples que todo auditor faz: dos controles que a norma propõe, quais você escolheu, por que escolheu e onde está a prova?</p>
+
+    <div class="callout">
+      <p><strong>O ponto central:</strong> a SoA não é uma lista de controles. É a ponte entre os riscos que você identificou e as proteções que você colocou em prática. Sem essa ponte, ela é só uma planilha.</p>
+    </div>
+
+    <h2>Onde a SoA entra no processo</h2>
+
+    <p>A ordem importa, e é justamente aí que muitas empresas tropeçam. A SoA não é o ponto de partida. Ela é consequência de três passos anteriores:</p>
+
+    <ol>
+      <li><strong>Análise de riscos:</strong> você identifica ativos, ameaças, vulnerabilidades e o nível de cada risco.</li>
+      <li><strong>Tratamento de riscos:</strong> para cada risco não aceito, você decide mitigar, transferir, evitar ou aceitar, e escolhe os controles necessários.</li>
+      <li><strong>Comparação com o Anexo A:</strong> você confere os controles escolhidos com os 93 da norma, para garantir que nenhum controle necessário foi esquecido.</li>
+      <li><strong>Declaração de Aplicabilidade:</strong> você registra o resultado dessa comparação, com justificativas e status.</li>
+    </ol>
+
+    <p>Quem começa pela SoA inverte a lógica. Marca os controles primeiro e depois tenta encontrar riscos que justifiquem as escolhas. O auditor percebe, porque as justificativas ficam genéricas e não apontam para nenhum risco real da matriz.</p>
+
+    <h2>Os 93 controles do Anexo A, em quatro grupos</h2>
+
+    <p>Desde a versão 2022 da norma, os controles do Anexo A foram reorganizados em quatro temas. Entender essa divisão ajuda a revisar a SoA com mais critério:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tema</th>
+          <th>Controles</th>
+          <th>Exemplos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Organizacionais (5.x)</strong></td>
+          <td>37</td>
+          <td>Políticas, gestão de fornecedores, uso de serviços em nuvem, gestão de incidentes</td>
+        </tr>
+        <tr>
+          <td><strong>Pessoas (6.x)</strong></td>
+          <td>8</td>
+          <td>Seleção, conscientização, termos de confidencialidade, trabalho remoto</td>
+        </tr>
+        <tr>
+          <td><strong>Físicos (7.x)</strong></td>
+          <td>14</td>
+          <td>Perímetros, controle de entrada, mesa limpa, equipamentos fora das instalações</td>
+        </tr>
+        <tr>
+          <td><strong>Tecnológicos (8.x)</strong></td>
+          <td>34</td>
+          <td>Controle de acesso, criptografia, backup, desenvolvimento seguro, separação de ambientes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Para uma software house, os temas organizacional e tecnológico concentram a maior parte do esforço. Mas isso não significa que os controles físicos e de pessoas possam ser descartados sem análise. Trabalho remoto, notebooks fora do escritório e acesso de terceiros ao código também são riscos.</p>
+
+    <h2>Como montar a SoA em 5 passos</h2>
+
+    <ol>
+      <li><strong>Parta da matriz de riscos, não do modelo.</strong> Para cada risco que exige tratamento, anote quais controles do Anexo A reduzem esse risco. Esse é o núcleo da sua SoA.</li>
+      <li><strong>Inclua as exigências externas.</strong> LGPD, cláusulas de contratos com clientes e requisitos de grandes players também justificam controles, mesmo quando o risco técnico parece baixo.</li>
+      <li><strong>Percorra os 93 controles, um a um.</strong> Para cada controle que não apareceu nos passos anteriores, pergunte: ele realmente não se aplica, ou eu esqueci um risco? Esse passo costuma revelar lacunas na própria análise de riscos.</li>
+      <li><strong>Escreva justificativas específicas.</strong> "Aplicável por boas práticas" não é justificativa. "Mitiga o risco R-12, acesso indevido ao repositório de código-fonte" é.</li>
+      <li><strong>Registre o status e onde está a evidência.</strong> Implementado, em implementação ou planejado. E, para cada controle implementado, onde o auditor encontra a prova: política, registro, configuração, ferramenta.</li>
+    </ol>
+
+    <h2>Exemplo prático: 4 controles típicos de software house</h2>
+
+    <p>Veja como fica uma SoA quando cada linha conversa com a operação real:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Controle</th>
+          <th>Aplicável?</th>
+          <th>Justificativa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>8.25</strong> Ciclo de vida de desenvolvimento seguro</td>
+          <td>Sim, implementado</td>
+          <td>Mitiga o risco de vulnerabilidades entregues a clientes. Evidência: política de desenvolvimento seguro e checklist de code review no pipeline.</td>
+        </tr>
+        <tr>
+          <td><strong>8.31</strong> Separação dos ambientes de desenvolvimento, teste e produção</td>
+          <td>Sim, em implementação</td>
+          <td>Mitiga o risco de alteração indevida em produção e exposição de dados de clientes. Conclusão prevista no plano de tratamento.</td>
+        </tr>
+        <tr>
+          <td><strong>5.23</strong> Segurança no uso de serviços em nuvem</td>
+          <td>Sim, implementado</td>
+          <td>Toda a infraestrutura roda em nuvem pública. Evidência: matriz de responsabilidade compartilhada e revisão de configurações.</td>
+        </tr>
+        <tr>
+          <td><strong>8.30</strong> Desenvolvimento terceirizado</td>
+          <td>Não</td>
+          <td>A empresa não terceiriza desenvolvimento. Todo o código é produzido pelo time interno. Reavaliar se houver contratação de fornecedores de desenvolvimento.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Repare na última linha. Uma exclusão bem feita não é só "não se aplica". Ela explica o motivo e já indica quando a decisão precisa ser revista.</p>
+
+    <h2>Exclusões: onde o auditor mais aperta</h2>
+
+    <p>Excluir controles é permitido. A norma não exige que todos os 93 sejam aplicados. O que ela exige é que a exclusão faça sentido diante dos seus riscos. E é aqui que muita SoA desmorona.</p>
+
+    <p>Um exemplo comum: a empresa é 100% remota e exclui todos os controles físicos. Parece lógico. Mas os notebooks com acesso ao código estão na casa de cada pessoa, em cafés, em aeroportos. Controles como mesa limpa e tela limpa, segurança de equipamentos fora das instalações e descarte seguro continuam relevantes. A exclusão em bloco mostra que ninguém analisou controle por controle.</p>
+
+    <h3>Uma boa justificativa de exclusão</h3>
+
+    <ul>
+      <li>Explica por que o controle não se aplica ao escopo do SGSI</li>
+      <li>Não contradiz nenhum risco registrado na matriz</li>
+      <li>É coerente com a operação que o auditor vai observar</li>
+      <li>Indica o gatilho que faria a decisão mudar</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>A verdade dura:</strong> o auditor não reprova uma SoA porque ela tem exclusões. Reprova porque as exclusões não têm justificativa, ou porque a justificativa é desmentida pela própria operação.</p>
+    </div>
+
+    <h2>Os 5 erros mais comuns na SoA</h2>
+
+    <ul>
+      <li><strong>Modelo copiado da internet.</strong> Os controles marcados refletem os riscos de outra empresa, não os seus.</li>
+      <li><strong>Tudo marcado como aplicável.</strong> Parece mais seguro, mas obriga a empresa a evidenciar 93 controles. Muitos sem nenhum risco que os justifique.</li>
+      <li><strong>Justificativas genéricas.</strong> "Boa prática" e "exigência da norma" não conectam o controle a nenhum risco.</li>
+      <li><strong>Status que não bate com a realidade.</strong> Controle marcado como implementado, sem evidência. É o caso do 8.31 que abriu este artigo.</li>
+      <li><strong>SoA congelada.</strong> A matriz de riscos é revisada, o escopo muda, um cliente novo traz exigências, e a SoA continua na versão da certificação.</li>
+    </ul>
+
+    <h2>SoA viva: quando revisar</h2>
+
+    <p>A SoA acompanha a análise de riscos. Se um muda, o outro precisa ser revisto. Na prática, os gatilhos são os mesmos:</p>
+
+    <ul>
+      <li>Revisão da matriz de riscos ou do plano de tratamento</li>
+      <li>Mudança no escopo do SGSI</li>
+      <li>Novo cliente, contrato ou requisito legal</li>
+      <li>Mudança de arquitetura, fornecedor ou provedor de nuvem</li>
+      <li>Resultado de <a href="artigo-auditoria-interna-iso-27001.html">auditoria interna</a> ou externa</li>
+    </ul>
+
+    <p>Uma boa prática é manter histórico de versões na própria SoA: data, o que mudou e por quê. Quando o auditor pergunta como a empresa reagiu a uma mudança, a resposta já está no documento.</p>
+
+    <h2>Checklist: sua SoA passa numa auditoria?</h2>
+
+    <ol>
+      <li>Cada controle aplicável aponta para um risco, uma lei ou um requisito contratual?</li>
+      <li>Cada exclusão tem justificativa específica e coerente com a operação?</li>
+      <li>O status de cada controle corresponde ao que existe de fato?</li>
+      <li>Existe evidência indicada para os controles implementados?</li>
+      <li>A SoA foi revisada depois da última atualização da matriz de riscos?</li>
+      <li>Há histórico de versões com data e motivo das mudanças?</li>
+    </ol>
+
+    <p>Se você respondeu não para duas ou mais, a SoA vai virar achado de auditoria. E, como ela é revisada logo no início da auditoria, um problema aqui contamina a percepção do auditor sobre todo o resto do SGSI.</p>
+
+    <h2>A SoA dentro do Método 3P</h2>
+
+    <p>No Método 3P da Blind Corp, a Declaração de Aplicabilidade é construída no primeiro pilar, a <strong>Padronização</strong>, entre os meses 1 e 3. Ela nasce junto com o GAP analysis, o mapa de riscos e o escopo do SGSI. Não é um documento que se preenche no fim, às pressas, antes da auditoria.</p>
+
+    <p>Essa ordem tem um motivo. Quando a SoA é feita a partir dos riscos reais, ela vira o roteiro da fase seguinte, a <strong>Proteção</strong>: os controles marcados como "em implementação" se transformam no plano de trabalho dos meses 4 a 6. E, na <strong>Prevenção</strong>, a auditoria interna confere se o que a SoA declara é o que a operação entrega.</p>
+
+    <p>Sem chão, não há prédio. E a SoA é uma das primeiras lajes desse chão.</p>
+
+  </div>
+
+  <div class="cta-box">
+    <h3>Sua SoA reflete a sua operação ou <span class="gt">um modelo da internet</span>?</h3>
+    <p>Faça um diagnóstico e descubra se seus controles, riscos e evidências estão conectados antes que o auditor descubra por você.</p>
+    <a href="index.html#diagnostico" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+      Solicitar Diagnóstico
+    </a>
+  </div>
+
+  <div class="related">
+    <h3>Leia também</h3>
+    <a href="artigo-riscos.html">Análise de riscos ISO 27001: documentar é fácil, usar é o que protege</a>
+    <a href="artigo-auditoria-interna-iso-27001.html">Auditoria interna ISO 27001: o ensaio geral que salva o certificado</a>
+    <a href="artigo-tratamento-nao-conformidades-iso-27001.html">Tratamento de não conformidades: como reduzir de 42 para 2</a>
+    <a href="artigo-como-implementar-iso-27001-9-meses.html">Como implementar a ISO 27001 em 9 meses</a>
+    <a href="artigo-iso-27001-software-house.html">ISO 27001 para software houses: o guia completo</a>
+    <a href="artigo-iso-27001-vs-27701.html">ISO 27001 vs ISO 27701: qual sua empresa precisa?</a>
+    <a href="blog.html">Ver todos os artigos →</a>
+  </div>
+
+</main>
+
+
+<div class="footer-bar">
+  <p>© 2026 Blind Corp. Todos os direitos reservados. | <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+</div>
+
+<script>
+  document.getElementById('mobileToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
